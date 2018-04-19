@@ -1,0 +1,45 @@
+{
+  "name": "cmc-ui",
+  "description": "CMC website (Alumni association of graduates, Christian Medical College Ludhiana, India)",
+  "version": "0.0.1",
+  "author": "mkdecisiondev",
+  "bugs": "https://github.com/mkdecisiondev/cmc-ui/issues",
+  "dependencies": {
+    "promise-polyfill": "^7.1.2",
+    "shoelace-css": "^1.0.0-beta24"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "cssnano": "^3.10.0",
+    "postcss-calc": "^6.0.1",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.3.1",
+    "postcss-import": "^11.1.0",
+    "postcss-nesting": "^4.2.1",
+    "postcss-responsive-type": "^1.0.0",
+    "reshape-component": "^1.0.6",
+    "reshape-eval-code": "^0.3.5",
+    "reshape-expressions": "^0.1.5",
+    "reshape-include": "^1.0.0",
+    "reshape-layouts": "^1.0.0",
+    "reshape-minify": "^1.1.0",
+    "spike-core": "github:mkdecisiondev/spike-core",
+    "spike-optimize": "^0.1.2",
+    "webpack": "^3.11.0"
+  },
+  "homepage": "https://github.com/mkdecisiondev/cmc-ui/",
+  "main": "app.js",
+  "private": true,
+  "repository": "https://github.com/mkdecisiondev/cmc-ui/",
+  "browserslist": [
+    "ie >= 11"
+  ],
+  "scripts": {
+    "build": "spike compile",
+    "prod": "spike compile -e production"
+  }
+}
