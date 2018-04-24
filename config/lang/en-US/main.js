@@ -5,6 +5,8 @@ const thankYou = require('./thankYou');
 
 const common = {
 	organizationName: 'CMC Alumni Association',
+	home: 'HOME',
+	contactUS: 'CONTACT US',
 };
 
 module.exports = Object.assign(

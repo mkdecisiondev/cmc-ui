@@ -1,0 +1,12 @@
+<footer class="footer" col-md-6>
+	<div class="flex">
+	   <p>Test message</p>
+		<a href="index.html" class="home">{{ lang.home }}</a>
+		<a href="./events.html" class="events">{{ lang.events }}</a>
+		<each loop="link in socialMedia">
+			<a href="{{ link.url }}" class="social-media" title="{{ link.title }}" target="_blank">
+			<i class="{{ link.icon }}"></i>
+			</a>
+		</each>
+	</div>
+</footer>

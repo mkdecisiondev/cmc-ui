@@ -6,7 +6,7 @@ const socialMedia = require('./socialMedia');
 module.exports = {
 	 cmcUi: 'cmc-ui',
 
-	organizationName: 'CMC Alumni Association',
+	organizationName: 'Alunmuni Association of Christian Medical College',
 
 	lang,
 	roles,

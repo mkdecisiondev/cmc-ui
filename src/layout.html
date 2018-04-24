@@ -23,5 +23,26 @@
 				<script src="js/main.js"></script>
 			</block>
 		</div>
+		<block name="header">
+
+		</block>
+
+		<block name="main">
+				<include src="components/home.html"></include>
+				<include src="components/welcome.html"></include>
+				<include src="components/events.html"></include>
+				<include src="components/photos.html"></include>
+				<include src="components/organization.html"></include>
+				<include src="components/history.html"></include>
+		</block>
+		<block name="footer">
+				<include src="components/footer.html"></include>
+		</block>
+
+		<block name="scripts">
+			<script src="config/main.js"></script>
+			<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+		</block>
+
 	</body>
 </html>
