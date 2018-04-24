@@ -1,3 +1,55 @@
 body {
 	font-family: var(--primary-font);
 }
+
+* {
+	box-sizing: border-box;
+}
+
+@media (--small-down) {
+	.hide-sm-down {
+		display: none;
+	}
+}
+
+@media (--small-up) {
+	.hide-sm-up {
+		display: none;
+	}
+}
+
+@media (--medium-down) {
+	.hide-md-down {
+		display: none;
+	}
+}
+
+@media (--medium-up) {
+	.hide-md-up {
+		display: none;
+	}
+}
+
+@media (--large-down) {
+	.hide-lg-down {
+		display: none;
+	}
+}
+
+@media (--large-up) {
+	.hide-lg-up {
+		display: none;
+	}
+}
+
+@media (--x-large-down) {
+	.hide-xl-down {
+		display: none;
+	}
+}
+
+@media (--x-large-up) {
+	.hide-xl-up {
+		display: none;
+	}
+}
