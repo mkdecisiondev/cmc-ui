@@ -1,12 +1,26 @@
-<footer class="footer" col-md-6>
-	<div class="flex">
-	   <p>Test message</p>
-		<a href="index.html" class="home">{{ lang.home }}</a>
-		<a href="./events.html" class="events">{{ lang.events }}</a>
-		<each loop="link in socialMedia">
-			<a href="{{ link.url }}" class="social-media" title="{{ link.title }}" target="_blank">
-			<i class="{{ link.icon }}"></i>
-			</a>
-		</each>
+<footer class="footer" col-xs-6 col-sm-4>
+	<div class="max-width">
+		<nav class="footer-nav col-xs-6" col-sm-4>
+			<table>
+				<tr>
+					<td><a href="index.html" class="home">{{ lang.home }}</a></td>
+					<td><a href="Events.html" class="events">{{ lang.events }}</a></td>
+					<td><a href="Registartion.html" class="registration">{{ lang.registration }}</a></td>
+				</tr>
+				<tr>
+					<td><a href="Photos.html" class="photos">{{ lang.photos }}</a></td>
+					<td><a href="Contact.html" class="contact">{{ lang.contactUS }}</a></td>
+					<td>
+						<each loop="link in socialMedia">
+								<a href="{{ link.url }}" class="social-media" title="{{ link.title }}" target="_blank">
+								<i class="{{ link.icon }}"></i>
+								</a>
+
+						</each>
+					</td>
+
+				</tr>
+			</table>
+		</nav>
 	</div>
 </footer>
