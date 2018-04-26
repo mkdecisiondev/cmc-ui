@@ -1,29 +1,28 @@
-@import '../../../assets/css/_variables.css';
-
 .footer {
-	padding: 1.1em 0;
+	padding: 1.1em 1.1em;
 	background:#A1A1A1;
 	width: 100%;
 
-	& .max-width{
+	& .max-width {
 		max-width: 1200px;
-		padding: 5%;
+		padding: 3%;
 	}
 }
 
-.footer-nav{
+.footer-nav {
 
 	& table {
 		width: 100%;
 
-		& tr:first-child td{
-			padding-bottom: 10%;
+		& tr:first-child td {
+			padding-bottom: 8%;
 		}
 
 		& a {
 			color: white;
 			font-size: 1 em;
 			font-family: var(--primary-font);
+			text-decoration: none;
 			text-transform: uppercase;
 		}
 

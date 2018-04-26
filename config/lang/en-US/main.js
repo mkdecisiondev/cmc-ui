@@ -4,9 +4,12 @@ const home = require('./home.js');
 const thankYou = require('./thankYou');
 
 const common = {
-	organizationName: 'CMC Alumni Association',
-	home: 'HOME',
-	contactUS: 'CONTACT US',
+	home: "home",
+	events: "events",
+	photos: "photos",
+	registration: "registration",
+	contactUS: "contact us",
+	siteName: 'Alumni Association of Christian Medical College',
 };
 
 module.exports = Object.assign(
