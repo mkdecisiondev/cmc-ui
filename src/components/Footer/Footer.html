@@ -1,23 +1,21 @@
-<footer class="footer" col-xs-6 col-sm-4>
+<footer class="footer col-xs-6 col-sm-4">
 	<div class="max-width">
-		<nav class="footer-nav col-xs-6" col-sm-4>
+		<nav class="footer-nav col-xs-6 col-sm-4">
 			<table>
 				<tr>
-					<td><a href="index.html" class="home">{{ lang.home }}</a></td>
-					<td><a href="Events.html" class="events">{{ lang.events }}</a></td>
-					<td><a href="Registartion.html" class="registration">{{ lang.registration }}</a></td>
+					<td><a href="index.html">{{ lang.home }}</a></td>
+					<td><a href="Events.html">{{ lang.events }}</a></td>
+					<td><a href="Registartion.html">{{ lang.registration }}</a></td>
 				</tr>
 				<tr>
-					<td><a href="Photos.html" class="photos">{{ lang.photos }}</a></td>
-					<td><a href="Contact.html" class="contact">{{ lang.contactUS }}</a></td>
+					<td><a href="Photos.html">{{ lang.photos }}</a></td>
+					<td><a href="Contact.html">{{ lang.contactUS }}</a></td>
 					<td>
 						<each loop="link in socialMedia">
-								<a href="{{ link.url }}" class="social-media" title="{{ link.title }}" target="_blank">
-								<i class="{{ link.icon }}"></i>
-								</a>
+							<a href="{{ link.url }}" rel="noopener" class="social-media" title="{{ link.title }}" target="_blank">
+								<i class="{{ link.icon }}"></i></a>
 						</each>
 					</td>
-
 				</tr>
 			</table>
 		</nav>
