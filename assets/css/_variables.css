@@ -8,7 +8,13 @@
 	--background-color: white;
 	--text-color: black;
 	--teal: #55B4B0;
+
+
+	--header-background-color: var(--teal);
+	--header-height: 88px;
 }
+
+
 
 /* Core breakpoints */
 @custom-media --x-small-down (max-width: 359px);

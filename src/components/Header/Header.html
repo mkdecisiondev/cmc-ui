@@ -1,20 +1,30 @@
-<header class="header">
-	<div class="main-navigation">
-		<div class="max-width">
-			<div class="logo-hamburger-donate">
-				<a href="/" class="logo-link">
-					<img src="{{ logoUrl }}" alt="{{ lang.guruNanakDwara }}" class="logo">
-				</a>
-				<div class="hamburger-and-donate">
-					<div class="hamburger" aria-expanded="false" data-node-name="hamburgerNode">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<a href="/donate.html" class="donate">{{ lang.donate }}</a>
-				</div>
+<header class="row row-flush">
+	<div class="logo-hamburger col-12 col-md-4">
+		<a href="/" class="logo">
+			<img src="/img/logo.png" alt="{{ organizationName }}" class="logo-image">
+		</a>
+		<div class="hamburger">
+			<div class="hamburger" aria-expanded="false" data-node-name="hamburgerNode">
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
-			<component type="VerticalNavigator"></component>
 		</div>
+	</div>
+	<nav class="vertical-navigator col-12 col-md-6" role="navigation" data-node-name="verticalNavigatorNode">
+		<ul>
+			<each loop="navitem in siteLinks">
+				<li>
+					<a href="{{ navitem.url }}">{{ navitem.title }}</a>
+				</li>
+			</each>
+		</ul>
+	</nav>
+	<div class="social-media col-12 col-md-2" data-node-name="socialMediaNode">
+		<each loop="link in socialMedia">
+			<a href="{{ link.url }}" title="{{ link.title }}" target="_blank">
+				<i class="{{ link.icon }}"></i>
+			</a>
+		</each>
 	</div>
 </header>
