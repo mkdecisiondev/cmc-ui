@@ -8,3 +8,15 @@
 	--background-color: white;
 	--text-color: black;
 }
+
+/* Core breakpoints */
+@custom-media --x-small-down (max-width: 359px);
+@custom-media --x-small-up (min-width: 360px);
+@custom-media --small-down (max-width: 575px);
+@custom-media --small-up (min-width: 576px);
+@custom-media --medium-down (max-width: 767px);
+@custom-media --medium-up (min-width: 768px);
+@custom-media --large-down (max-width: 991px);
+@custom-media --large-up (min-width: 992px);
+@custom-media --x-large-down (max-width: 1199px);
+@custom-media --x-large-up (min-width: 1200px);
