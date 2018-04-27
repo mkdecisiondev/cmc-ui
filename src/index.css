@@ -1,0 +1,32 @@
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+.hero {
+	background-color: #d4d2d1;
+	& .image-outter {
+		height: 0;
+		position: relative;
+
+		& .image-inner {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			clear: both;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+
+	& .image-outter {
+		padding-bottom: 31.67%;
+
+		& .image-inner {
+			background: url('img/cmc_1200x210.png') center bottom no-repeat, url('img/1200x380-home.jpg') center center no-repeat;
+		}
+	}
+}

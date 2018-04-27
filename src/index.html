@@ -2,8 +2,17 @@
 	<block name="title">
 		<title>{{ organizationName }}</title>
 	</block>
+	<block name="styles" type="append">
+		<link href="index.css" rel="stylesheet">
+	</block>
 
 	<block name="main">
+		<figure class="hero">
+			<div class="image-outter">
+				<div class="image-inner">
+				</div>
+			</div>
+		</figure>
 		<p>Main content for the {{ organizationName }} application.</p>
 	</block>
 </extends>
