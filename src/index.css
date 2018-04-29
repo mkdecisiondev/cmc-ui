@@ -8,9 +8,10 @@ figure {
 	& .image-outter {
 		height: 0;
 		position: relative;
+		padding-bottom: 31.67%;
 
 		& .image-inner {
-			background-position: center;
+			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: contain;
 			clear: both;
@@ -19,14 +20,8 @@ figure {
 			position: absolute;
 			top: 0;
 			width: 100%;
-		}
-	}
 
-	& .image-outter {
-		padding-bottom: 31.67%;
-
-		& .image-inner {
-			background: url('img/cmc_1200x210.png') center bottom no-repeat, url('img/1200x380-home.jpg') center center no-repeat;
+			background-image: url('img/cmc_1200x210.png'), url('img/1200x380-home.jpg');
 		}
 	}
 }
