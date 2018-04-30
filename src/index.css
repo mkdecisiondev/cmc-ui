@@ -53,6 +53,13 @@ section {
 	& h2 {
 		font-size: 28px;
 		font-weight: normal;
+		padding: 0;
+		margin: 1em 0 0.8em 0;
+	}
+
+	& h2 + p {
+		padding: 0;
+		margin: 0 0 0.5em 0;
 	}
 }
 
@@ -79,6 +86,8 @@ section.welcome {
 		font-weight: normal;
 		font-size: 34px;
 		letter-spacing: 2px;
+		padding: 0;
+		margin: 0.5em 0;
 	}
 
 	& p {
@@ -148,8 +157,8 @@ article.gradient {
 		color: white;
 		display: inline-block;
 		border-radius: 3px;
-		padding: 1em 2em;
-		font-size: 18px;
+		padding: 0.9em 2em;
+		font-size: 15px;
 		text-transform: uppercase;
 		text-decoration: none;
 		float: right;
@@ -170,7 +179,7 @@ article.gradient {
 		}
 
 		& .button-link {
-			font-size: 24px;
+			font-size: 20px;
 		}
 	}
 
@@ -199,23 +208,40 @@ section.organization {
 
 	& .roles {
 		text-align: left;
+	}
 
-		& dl {
-			margin: 0 0 1em 0;
-			padding: 0;
-		}
+	& dl {
+		margin: 0 0 0.5em 0;
+		padding: 0;
+	}
+
+
+	& dl.one-to-one {
+		margin-top: 1em;
 
 		& dt {
-			font-family: var(--medium-font);
-			margin-bottom: 0.5em;
-			margin-top: 1em;
+			float: left;
+			clear: both;
+			margin: 0 0.5em 0 0;
 		}
 
 		& dd {
-			margin-left: 0;
-			padding-left: 0;
-			margin-bottom: 0.5em;
+			float: left;
+			display: inline-block;
 		}
+	}
+
+	& dt {
+		font-family: var(--primary-font);
+		margin-bottom: 0.5em;
+		margin-top: 1em;
+		font-weight: normal;
+	}
+
+	& dd {
+		margin-left: 0;
+		padding-left: 0;
+		margin-bottom: 0.5em;
 	}
 }
 
@@ -248,7 +274,7 @@ section.history {
 		}
 
 		& p {
-			margin: 1em;
+			margin-right: 2em;
 			font-family: var(--medium-font);
 			vertical-align: center;
 			font-style: italic;
@@ -292,7 +318,7 @@ section.history {
 	background: black;
 	color: white;
 	text-align: center;
-	padding: 1em 1em 0.5em;
+	padding: 1em 2em 0.5em;
 	text-decoration: none;
 	font-size: 18px;
 	margin-bottom: 2em;
