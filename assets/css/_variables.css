@@ -9,13 +9,20 @@
 	--font-weight-semibold: 600;
 	--font-weight-bold: 700;
 
-	--background-color: white;
-	--text-color: black;
+
+
 	--teal: #55B4B0;
+	--almost-white: #fdfefe;
+	--green: #009b77;
+	--light-gray: #e6e6e6;
 
-
+	--text-color: black;
+	--background-color: white;
 	--header-background-color: var(--teal);
 	--header-height: 88px;
+	--page-background-color: var(--almost-white);
+	--button-link-background-color: var(--green);
+	--history-background-color: var(--light-gray);
 }
 
 

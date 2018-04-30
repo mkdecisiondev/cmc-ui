@@ -14,7 +14,7 @@ figure {
 		position: relative;
 
 		& .image-inner {
-			background-image: url('img//1200x380-home.jpg');
+			background-image: url('img/1200x380-home.jpg');
 			background-position: center bottom;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -31,5 +31,283 @@ figure {
 @media (--medium-up) {
 	.hero .image-outter  .image-inner {
 		background-image: url('img/cmc_1200x210.png'), url('img/1200x380-home.jpg');
+	}
+}
+
+section {
+	padding-left: 2%;
+	padding-right: 2%;
+	margin-bottom: 3em;
+	font-size: 18px;
+	font-family: var(--light-font);
+
+	& hr {
+		background: url('img/text-divider-454x30.png') no-repeat center bottom;
+		background-size: contain;
+		border: none;
+		height: 30px;
+		margin: 0 auto 1em;
+		max-width: 70%;
+	}
+
+	& h2 {
+		font-size: 28px;
+		font-weight: normal;
+	}
+}
+
+@media (--medium-up) {
+	section {
+		padding-left: 4%;
+		padding-right: 4%;
+
+		& h2 {
+			font-size: 45px;
+		}
+
+		& hr {
+			max-width: 454px;
+		}
+	}
+}
+
+section.welcome {
+	text-align: center;
+	font-family: var(--light-font);
+
+	& h1 {
+		font-weight: normal;
+		font-size: 34px;
+		letter-spacing: 2px;
+	}
+
+	& p {
+		font-size: 18px;
+		line-height: 2;
+	}
+
+	& hr {
+		display: none;
+	}
+}
+
+
+@media (--medium-up) {
+	section.welcome {
+		padding-left: 8%;
+		padding-right: 8%;
+
+		& h1 {
+			font-size: 60px;
+			letter-spacing: 3px;
+		}
+
+		& p {
+			font-size: 24px;
+		}
+
+		& hr {
+			display: block;
+		}
+	}
+}
+
+article.gradient {
+	background: linear-gradient(#f3faf9, #b3dddc);
+	text-align: center;
+	border-radius: 6px;
+	padding-bottom: 1em;
+	padding-left: 4%;
+	padding-right: 4%;
+
+	& hr {
+		max-width: 200px;
+	}
+
+	& .image-outter {
+		height: 0;
+		padding-bottom: 66.22%;
+		position: relative;
+		margin-bottom: 1em;
+
+		& .image-inner {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			clear: both;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+
+	& .button-link {
+		background: var(--button-link-background-color);
+		color: white;
+		display: inline-block;
+		border-radius: 3px;
+		padding: 1em 2em;
+		font-size: 18px;
+		text-transform: uppercase;
+		text-decoration: none;
+		float: right;
+	}
+
+	& .button-link:hover {
+		text-decoration: underline;
+	}
+}
+
+@media (--medium-up) {
+
+	article.gradient {
+		/* max-width: 45%; */
+
+		& hr {
+			max-width: 410px;
+		}
+
+		& .button-link {
+			font-size: 24px;
+		}
+	}
+
+	article.gradient:nth-child(odd) {
+		margin-right: 24px;
+		max-width: calc(50% - 12px);
+	}
+
+	article.gradient:nth-child(even) {
+		max-width: calc(50% - 12px);
+	}
+}
+
+
+section.organization {
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+
+	& img {
+		display: block;
+		margin: 0 auto;
+		max-width: 626px;
+		width: 100%;
+	}
+
+	& .roles {
+		text-align: left;
+
+		& dl {
+			margin: 0 0 1em 0;
+			padding: 0;
+		}
+
+		& dt {
+			font-family: var(--medium-font);
+			margin-bottom: 0.5em;
+			margin-top: 1em;
+		}
+
+		& dd {
+			margin-left: 0;
+			padding-left: 0;
+			margin-bottom: 0.5em;
+		}
+	}
+}
+
+
+section.history {
+	font-size: 14px;
+	background: var(--history-background-color);
+	padding: 4em 5%;
+	margin-bottom: 0;
+
+	& h2 {
+		text-align: center;
+		padding-top: 0;
+		margin-top: 0;
+	}
+
+	& hr {
+		margin-bottom: 2em;
+	}
+
+	& summary {
+		display: flex;
+		align-items: center;
+
+		& img {
+			width: 40%;
+			max-width: 150px;
+			float: left;
+			margin-right: 1em;
+		}
+
+		& p {
+			margin: 1em;
+			font-family: var(--medium-font);
+			vertical-align: center;
+			font-style: italic;
+		}
+	}
+
+	& cite {
+		font-style: normal;
+		line-height: 1.5;
+	}
+
+	& p {
+		line-height: 3;
+		margin-bottom: 2em;
+	}
+}
+
+@media (--medium-up) {
+	section.history {
+		font-size: 18px;
+
+		& summary {
+			float: right;
+			width: 45%;
+			margin: 0 0 2em 2em;
+
+			& img {
+				max-width: 201px;
+			}
+		}
+
+		&  p {
+			line-height: 2;
+		}
+	}
+}
+
+.link-to-top {
+	display: inline-block;
+	float: right;
+	background: black;
+	color: white;
+	text-align: center;
+	padding: 1em 1em 0.5em;
+	text-decoration: none;
+	font-size: 18px;
+	margin-bottom: 2em;
+	margin-right: 5%;
+}
+
+.link-to-top::before {
+	content: '\005E';
+	display: block;
+	font-size: 300%;
+	line-height: 24px;
+}
+
+@media (--medium-up) {
+	.link-to-top {
+		font-size: 22px;
 	}
 }
