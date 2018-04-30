@@ -2,3 +2,18 @@
 @import './fontawesome/_fa-brands.css';
 @import './fontawesome/_fa-regular.css';
 @import './fontawesome/_fa-solid.css';
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url(../fonts/roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url(../fonts/roboto/Roboto-Light.ttf);
+}

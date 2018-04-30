@@ -1,5 +1,9 @@
 :root {
-	--primary-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	--light-font: 'Roboto Light', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	--medium-font: 'Roboto Medium', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	--primary-font: 'Roboto', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+
 	--font-weight-thin: 300;
 	--font-weight-regular: 400;
 	--font-weight-semibold: 600;
@@ -7,7 +11,14 @@
 
 	--background-color: white;
 	--text-color: black;
+	--teal: #55B4B0;
+
+
+	--header-background-color: var(--teal);
+	--header-height: 88px;
 }
+
+
 
 /* Core breakpoints */
 @custom-media --x-small-down (max-width: 359px);
