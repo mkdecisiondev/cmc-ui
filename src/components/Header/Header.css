@@ -110,18 +110,18 @@ nav.vertical-navigator {
 
 .hamburger {
 	cursor: pointer;
-	height: 16px;
+	height: 38px;
 	margin: 0 15px 0 0;
 	position: relative;
 	transform: rotate(0deg);
 	transition: 0.5s ease-in-out;
-	width: 22px;
+	width: 38px;
 
 	& span {
 		background: white;
-		border-radius: 0;
+		border-radius: 4px;
 		display: block;
-		height: 2px;
+		height: 8px;
 		left: 0;
 		opacity: 1;
 		position: absolute;
@@ -134,11 +134,11 @@ nav.vertical-navigator {
 	}
 
 	& span:nth-child(2) {
-		top: 7px;
+		top: 15px;
 	}
 
 	& span:nth-child(3) {
-		top: 14px;
+		top: 30px;
 	}
 
 	&.open {
@@ -148,7 +148,7 @@ nav.vertical-navigator {
 		}
 
 		& span:nth-child(1) {
-			top: 7px;
+			top: 15px;
 			transform: rotate(135deg);
 		}
 
@@ -157,7 +157,7 @@ nav.vertical-navigator {
 		}
 
 		& span:nth-child(3) {
-			top: 7px;
+			top: 15px;
 			transform: rotate(-135deg);
 		}
 	}
