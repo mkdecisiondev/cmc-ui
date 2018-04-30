@@ -1,0 +1,32 @@
+@import '../assets/css/_variables.css';
+
+body {
+	font-family: var(--primary-font);
+}
+.splash-wrapper.photos {
+	height: 0;
+	padding-bottom: 31.39%; /* 113 divided by 360 */
+	position: relative;
+	margin-bottom: 15px;
+	min-height: 113px;
+
+	& .splash-inner.photos {
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		background-size: cover;
+		clear: both;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		min-height: 78px;
+		background-image: url('img/photos-splash-image.jpg');
+		background-color: #846e5e;
+		opacity: 0.5;
+	}
+}
+
+.introduction {
+	text-align: center;
+}
