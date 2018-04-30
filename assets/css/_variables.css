@@ -9,10 +9,19 @@
 	--font-weight-semibold: 600;
 	--font-weight-bold: 700;
 
-	--background-color: white;
-	--text-color: black;
+	--green: hsl(120, 100%, 27%);
+	--grey: hsl(0, 0%, 46%);
+	--red: hsl(0, 100%, 46.1%);
 	--teal: #55B4B0;
 
+
+	--background-color: white;
+	--text-color: black;
+
+	--input-color: var(--grey);
+	--input-focus-color: var(--teal);
+	--input-invalid-color: var(--red);
+	--input-valid-color: var(--green);
 
 	--header-background-color: var(--teal);
 	--header-height: 88px;
