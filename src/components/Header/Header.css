@@ -195,7 +195,7 @@ nav.vertical-navigator {
 				& a {
 					background: var(--teal);
 					color:white;
-					font-size: 19px;
+					font-size: 16px;
 					font-weight: normal;
 					line-height: 20px;
 					letter-spacing: 1px;
@@ -224,7 +224,14 @@ nav.vertical-navigator {
 
 
 @media (--large-up) {
-	header nav.vertical-navigator ul  li  a {
-		font-size: 22px;
+	header {
+
+		& nav.vertical-navigator ul  li  a {
+			font-size: 22px;
+		}
+
+		& .social-media  a {
+			font-size: 46px;
+		}
 	}
 }
