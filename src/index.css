@@ -30,7 +30,7 @@ figure {
 
 @media (--medium-up) {
 	.hero .image-outter  .image-inner {
-		background-image: url('img/cmc_1200x210.png'), url('img/1200x380-home.jpg');
+		background-image: url('img/cmc-1200x210.png'), url('img/1200x380-home.jpg');
 	}
 }
 
