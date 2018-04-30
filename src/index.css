@@ -35,15 +35,15 @@ figure {
 }
 
 section {
+	font-family: var(--light-font);
+	font-size: 18px;
+	margin-bottom: 3em;
 	padding-left: 2%;
 	padding-right: 2%;
-	margin-bottom: 3em;
-	font-size: 18px;
-	font-family: var(--light-font);
 
 	& hr {
-		background: url('img/text-divider-454x30.png') no-repeat center bottom;
 		background-size: contain;
+		background: url('img/text-divider-454x30.png') no-repeat center bottom;
 		border: none;
 		height: 30px;
 		margin: 0 auto 1em;
@@ -53,8 +53,8 @@ section {
 	& h2 {
 		font-size: 28px;
 		font-weight: normal;
-		padding: 0;
 		margin: 1em 0 0.8em 0;
+		padding: 0;
 	}
 
 	& h2 + p {
@@ -79,15 +79,15 @@ section {
 }
 
 section.welcome {
-	text-align: center;
 	font-family: var(--light-font);
+	text-align: center;
 
 	& h1 {
-		font-weight: normal;
 		font-size: 34px;
+		font-weight: normal;
 		letter-spacing: 2px;
-		padding: 0;
 		margin: 0.5em 0;
+		padding: 0;
 	}
 
 	& p {
@@ -123,11 +123,11 @@ section.welcome {
 
 article.gradient {
 	background: linear-gradient(#f3faf9, #b3dddc);
-	text-align: center;
 	border-radius: 6px;
 	padding-bottom: 1em;
 	padding-left: 4%;
 	padding-right: 4%;
+	text-align: center;
 
 	& hr {
 		max-width: 200px;
@@ -135,9 +135,9 @@ article.gradient {
 
 	& .image-outter {
 		height: 0;
+		margin-bottom: 1em;
 		padding-bottom: 66.22%;
 		position: relative;
-		margin-bottom: 1em;
 
 		& .image-inner {
 			background-position: center;
@@ -154,14 +154,14 @@ article.gradient {
 
 	& .button-link {
 		background: var(--button-link-background-color);
+		border-radius: 3px;
 		color: white;
 		display: inline-block;
-		border-radius: 3px;
-		padding: 0.9em 2em;
-		font-size: 15px;
-		text-transform: uppercase;
-		text-decoration: none;
 		float: right;
+		font-size: 15px;
+		padding: 0.9em 2em;
+		text-decoration: none;
+		text-transform: uppercase;
 	}
 
 	& .button-link:hover {
@@ -193,11 +193,10 @@ article.gradient {
 	}
 }
 
-
 section.organization {
-	text-align: center;
 	padding-left: 5%;
 	padding-right: 5%;
+	text-align: center;
 
 	& img {
 		display: block;
@@ -220,42 +219,41 @@ section.organization {
 		margin-top: 1em;
 
 		& dt {
-			float: left;
 			clear: both;
+			float: left;
 			margin: 0 0.5em 0 0;
 		}
 
 		& dd {
-			float: left;
 			display: inline-block;
+			float: left;
 		}
 	}
 
 	& dt {
 		font-family: var(--primary-font);
+		font-weight: normal;
 		margin-bottom: 0.5em;
 		margin-top: 1em;
-		font-weight: normal;
 	}
 
 	& dd {
+		margin-bottom: 0.5em;
 		margin-left: 0;
 		padding-left: 0;
-		margin-bottom: 0.5em;
 	}
 }
 
-
 section.history {
-	font-size: 14px;
 	background: var(--history-background-color);
-	padding: 4em 5%;
+	font-size: 14px;
 	margin-bottom: 0;
+	padding: 4em 5%;
 
 	& h2 {
-		text-align: center;
-		padding-top: 0;
 		margin-top: 0;
+		padding-top: 0;
+		text-align: center;
 	}
 
 	& hr {
@@ -263,21 +261,21 @@ section.history {
 	}
 
 	& summary {
-		display: flex;
 		align-items: center;
+		display: flex;
 
 		& img {
-			width: 40%;
-			max-width: 150px;
 			float: left;
 			margin-right: 1em;
+			max-width: 150px;
+			width: 40%;
 		}
 
 		& p {
-			margin-right: 2em;
 			font-family: var(--medium-font);
-			vertical-align: center;
 			font-style: italic;
+			margin-right: 2em;
+			vertical-align: center;
 		}
 	}
 
@@ -298,8 +296,8 @@ section.history {
 
 		& summary {
 			float: right;
-			width: 45%;
 			margin: 0 0 2em 2em;
+			width: 45%;
 
 			& img {
 				max-width: 201px;
@@ -313,16 +311,16 @@ section.history {
 }
 
 .link-to-top {
-	display: inline-block;
-	float: right;
 	background: black;
 	color: white;
-	text-align: center;
-	padding: 1em 2em 0.5em;
-	text-decoration: none;
+	display: inline-block;
+	float: right;
 	font-size: 18px;
 	margin-bottom: 2em;
 	margin-right: 5%;
+	padding: 1em 2em 0.5em;
+	text-align: center;
+	text-decoration: none;
 }
 
 .link-to-top::before {
