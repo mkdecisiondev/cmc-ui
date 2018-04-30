@@ -1,0 +1,27 @@
+<extends src="layout.html">
+	<block name="title">
+		<title>Photos</title>
+	</block>
+
+	<block name="styles" type="append">
+		<link href="photos.css" rel="stylesheet">
+	</block>
+
+	<block name="main">
+		<div class="splash-wrapper photos">
+			<div class="splash-inner photos"></div>
+		</div>
+		<main class="main-content photos">
+			<div class="container introduction">
+				<h1>PHOTOS</h1>
+				<!-- <p>{{ lang.enjoyPhotosOfTheCommunity }}</p> -->
+			</div>
+			<div class="album-container row" id="albumListing"></div>
+		</main>
+	</block>
+</extends>
+
+<block name="scripts">
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js"></script> -->
+	<script src="js/photos.js"></script>
+</block>
