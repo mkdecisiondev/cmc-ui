@@ -1,0 +1,159 @@
+.textbox {
+	position: relative;
+
+	& label {
+		color: var(--input-color);
+		position: relative;
+	}
+
+	& .mask {
+		color: var(--text-color);
+		font-size: 2rem;
+		left: 0.4em;
+		position: absolute;
+		top: -0.5em;
+	}
+
+	& input {
+		background: none;
+		border: 0;
+		border-radius: 0;
+		border-bottom: 1px solid var(--input-color);
+		font-size: 1.2rem;
+		padding: 1em 0.7em 0 0.7em;
+		touch-action: manipulation;
+		height: var(--input-height);
+		width: 100%;
+
+		&.hide-input {
+			color: var(--background-color);
+		}
+	}
+
+	& input:focus,
+	& .populated.invalid:focus,
+	& .populated.valid:focus {
+		border-bottom-color: var(--input-focus-color);
+		outline: none;
+	}
+
+	& input[type='date']::-webkit-inner-spin-button {
+		display: none;
+		-webkit-appearance: none;
+	}
+
+	& input[type='date']::-webkit-calendar-picker-indicator {
+		color: transparent;
+		padding: 0.5em;
+		position: absolute;
+		right: 0;
+	}
+
+	& input[type='date']::-webkit-calendar-picker-indicator:hover {
+		background: transparent;
+		color: transparent;
+		cursor: pointer;
+	}
+
+	& input[type='date'] {
+		-webkit-appearance: none;
+		background: var(--select-background-image);
+		background-position: 98% 75%;
+		background-repeat: no-repeat;
+		background-size: 15px 10px;
+		color: var(--background-color);
+	}
+
+	& input[type='date']:before {
+		color: var(--input-color);
+	}
+
+	& input[type='date']:focus,
+	& input[type='date']:valid,
+	& input[type='date'].populated.invalid {
+		color: var(--text-color);
+	}
+
+	& input.unsupported[type='date'] {
+		background-image: none;
+	}
+
+	& .label {
+		cursor: text;
+		font-size: 1rem;
+		left: 0.8em;
+		position: absolute;
+		top: -0.4em;
+		touch-action: manipulation;
+		transition: font-size 0.2s, font-weight 0.2s, left 0.2s, top 0.2s;
+	}
+
+	& input:focus ~ .label,
+	& .populated ~ .label,
+	& .populated.invalid:focus ~ .label,
+	& .populated.valid:focus ~ .label {
+		color: var(--input-focus-color);
+		font-size: 0.8rem;
+		font-weight: var(--font-weight-semibold);
+		left: 1.1em;
+		top: -1.7em;
+	}
+
+	& input:-webkit-autofill ~ .label,
+	& input:-webkit-autofill:hover ~ .label,
+	& input:-webkit-autofill:focus ~ .label {
+		color: var(--input-focus-color);
+		font-size: 0.8rem;
+		font-weight: var(--font-weight-semibold);
+		left: 1.1em;
+		top: -1.7em;
+	}
+
+	& .description {
+		color: var(--input-color);
+		font-size: 0.8rem;
+		padding-left: 1em;
+	}
+
+	& .validation-message {
+		color: var(--input-invalid-color);
+		font-size: 0.8rem;
+		padding-left: 1em;
+	}
+
+	& .populated.invalid {
+		border-bottom-color: var(--input-invalid-color);
+	}
+
+	& .populated.invalid ~ .label {
+		color: var(--input-invalid-color);
+	}
+
+	& .populated.valid {
+		border-bottom-color: var(--input-valid-color);
+	}
+
+	& .populated.valid ~ .label {
+		color: var(--input-valid-color);
+	}
+
+	& .info-icon {
+		cursor: pointer;
+		font-size: 1rem;
+		position: absolute;
+		right: 0;
+		top: 0.6em;
+	}
+
+	& .info-box {
+		padding-top: 0.3em;
+		position: relative;
+	}
+
+	& .info-box-close {
+		cursor: pointer;
+		position: absolute;
+		right: -15px;
+		top: -15px;
+	}
+}
