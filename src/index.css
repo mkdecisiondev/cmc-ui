@@ -1,3 +1,5 @@
+@import '../assets/css/_variables.css';
+
 figure {
 	margin: 0;
 	padding: 0;
@@ -5,13 +7,15 @@ figure {
 
 .hero {
 	background-color: #d4d2d1;
+
 	& .image-outter {
 		height: 0;
-		position: relative;
 		padding-bottom: 31.67%;
+		position: relative;
 
 		& .image-inner {
-			background-position: center center;
+			background-image: url('img//1200x380-home.jpg');
+			background-position: center bottom;
 			background-repeat: no-repeat;
 			background-size: contain;
 			clear: both;
@@ -20,8 +24,12 @@ figure {
 			position: absolute;
 			top: 0;
 			width: 100%;
-
-			background-image: url('img/cmc_1200x210.png'), url('img/1200x380-home.jpg');
 		}
+	}
+}
+
+@media (--medium-up) {
+	.hero .image-outter  .image-inner {
+		background-image: url('img/cmc_1200x210.png'), url('img/1200x380-home.jpg');
 	}
 }
