@@ -1,0 +1,66 @@
+.textbox {
+	position: relative;
+
+	& label {
+		color: var(--input-color);
+		position: relative;
+	}
+
+	& .mask {
+		color: var(--text-color);
+		font-size: 2rem;
+		left: 0.4em;
+		position: absolute;
+		top: -0.5em;
+	}
+
+	& input {
+		background: none;
+		border: 0;
+		border-radius: 0;
+		border-bottom: 1px solid var(--input-color);
+		font-size: 1.2rem;
+		padding: 1em 0.7em 0 0.7em;
+		touch-action: manipulation;
+		height: var(--input-height);
+		width: 100%;
+
+		&.hide-input {
+			color: var(--background-color);
+		}
+	}
+
+	& input:focus,{
+		border-bottom-color: var(--input-focus-color);
+		outline: none;
+	}
+
+	& .label {
+		cursor: text;
+		font-size: 1rem;
+		left: 0.8em;
+		position: absolute;
+		top: -0.4em;
+		touch-action: manipulation;
+		transition: font-size 0.2s, font-weight 0.2s, left 0.2s, top 0.2s;
+	}
+
+	& input:focus ~ .label,
+	& .populated ~ .label, {
+		color: var(--input-focus-color);
+		font-size: 0.8rem;
+		font-weight: var(--font-weight-semibold);
+		left: 1.1em;
+		top: -1.7em;
+	}
+
+	& input:-webkit-autofill ~ .label,
+	& input:-webkit-autofill:hover ~ .label,
+	& input:-webkit-autofill:focus ~ .label {
+		color: var(--input-focus-color);
+		font-size: 0.8rem;
+		font-weight: var(--font-weight-semibold);
+		left: 1.1em;
+		top: -1.7em;
+	}
+}
