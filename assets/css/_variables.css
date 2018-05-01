@@ -25,7 +25,7 @@
 	--header-background-color: var(--teal);
 	--header-height: 88px;
 	--page-background-color: var(--almost-white);
-	--button-link-background-color: var(--green);
+	--primary-button-background-color: var(--green);
 	--history-background-color: var(--light-gray);
 }
 

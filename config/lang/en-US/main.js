@@ -6,5 +6,5 @@ const common = {
 
 module.exports = Object.assign(
 	common,
-	home,
+	home
 );

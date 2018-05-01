@@ -29,7 +29,7 @@ figure {
 }
 
 @media (--medium-up) {
-	.hero .image-outter  .image-inner {
+	.hero .image-outter .image-inner {
 		background-image: url('img/cmc-1200x210.png'), url('img/1200x380-home.jpg');
 	}
 }
@@ -78,7 +78,7 @@ section {
 	}
 }
 
-section.welcome {
+.welcome {
 	font-family: var(--light-font);
 	text-align: center;
 
@@ -102,7 +102,7 @@ section.welcome {
 
 
 @media (--medium-up) {
-	section.welcome {
+	.welcome {
 		padding-left: 8%;
 		padding-right: 8%;
 
@@ -121,7 +121,7 @@ section.welcome {
 	}
 }
 
-article.gradient {
+.gradient {
 	background: linear-gradient(#f3faf9, #b3dddc);
 	border-radius: 6px;
 	padding-bottom: 1em;
@@ -160,8 +160,8 @@ article.gradient {
 		}
 	}
 
-	& .button-link {
-		background: var(--button-link-background-color);
+	& .primary-button {
+		background: var(--primary-button-background-color);
 		border-radius: 3px;
 		color: white;
 		display: inline-block;
@@ -172,36 +172,35 @@ article.gradient {
 		text-transform: uppercase;
 	}
 
-	& .button-link:hover {
+	& .primary-button:hover {
 		text-decoration: underline;
 	}
 }
 
 @media (--medium-up) {
-
-	article.gradient {
+	.gradient {
 		/* max-width: 45%; */
 
 		& hr {
 			max-width: 410px;
 		}
 
-		& .button-link {
+		& .primary-button {
 			font-size: 20px;
 		}
 	}
 
-	article.gradient:nth-child(odd) {
+	.gradient:nth-child(odd) {
 		margin-right: 24px;
 		max-width: calc(50% - 12px);
 	}
 
-	article.gradient:nth-child(even) {
+	.gradient:nth-child(even) {
 		max-width: calc(50% - 12px);
 	}
 }
 
-section.organization {
+.organization {
 	padding-left: 5%;
 	padding-right: 5%;
 	text-align: center;
@@ -252,7 +251,7 @@ section.organization {
 	}
 }
 
-section.history {
+.history {
 	background: var(--history-background-color);
 	font-size: 14px;
 	margin-bottom: 0;
@@ -299,7 +298,7 @@ section.history {
 }
 
 @media (--medium-up) {
-	section.history {
+	.history {
 		font-size: 18px;
 
 		& summary {

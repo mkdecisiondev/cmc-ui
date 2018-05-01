@@ -6,8 +6,9 @@
 	<block name="styles" type="append">
 		<link href="index.css" rel="stylesheet">
 	</block>
+
 	<block name="header" type="prepend">
-		<a name="top" class="hidden"></a>
+		<span name="top" class="hidden"></span>
 	</block>
 
 	<block name="main">
@@ -17,11 +18,13 @@
 				</div>
 			</div>
 		</figure>
+
 		<section class="welcome">
 			<h1>{{ lang.helloWelcome }}</h1>
 			<p>{{ lang.ourNewWebsite }}</p>
 			<hr>
 		</section>
+
 		<section class="gradient-articles row row-flush">
 			<article class="gradient col-12 col-md-6">
 				<h2>{{ lang.events }}</h2>
@@ -30,35 +33,46 @@
 				<div class="image-outter">
 					<div class="image-inner events"></div>
 				</div>
-				<a href="/events.html" class="button-link">{{ lang.viewEvents }}</a>
+				<a href="/events.html" class="primary-button">{{ lang.viewEvents }}</a>
 			</article>
 			<article class="gradient col-12 col-md-6">
 				<h2>{{ lang.photos }}</h2>
-				<p>{{ lang.enjoyPhotosFromEvents }}</p>
+				<p>{{ lang.enjoyMemoriesFromEvents }}</p>
 				<hr>
 				<div class="image-outter">
 					<div class="image-inner photos"></div>
 				</div>
-				<a href="/photos.html" class="button-link">{{ lang.viewPhotos }}</a>
+				<a href="/photos.html" class="primary-button">{{ lang.viewPhotos }}</a>
 			</article>
 		</section>
+
 		<section class="organization">
 			<h2>{{ lang.ourOrganization }}</h2>
 			<p>{{ lang.weAreInItForTheFuture }}</p>
 			<hr>
 			<img src="img/organization-626x223.jpg" alt="">
 			<div class="roles row row-flush">
-				<dl class="one-to-one col-12 col-md-6 col-lg-5">
-					{{ lang.organizationOfficers }}
-				</dl>
-				<dl class="col-12 col-md-3 col-lg-4">
-					{{ lang.organizationAdvisoryBoard }}
-				</dl>
-				<dl class="col-12 col-md-3">
-					{{ lang.organizationMembersAtLarge }}
-				</dl>
+				<each loop="item in roles">
+					<if condition="item.title">
+						<dl class="col-md-3">
+							<dt>{{ item.title }}:</dt>
+							<each loop="member in item.members">
+								<dd>{{ member }}</dd>
+							</each>
+						</dl>
+					</if>
+					<else>
+						<dl class="one-to-one col-md-6">
+							<each loop="member in item.members">
+								<dt>{{ member.title }}:</dt>
+								<dd>{{ member.name }}</dd>
+							</each>
+						</dl>
+					</else>
+				</each>
 			</div>
 		</section>
+
 		<section class="history">
 			<h2> {{ lang.history }}</h2>
 			<hr>
@@ -67,9 +81,10 @@
 				<p>{{ lang.drJamesWrites }}</p>
 			</summary>
 			<article>
-				{{ lang.historyParagraphs  }}
+				{{ lang.historyOfCMC  }}
 			</article>
 		</section>
-		<a class='link-to-top' href='#top'>{{ lang.top }}</a>
+
+		<a href="#top" class="link-to-top">{{ lang.top }}</a>
 	</block>
 </extends>
