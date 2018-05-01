@@ -14,7 +14,6 @@
 	--red: hsl(0, 100%, 46.1%);
 	--teal: #55B4B0;
 
-
 	--background-color: white;
 	--text-color: black;
 
@@ -22,6 +21,7 @@
 	--input-focus-color: var(--teal);
 	--input-invalid-color: var(--red);
 	--input-valid-color: var(--green);
+	--select-background-image: url('/img/icons/select-caret.svg');
 
 	--header-background-color: var(--teal);
 	--header-height: 88px;
