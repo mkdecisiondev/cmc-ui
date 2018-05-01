@@ -1,3 +1,4 @@
+const events = require('./events.js');
 const home = require('./home.js');
 const thankYou = require('./thankYou');
 
@@ -7,6 +8,7 @@ const common = {
 
 module.exports = Object.assign(
 	common,
+	events,
 	home,
 	thankYou
 );
