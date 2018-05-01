@@ -1,0 +1,74 @@
+.select {
+	position: relative;
+
+	& .select-wrap {
+		display: flex;
+		flex-direction: row;
+	}
+
+	& label {
+		color: var(--input-color);
+		display: block;
+		flex: 1;
+	}
+
+	& select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background: var(--select-background-image);
+		background-repeat: no-repeat;
+		background-position: 98% 75%;
+		background-size: 15px 10px;
+		border: 0;
+		border-radius: 0;
+		border-bottom: 1px solid var(--input-color);
+		font-size: 1.2rem;
+		padding: 1em 1em 0 0.7em;
+		touch-action: manipulation;
+		height: var(--input-height);
+		width: 100%;
+	}
+
+	& select::-ms-expand {
+		display: none;
+	}
+
+	& select:focus {
+		border-bottom-color: var(--input-focus-color);
+		outline: none;
+	}
+
+	& .label {
+		cursor: text;
+		font-size: 1rem;
+		left: 0.8em;
+		position: absolute;
+		pointer-events: none;
+		top: 1.1em;
+		touch-action: manipulation;
+		transition: font-size 0.2s, font-weight 0.2s, left 0.2s, top 0.2s;
+	}
+
+	& select:focus ~ .label,
+	& .populated ~ .label {
+		color: var(--input-focus-color);
+		font-size: 0.8rem;
+		font-weight: var(--font-weight-semibold);
+		left: 1.1em;
+		top: 0.4em;
+	}
+
+	& select:-webkit-autofill ~ .label,
+	& select:-webkit-autofill:hover ~ .label,
+	& select:-webkit-autofill:focus ~ .label {
+		color: var(--input-focus-color);
+		font-size: 0.8rem;
+		font-weight: var(--font-weight-semibold);
+		left: 1.1em;
+		top: 0;
+	}
+
+	& option {
+		font-size: 1rem;
+	}
+}
