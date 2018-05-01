@@ -17,6 +17,7 @@
 	--input-color: var(--grey);
 	--input-focus-color: var(--teal);
 	--select-background-image: url('/img/icons/select-caret.svg');
+	--input-height: 50px;
 
 	--text-color: black;
 	--background-color: white;
