@@ -6,6 +6,9 @@
 	<block name="styles" type="append">
 		<link href="index.css" rel="stylesheet">
 	</block>
+	<block name="header" type="prepend">
+		<a name="top" class="hidden"></a>
+	</block>
 
 	<block name="main">
 		<figure class="hero">
@@ -25,7 +28,7 @@
 				<p>{{ lang.joinUsAtEvents }}</p>
 				<hr>
 				<div class="image-outter">
-					<div class="image-inner" style="background-image: url(img/450x298-events.jpg);"></div>
+					<div class="image-inner events"></div>
 				</div>
 				<a href="/events.html" class="button-link">{{ lang.viewEvents }}</a>
 			</article>
@@ -34,7 +37,7 @@
 				<p>{{ lang.enjoyPhotosFromEvents }}</p>
 				<hr>
 				<div class="image-outter">
-					<div class="image-inner" style="background-image: url(img/450x298-las-vegas.jpg);"></div>
+					<div class="image-inner photos"></div>
 				</div>
 				<a href="/photos.html" class="button-link">{{ lang.viewPhotos }}</a>
 			</article>
@@ -67,7 +70,6 @@
 				{{ lang.historyParagraphs  }}
 			</article>
 		</section>
-		<!-- <a class='link-to-top' href='' onclick="scroll(0,0)">TOP</a> -->
 		<a class='link-to-top' href='#top'>{{ lang.top }}</a>
 	</block>
 </extends>
