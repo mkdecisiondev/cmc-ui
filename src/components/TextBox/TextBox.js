@@ -11,26 +11,6 @@ class TextBox extends MkComponent {
 			this.requiredMessage = this.node.dataset.requiredMessage;
 		}
 		this.validationMessage = this.validationNode.textContent || window.lang.fieldIsRequired;
-
-		if (this.node.dataset.minMessage === 'undefined') {
-			this.minMessage = this.validationMessage;
-		}
-		else {
-			this.minMessage = this.node.dataset.minMessage;
-		}
-
-		if (this.node.dataset.maxMessage === 'undefined') {
-			this.maxMessage = this.validationMessage;
-		}
-		else {
-			this.maxMessage = this.node.dataset.maxMessage;
-		}
-
-		setTimeout(function () {
-			if (this.inputNode.value) {
-				this.validate();
-			}
-		}.bind(this), 0);
 	}
 
 	registerEventHandlers () {
@@ -71,15 +51,6 @@ class TextBox extends MkComponent {
 	}
 
 	handleInvalidInput () {
-		if (this.inputNode.type === 'date') {
-			if (this.inputNode.validity.rangeUnderflow) {
-				this.validationMessage = this.minMessage;
-			}
-			else if (this.inputNode.validity.rangeOverflow) {
-				this.validationMessage = this.maxMessage;
-			}
-		}
-
 		if (this.inputNode.classList.contains('populated')) {
 			this.validationNode.textContent = this.validationMessage;
 		}
