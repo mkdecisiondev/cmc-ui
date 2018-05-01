@@ -1,4 +1,4 @@
-@import '../assets/css/_variables.css';
+@import '../assets/css/_common.css';
 
 body {
 	font-family: var(--primary-font);
@@ -15,7 +15,7 @@ figure {
 }
 
 .outer {
-	background-color: rgb(189, 183, 182);
+	background-color: var(--photos-splash-background);
 
 	& .splash-outer {
 		height: 0;
