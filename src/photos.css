@@ -32,7 +32,7 @@ body {
 }
 
 @media (--medium-up) {
-	.outer .splash-outer  .splash-inner {
+	.outer .splash-outer .splash-inner {
 		background-image: url('img/cmc-1200x210.png'), url('img/1200x413-events.jpg');
 
 	}
