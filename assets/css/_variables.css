@@ -9,22 +9,20 @@
 	--font-weight-semibold: 600;
 	--font-weight-bold: 700;
 
-	--green: hsl(120, 100%, 27%);
-	--grey: hsl(0, 0%, 46%);
-	--red: hsl(0, 100%, 46.1%);
+
+
 	--teal: #55B4B0;
+	--almost-white: #fdfefe;
+	--green: #009b77;
+	--light-gray: #e6e6e6;
 
-	--background-color: white;
 	--text-color: black;
-
-	--input-color: var(--grey);
-	--input-focus-color: var(--teal);
-	--input-invalid-color: var(--red);
-	--input-valid-color: var(--green);
-	--select-background-image: url('/img/icons/select-caret.svg');
-
+	--background-color: white;
 	--header-background-color: var(--teal);
 	--header-height: 88px;
+	--page-background-color: var(--almost-white);
+	--button-link-background-color: var(--green);
+	--history-background-color: var(--light-gray);
 }
 
 
