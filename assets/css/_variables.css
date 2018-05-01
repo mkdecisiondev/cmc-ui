@@ -3,7 +3,6 @@
 	--medium-font: 'Roboto Medium', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	--primary-font: 'Roboto', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
-
 	--font-weight-thin: 300;
 	--font-weight-regular: 400;
 	--font-weight-semibold: 600;
@@ -27,8 +26,6 @@
 	--button-link-background-color: var(--green);
 	--history-background-color: var(--light-gray);
 }
-
-
 
 /* Core breakpoints */
 @custom-media --x-small-down (max-width: 359px);
