@@ -19,11 +19,11 @@ figure {
 
 	& .splash-outer {
 		height: 0;
-		padding-bottom: 34.42%;
+		padding-bottom: 34.3%;
 		position: relative;
 
 		& .splash-inner {
-			background-image: url('img/1200x413-events.jpg');
+			background-image: url('img/412x1200-photos.jpg');
 			background-position: center bottom;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -39,7 +39,7 @@ figure {
 
 @media (--medium-up) {
 	.outer .splash-outer .splash-inner {
-		background-image: url('img/cmc-1200x210.png'), url('img/1200x413-events.jpg');
+		background-image: url('img/cmc-1200x210.png'), url('img/412x1200-photos.jpg');
 
 	}
 }
