@@ -1,0 +1,19 @@
+<extends src="layout.html">
+	<block name="title">
+		<title>{{ lang.thankYouPageTitle }} - {{ organizationName }}</title>
+	</block>
+
+	<block name="styles" type="append">
+		<link href="thank-you.css" rel="stylesheet">
+	</block>
+	<block name="header" type="prepend">
+		<a name="top" class="hidden"></a>
+	</block>
+
+	<block name="main">
+		<section>
+			<h1>{{ lang.thanksForRegistering }}</h1>
+			<h1>{{ lang.confirmationWillBeEmailed }} <img src="img/envelope.png" alt=""></h1>
+		</section>
+	</block>
+</extends>
