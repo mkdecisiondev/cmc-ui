@@ -1,5 +1,4 @@
 import { MkComponent } from '../MkComponent/MkComponent.js';
-//import { Tooltip } from '../Tooltip/Tooltip.js';
 
 class Select extends MkComponent {
 	init () {
@@ -16,28 +15,12 @@ class Select extends MkComponent {
 				this.validate();
 			}
 		}.bind(this), 0);
-
-		// if (this.infoContentNode.textContent) {
-		// 	this.infoBoxNode.id = this.inputNode.name + 'Tooltip';
-		// 	this.infoIconNode.setAttribute('aria-describedby', this.infoBoxNode.id);
-		// 	this.infoIconNode.classList.remove('hidden');
-		// 	this.infoTooltip = new Tooltip(this.node, {
-		// 		position: 'ne',
-		// 		tooltipContent: this.infoBoxNode,
-		// 	});
-		// 	this.infoBoxNode.classList.remove('hidden');
-		// }
 	}
 
 	registerEventHandlers () {
 		this.inputNode.addEventListener('change', this.handleInput.bind(this));
 		this.inputNode.addEventListener('invalid', this.handleInvalidInput.bind(this));
 		this.inputNode.addEventListener('valid', this.handleValidInput.bind(this));
-
-		// if (this.infoTooltip) {
-		// 	this.infoIconNode.addEventListener('click', this.infoTooltip.toggle.bind(this.infoTooltip));
-		// 	this.infoBoxCloseNode.addEventListener('click', this.infoTooltip.hide.bind(this.infoTooltip, undefined));
-		// }
 	}
 
 	handleInput () {
