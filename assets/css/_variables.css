@@ -12,15 +12,15 @@
 	--background-color: white;
 	--text-color: black;
 
-	--input-color: var(--grey);
-	--input-focus-color: var(--teal);
-	--select-background-image: url('/img/icons/select-caret.svg');
-
 	--teal: #55B4B0;
 	--almost-white: #fdfefe;
 	--green: #009b77;
 	--light-gray: #e6e6e6;
 	--grey: hsl(0, 0%, 46%);
+
+	--input-color: var(--grey);
+	--input-focus-color: var(--teal);
+	--select-background-image: url('/img/icons/select-caret.svg');
 
 	--text-color: black;
 	--background-color: white;

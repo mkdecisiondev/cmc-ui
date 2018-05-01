@@ -1,29 +1,5 @@
 import { MkComponent } from '../MkComponent/MkComponent.js';
 
-function parseDate (inputNode) {
-	if (window.JSJoda) {
-		try {
-			const [
-				month,
-				day,
-				year,
-			] = inputNode.value.split('-').map(x => parseInt(x, 10));
-
-			return JSJoda.LocalDate.of(year, month, day);
-		}
-		catch (error) {
-			/* eslint-disable no-console */
-			console.error(error);
-			/* eslint-enable no-console */
-
-			return null;
-		}
-	}
-	else {
-		return null;
-	}
-}
-
 class TextBox extends MkComponent {
 	init () {
 		this.mask = false;
@@ -55,15 +31,6 @@ class TextBox extends MkComponent {
 				this.validate();
 			}
 		}.bind(this), 0);
-
-		if (this.infoContentNode.textContent) {
-			this.infoBoxNode.id = this.inputNode.name + 'Tooltip';
-			this.infoIconNode.setAttribute('aria-describedby', this.infoBoxNode.id);
-			this.infoIconNode.classList.remove('hidden');
-			this.infoBoxNode.classList.remove('hidden');
-		}
-
-		this._fixDateCompatibility();
 	}
 
 	registerEventHandlers () {
@@ -135,90 +102,6 @@ class TextBox extends MkComponent {
 		this.handleInput();
 		hyperform.checkValidity(this.inputNode);
 	}
-
-	get dateString () {
-		return (parseDate(this.inputNode) || this.inputNode.value).toString();
-	}
-
-	/**
-	 * For browsers (IE11) that don't support input[type=date] the input format needs to be changed
-	 */
-	_fixDateCompatibility () {
-		const intendedType = this.inputNode.getAttribute('type');
-
-		if (intendedType === 'date') {
-			const actualType = this.inputNode.type;
-
-			if (actualType !== intendedType) {
-				// necessary to prevent hyperform from performing bad validation
-				this.inputNode.type = 'text';
-				this.inputNode.setAttribute('type', 'text');
-				this.inputNode.classList.add('unsupported');
-				this.descriptionNode.textContent = 'MM-DD-YYYY';
-				this.initialValidationMessage = this.validationMessage;
-
-				/* eslint-disable complexity */
-				hyperform.addValidator(this.inputNode, function (inputNode) {
-					if (!inputNode.value && !inputNode.required) {
-						return true;
-					}
-
-					const parsedDate = parseDate(inputNode);
-
-					if (!parsedDate) {
-						this.validationMessage = this.initialValidationMessage;
-
-						return false;
-					}
-
-					let isValid = true;
-					let withinMin = true;
-					let withinMax = true;
-					const minValue = this.inputNode.getAttribute('min');
-					const maxValue = this.inputNode.getAttribute('max');
-					if (minValue || maxValue) {
-						try {
-							if (minValue && maxValue) {
-								const minDate = JSJoda.LocalDate.parse(minValue);
-								const maxDate = JSJoda.LocalDate.parse(maxValue);
-								withinMin = parsedDate.compareTo(minDate) >= 0;
-								withinMax = parsedDate.compareTo(maxDate) <= 0;
-								isValid = withinMin && withinMax;
-							}
-							else if (minValue) {
-								const minDate = JSJoda.LocalDate.parse(minValue);
-								withinMax = parsedDate.compareTo(minDate) >= 0;
-								isValid = withinMax;
-							}
-							else if (maxValue) {
-								const maxDate = JSJoda.LocalDate.parse(maxValue);
-								withinMax = parsedDate.compareTo(maxDate) <= 0;
-								isValid = withinMax;
-							}
-						}
-						catch (error) {
-							/* eslint-disable no-console */
-							console.error(error);
-							/* eslint-enable no-console */
-						}
-					}
-
-					if (!withinMin) {
-						this.validationMessage = this.minMessage;
-					}
-
-					if (!withinMax) {
-						this.validationMessage = this.maxMessage;
-					}
-
-					return isValid;
-				}.bind(this));
-				/* eslint-enable complexity */
-			}
-		}
-	}
 }
-
-TextBox.prototype.tooltipPosition = 'ne';
 
 export { TextBox };
