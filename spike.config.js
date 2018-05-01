@@ -9,6 +9,7 @@ const webpackConfig = {
 	devtool: 'source-map',
 	entry: {
 		'js/main': './assets/js/main.js',
+		'js/photos': './src/photos.js',
 	},
 };
 

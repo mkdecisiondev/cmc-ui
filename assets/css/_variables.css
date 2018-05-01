@@ -14,6 +14,8 @@
 	--light-gray: #e6e6e6;
 	--grey: hsl(0, 0%, 46%);
 
+	--photos-splash-background: rgb(189, 183, 182);
+
 	--input-color: var(--grey);
 	--input-focus-color: var(--teal);
 	--select-background-image: url('/img/icons/select-caret.svg');

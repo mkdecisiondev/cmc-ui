@@ -1,0 +1,29 @@
+<extends src="layout.html">
+	<block name="title">
+		<title>{{ lang.photos }}</title>
+	</block>
+
+	<block name="styles" type="append">
+		<link href="photos.css" rel="stylesheet">
+	</block>
+
+	<block name="main">
+		<figure class="outer">
+			<div class="splash-outer">
+				<div class="splash-inner">
+				</div>
+			</div>
+		</figure>
+		<main class="main-content photos">
+			<div class="container introduction">
+				<p class="photos-title">{{ lang.photos.toUpperCase() }}</p>
+			</div>
+			<div class="album-container row" id="albumListing"></div>
+		</main>
+	</block>
+</extends>
+
+<block name="scripts">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js"></script>
+	<script src="js/photos.js"></script>
+</block>

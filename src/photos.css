@@ -1,0 +1,116 @@
+@import '../assets/css/_common.css';
+
+body {
+	font-family: var(--primary-font);
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+.photos-title {
+	font-family: var(--light-font);
+	font-size: 48px;
+}
+
+.outer {
+	background-color: var(--photos-splash-background);
+
+	& .splash-outer {
+		height: 0;
+		padding-bottom: 34.42%;
+		position: relative;
+
+		& .splash-inner {
+			background-image: url('img/1200x413-events.jpg');
+			background-position: center bottom;
+			background-repeat: no-repeat;
+			background-size: contain;
+			clear: both;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+}
+
+@media (--medium-up) {
+	.outer .splash-outer .splash-inner {
+		background-image: url('img/cmc-1200x210.png'), url('img/1200x413-events.jpg');
+
+	}
+}
+
+.introduction {
+	text-align: center;
+}
+
+
+main.main-content.photos {
+	margin: 26px auto;
+	max-width: 1090px;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.introduction {
+	padding: 0;
+	text-align: center;
+
+	& p {
+		line-height: 160%;
+		margin: 10px 0 8px 0;
+	}
+
+	& h1 {
+		margin-bottom: 0;
+	}
+}
+
+.album-container {
+	padding: 10px 0 0 0;
+	margin: 0;
+}
+
+.album-wrap {
+	padding: 0;
+}
+
+.album-image-wrap {
+	height: 206px;
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+}
+
+.album-image {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 301px;
+	min-width:  300px;
+	object-fit: cover;
+	position: relative;
+}
+
+.album-image:hover {
+	cursor: pointer;
+}
+
+.album-description {
+	margin: 0;
+	padding: 12px 2% 5px 2%;
+	text-align: center;
+}
+
+.album-date {
+	margin: 0;
+	padding: 0 62px 20px 62px;
+	text-align: center;
+}
