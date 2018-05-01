@@ -9,15 +9,15 @@ body {
 	font-family: var(--primary-font);
 }
 .outer {
-	background-color: #d4d2d1;
+	background-color: rgb(189, 183, 182);
 
 	& .splash-outer {
 		height: 0;
-		padding-bottom: 31.67%;
+		padding-bottom: 34.42%;
 		position: relative;
 
 		& .splash-inner {
-			background-image: url('img/photos-splash-image.jpg');
+			background-image: url('img/1200x413-events.jpg');
 			background-position: center bottom;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -32,8 +32,9 @@ body {
 }
 
 @media (--medium-up) {
-	.outer .splash-outer  .image-inner {
-		background-image: url('img/cmc-1200x210.png'), url('img/photos-splash-image.jpg');
+	.outer .splash-outer  .splash-inner {
+		background-image: url('img/cmc-1200x210.png'), url('img/1200x413-events.jpg');
+
 	}
 }
 
