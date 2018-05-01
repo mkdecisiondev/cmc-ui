@@ -1,3 +1,4 @@
+const home = require('./home.js');
 
 const common = {
 	organizationName: 'CMC Alumni Association',
@@ -5,4 +6,5 @@ const common = {
 
 module.exports = Object.assign(
 	common,
+	home,
 );
