@@ -9,6 +9,7 @@ body {
 }
 
 .page {
+	background-color: var(--page-background-color);
 	margin: 0 auto;
 	max-width: 1200px;
 	width: 100%;
