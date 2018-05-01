@@ -1,13 +1,19 @@
 @import '../assets/css/_variables.css';
 
+body {
+	font-family: var(--primary-font);
+}
+
 figure {
 	margin: 0;
 	padding: 0;
 }
 
-body {
-	font-family: var(--primary-font);
+.photos-title {
+	font-family: var(--light-font);
+	font-size: 48px;
 }
+
 .outer {
 	background-color: rgb(189, 183, 182);
 
@@ -60,7 +66,6 @@ main.main-content.photos {
 	}
 
 	& h1 {
-		font-weight: normal;
 		margin-bottom: 0;
 	}
 }
@@ -84,7 +89,7 @@ main.main-content.photos {
 .album-image {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	border-radius: 25px;
+	/* border-radius: 25px; */
 	display: block;
 	height: 100%;
 	margin-left: auto;
