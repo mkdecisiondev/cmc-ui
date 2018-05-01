@@ -150,6 +150,14 @@ article.gradient {
 			top: 0;
 			width: 100%;
 		}
+
+		& .image-inner.events {
+			background-image: url(img/450x298-events.jpg);
+		}
+
+		& .image-inner.photos {
+			background-image: url(img/450x298-las-vegas.jpg);
+		}
 	}
 
 	& .button-link {
