@@ -1,5 +1,6 @@
 // TODO: set this const to the correct Facebook access token once obtained
 // const access_token
+
 let albumIDs;
 window.fbAsyncInit = function () {
 	FB.init({

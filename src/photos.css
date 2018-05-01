@@ -89,7 +89,6 @@ main.main-content.photos {
 .album-image {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	/* border-radius: 25px; */
 	display: block;
 	height: 100%;
 	margin-left: auto;
@@ -114,12 +113,4 @@ main.main-content.photos {
 	margin: 0;
 	padding: 0 62px 20px 62px;
 	text-align: center;
-}
-
-@media only screen and (min-width: 425px) {
-    .splash {
-        height: 330px;
-        padding-top: 84px;
-        width: 100%;
-    }
 }

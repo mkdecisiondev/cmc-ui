@@ -1,6 +1,6 @@
 <extends src="layout.html">
 	<block name="title">
-		<title>Photos</title>
+		<title>{{ lang.photos }}</title>
 	</block>
 
 	<block name="styles" type="append">
@@ -16,7 +16,7 @@
 		</figure>
 		<main class="main-content photos">
 			<div class="container introduction">
-				<p class="photos-title">PHOTOS</p>
+				<p class="photos-title">{{ lang.photos.toUpperCase() }}</p>
 			</div>
 			<div class="album-container row" id="albumListing"></div>
 		</main>
