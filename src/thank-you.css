@@ -1,4 +1,4 @@
-@import '../assets/css/_common.css';
+@import '../assets/css/_variables.css';
 
 section {
 	font-family: var(--light-font);
