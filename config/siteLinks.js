@@ -2,6 +2,12 @@ const lang = require('./lang/default.js');
 
 module.exports = [
 	{
+
+
+		title: 'home',
+		url: '/',
+	},
+	{
 		title: 'events',
 		url: '/events.html',
 	},

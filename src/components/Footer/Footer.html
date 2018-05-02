@@ -1,23 +1,28 @@
-<footer class="footer col-xs-6 col-sm-4">
-	<div class="max-width">
-		<nav class="footer-nav col-xs-6 col-sm-4">
-			<table>
-				<tr>
-					<td><a href="index.html">{{ lang.home }}</a></td>
-					<td><a href="Events.html">{{ lang.events }}</a></td>
-					<td><a href="Registartion.html">{{ lang.registration }}</a></td>
-				</tr>
-				<tr>
-					<td><a href="Photos.html">{{ lang.photos }}</a></td>
-					<td><a href="Contact.html">{{ lang.contactUS }}</a></td>
-					<td>
-						<each loop="link in socialMedia">
-							<a href="{{ link.url }}" rel="noopener" class="social-media" title="{{ link.title }}" target="_blank">
-								<i class="{{ link.icon }}"></i></a>
-						</each>
-					</td>
-				</tr>
-			</table>
+<footer class="container">
+		<nav class="footer-nav">
+			<ul class="row col-md-12">
+				<each loop="navitem in siteLinks">
+				<div class="flex-container">
+					<li class="col-md">
+						<a href="{{ navitem.url }}">{{ navitem.title }}</a>
+					</li>
+				</div>
+				</each>
+
+				<div class="social-media">
+					<each loop="link in socialMedia">
+						<a  class="col-md col-md-offset-2" href="{{ link.url }}" title="{{ link.title }}" target="_blank">
+						<i class="{{ link.icon }}"></i></a>
+					</each>
+				</div->
+
+			</ul>
 		</nav>
-	</div>
 </footer>
+
+<!--footer class="container">
+		<div class="row">
+				<h1 class="col-md-6">One</h1>
+				<h1 class="col-md-6">Two</h1>
+		</div>
+</footer-->

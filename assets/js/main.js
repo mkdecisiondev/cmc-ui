@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 import { Header } from '../../src/components/Header/Header.js';
 
-new Header(document.getElementById('header'));
+/*new Header(document.getElementById('header'));*/
 import * as config from '../../config/main.js';
-/*const home = require('./home.js');*/
 
 const common = {
-	home: 'Home'
+	home: 'home'
 };
 
 module.exports = Object.assign(
@@ -15,5 +13,3 @@ module.exports = Object.assign(
 	home,
 	photos,
 );
-=======
->>>>>>>  footer (#01) -  review chnages
