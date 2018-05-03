@@ -79,7 +79,7 @@
 	& .validation-message {
 		color: var(--red);
 		font-size: 0.8rem;
-		padding-left: 1em;
+		padding-left: 0.25rem;
 	}
 
 	& .populated.invalid {
