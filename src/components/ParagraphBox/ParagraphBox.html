@@ -1,10 +1,8 @@
-<div class="paragraphBox">
+<div class="paragraphBox" data-required-message="${required-message}">
 	<label>
-		<span class="mask hidden" data-node-name="maskNode"></span>
 		<textarea name="${name}" ${type}="text" data-node-name="inputNode" ${required} ${pattern} ${maxlength} ${placeholder}></textarea>
 		<span class="label">${label}</span>
 	</label>
 
-	<div class="description" data-node-name="descriptionNode">${description}</div>
 	<div class="validation-message hidden" data-node-name="validationNode">${validation-message}</div>
 </div>

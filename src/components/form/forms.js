@@ -1,46 +1,4 @@
-function handlePostalCodeEntry (app, postalCodeTextBox, cityTextBox, stateSelect) {
-	if (postalCodeTextBox.inputNode.validity.valid) {
-		app.lookupCityState(postalCodeTextBox.inputNode.value, setCityState.bind(null, cityTextBox, stateSelect));
-	}
-}
-
-function setCityState (cityTextBox, stateSelect, cityStateInfo) {
-	if (!cityStateInfo.city) {
-		return;
-	}
-
-	if (!(cityTextBox.inputNode === document.activeElement && cityTextBox.inputNode.value.length)) {
-		cityTextBox.inputNode.value = cityStateInfo.city;
-		cityTextBox.validate();
-	}
-
-	if (!(stateSelect.inputNode === document.activeElement && stateSelect.inputNode.value.length)) {
-		stateSelect.inputNode.value = cityStateInfo.state;
-		stateSelect.validate();
-	}
-}
-
 const forms = {
-	addCurrencyBehavior (inputNode) {
-		inputNode.addEventListener('input', function (event) {
-			const node = event.target;
-			let currencyValue = node.value.toString();
-			currencyValue = currencyValue.replace('$', '');
-			currencyValue = currencyValue.replace(/,/g, '');
-
-			if (currencyValue.length) {
-				currencyValue = parseInt(currencyValue, 10);
-				if (!isNaN(currencyValue)) {
-					node.value = '$' + currencyValue.toLocaleString();
-				}
-			}
-			else {
-				node.value = '';
-				node.classList.remove('populated');
-			}
-		});
-	},
-
 	/**
 	 * Prevent input of non-whitelisted characters in an input field
 	 * This function should be provided an HTMLInputElement (`options.inputNode`).
@@ -138,35 +96,6 @@ const forms = {
 				node.value = node.value[0].toUpperCase() + node.value.substr(1);
 			}
 		});
-	},
-
-	setAgeConstraint (ageConstraint, constraintType, inputNode) {
-		const now = new Date();
-		const currentYear = now.getFullYear();
-		let currentMonth = now.getMonth() + 1;
-		let currentDate = now.getDate();
-
-		if (currentMonth.toString().length === 1) {
-			currentMonth = '0' + currentMonth;
-		}
-
-		if (currentDate.toString().length === 1) {
-			currentDate = '0' + currentDate;
-		}
-
-		const dateConstraint = (currentYear - ageConstraint) + '-' + currentMonth + '-' + currentDate;
-		inputNode.setAttribute(constraintType, dateConstraint);
-	},
-
-	setCityStateFromPostalCode (options) {
-		const {
-			app,
-			cityTextBox,
-			postalCodeTextBox,
-			stateSelect,
-		} = options;
-
-		postalCodeTextBox.inputNode.addEventListener('input', handlePostalCodeEntry.bind(null, app, postalCodeTextBox, cityTextBox, stateSelect));
 	},
 };
 

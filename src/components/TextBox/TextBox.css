@@ -2,7 +2,6 @@
 	position: relative;
 
 	& label {
-		/* color: var(--input-invalid-color); */
 		position: relative;
 	}
 
