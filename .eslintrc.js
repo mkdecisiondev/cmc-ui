@@ -5,6 +5,11 @@ module.exports = {
 		node: true,
 	},
 	extends: 'eslint:recommended',
+	globals: {
+		JSJoda: true,
+		hyperform: true,
+		lang: true,
+	},
 	parserOptions: {
 		ecmaVersion: 8,
 		sourceType: 'module',
@@ -38,12 +43,12 @@ module.exports = {
 		'no-invalid-this': 'error',
 		'no-lone-blocks': 'error',
 		'no-magic-numbers': [ 'warn', {
-			ignore: [ -1, 0, 1 ],
+			ignore: [ -1, 0, 1, 2 ],
 			ignoreArrayIndexes: true
 		} ],
 		'no-multi-spaces': 'error',
 		'no-multi-str': 'error',
-		'no-new': 'error',
+		'no-new': 'off',
 		'no-new-func': 'error',
 		'no-new-wrappers': 'error',
 		'no-octal-escape': 'error',

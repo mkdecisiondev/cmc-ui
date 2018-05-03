@@ -8,10 +8,6 @@ Object.assign(MkComponent._mkComponentConstructors, {
 });
 
 class ContactForm extends MkComponent {
-	init () {
-		console.log(this.firstNameTextBox);
-	}
-
 	registerEventHandlers () {
 		hyperform(this.node, {
 			classes: {
@@ -20,7 +16,6 @@ class ContactForm extends MkComponent {
 			},
 			revalidate: 'onblur',
 		});
-
 	}
 }
 

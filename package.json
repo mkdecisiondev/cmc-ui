@@ -6,6 +6,7 @@
   "bugs": "https://github.com/mkdecisiondev/cmc-ui/issues",
   "dependencies": {
     "promise-polyfill": "^7.1.2",
+    "reshape-beautify": "^0.1.2",
     "shoelace-css": "^1.0.0-beta24"
   },
   "devDependencies": {
