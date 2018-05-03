@@ -50,7 +50,6 @@ module.exports = {
 	generalQuestion: 'General Question',
 	lastName: 'Last Name',
 	lifetime: 'Lifetime',
-	mailToSwarnjitSingh: 'mailto:sss786sss@aol.com',
 	membershipFee: 'Membership Fee',
 	middleInitialAbbreviation: 'M.I.',
 	no: 'No',
