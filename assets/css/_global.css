@@ -62,3 +62,52 @@ body {
 		display: none;
 	}
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+.flex-wrapper {
+	flex: 1 0 auto;
+	width: 100vw;
+}
+
+.hidden,
+.hf-warning {
+	display: none;
+}
+
+.visually-hidden {
+	height: 1px;
+	left: -10000px;
+	overflow: hidden;
+	position: absolute;
+	top: auto;
+	width: 1px;
+}
+
+.no-scroll {
+	overflow: hidden;
+	position: fixed;
+	width: 100vw;
+}
+
+.input-row {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 400px;;
+	margin: 0 auto;
+	margin-top: 0em;
+}
+
+.input-row > * {
+	flex-basis: 0;
+	flex-grow: 1;
+	margin: 0.5em 1em;
+}

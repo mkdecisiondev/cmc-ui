@@ -2,19 +2,10 @@ import { MkComponent } from '../MkComponent/MkComponent.js';
 
 class Select extends MkComponent {
 	init () {
-		if (this.node.dataset.requiredMessage === 'undefined') {
-			this.requiredMessage = window.lang.fieldIsRequired;
-		}
-		else {
+		if (this.node.dataset.requiredMessage) {
 			this.requiredMessage = this.node.dataset.requiredMessage;
 		}
 		this.validationMessage = this.validationNode.textContent;
-
-		setTimeout(function () {
-			if (this.inputNode.value) {
-				this.validate();
-			}
-		}.bind(this), 0);
 	}
 
 	registerEventHandlers () {

@@ -1,0 +1,23 @@
+<extends src="layout.html">
+	<block name="title">
+		<title>{{ lang.contactUs }}</title>
+	</block>
+
+	<block name="styles" type="append">
+		<link href="./contact.css" rel="stylesheet">
+	</block>
+
+	<block name="main">
+		<section class="welcome">
+			<h1>{{ lang.contactUs }}</h1>
+			<hr>
+		</section>
+
+		<component type="ContactForm" id="contactForm"></component>
+	</block>
+
+	<block name="scripts" type="append">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/hyperform/0.9.9/hyperform.min.js"></script>
+		<script src="js/contactus.js"></script>
+	</block>
+</extends>

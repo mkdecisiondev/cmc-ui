@@ -17,13 +17,13 @@
 		-moz-appearance: none;
 		background: var(--select-background-image);
 		background-repeat: no-repeat;
-		background-position: 98% 75%;
-		background-size: 15px 10px;
-		border: 0;
-		border-radius: 0;
-		border-bottom: 1px solid var(--input-color);
-		font-size: 1.2rem;
-		padding: 1em 1em 0 0.7em;
+		background-position: 98% 55%;
+		background-size: 15px 15px;
+		border-radius: 3px;
+		border: 2px solid var(--light-gray);
+		color: var(--gray);
+		font-size: 1rem;
+		padding: 0 1em 0 0.25em;
 		touch-action: manipulation;
 		height: var(--input-height);
 		width: 100%;
@@ -34,8 +34,17 @@
 	}
 
 	& select:focus {
-		border-bottom-color: var(--input-focus-color);
+		background: var(--select-focus-background-image);
+		background-repeat: no-repeat;
+		background-position: 98% 55%;
+		background-size: 15px 15px;
+		border: 2px solid var(--teal);
+		color: var(--text-color);
 		outline: none;
+	}
+
+	& select.populated {
+		color: var(--text-color);
 	}
 
 	& .label {
@@ -51,7 +60,7 @@
 
 	& select:focus ~ .label,
 	& .populated ~ .label {
-		color: var(--input-focus-color);
+		color: var(--gray);
 		font-size: 0.8rem;
 		font-weight: var(--font-weight-semibold);
 		left: 1.1em;
@@ -61,7 +70,7 @@
 	& select:-webkit-autofill ~ .label,
 	& select:-webkit-autofill:hover ~ .label,
 	& select:-webkit-autofill:focus ~ .label {
-		color: var(--input-focus-color);
+		color: var(--teal);
 		font-size: 0.8rem;
 		font-weight: var(--font-weight-semibold);
 		left: 1.1em;

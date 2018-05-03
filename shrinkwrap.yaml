@@ -1,5 +1,6 @@
 dependencies:
   promise-polyfill: 7.1.2
+  reshape-beautify: 0.1.2
   shoelace-css: 1.0.0-beta24
 devDependencies:
   autoprefixer: 7.2.6
@@ -448,7 +449,7 @@ packages:
     dev: true
     engines:
       node: '>=4'
-    peerDependencies: &ref_0
+    peerDependencies:
       babel-core: '6'
       webpack: 2 || 3 || 4
     resolution:
@@ -464,7 +465,9 @@ packages:
     engines:
       node: '>=4'
     id: registry.npmjs.org/babel-loader/7.1.4
-    peerDependencies: *ref_0
+    peerDependencies:
+      babel-core: '6'
+      webpack: 2 || 3 || 4
     resolution:
       integrity: sha512-/hbyEvPzBJuGpk9o80R0ZyTej6heEOr59GoEUtn8qFKbnx4cJm9FWES6J/iv644sYgrtVw9JJQkjaLW/bqb5gw==
   /babel-messages/6.23.0:
@@ -4410,6 +4413,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+  /reshape-beautify/0.1.2:
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha1-oYvsaJLhWibHSw7ls2II2i3PzF0=
   /reshape-code-gen/1.0.0:
     dependencies:
       objectfn: 2.0.0
@@ -5662,6 +5671,7 @@ specifiers:
   postcss-nesting: ^4.2.1
   postcss-responsive-type: ^1.0.0
   promise-polyfill: ^7.1.2
+  reshape-beautify: ^0.1.2
   reshape-component: ^1.0.6
   reshape-eval-code: ^0.3.5
   reshape-expressions: ^0.1.5

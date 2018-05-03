@@ -1,0 +1,78 @@
+@import '../assets/css/_variables.css';
+
+.welcome {
+	padding: 2em 1em 0 1em;
+	max-width: 1000px;
+	margin: 0 auto;
+
+	& h1 {
+		font-size: 1.25rem;
+		font-weight: var(--font-weight-regular);
+	}
+
+	& hr {
+		border: 1px solid var(--teal);
+	}
+}
+
+.input-row.share {
+	flex-direction: column;
+}
+
+.input-row > * {
+	flex-basis: 0;
+	flex-grow: 1;
+	margin: 0.5em 1em;
+}
+
+button.primary-button {
+	background-color: var(--green);
+	color: white;
+	font-size: 1.25rem;
+	padding: 0.75em 0 2em 0;
+	text-transform: uppercase;
+	max-width: 200px;
+	border-radius: 3px;
+	cursor: pointer;
+	max-height: 66px;
+}
+
+.input-row.mainContact {
+	margin-top: 0;
+	color: var(--thankyou-text-color);
+
+	& a {
+		color: var(--thankyou-text-color);
+	}
+
+	& a:hover {
+		color: var(--teal);
+	}
+}
+
+@media (--medium-up) {
+	.contact-form {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.input-row {
+		margin: 0;
+	}
+
+	.input-row.share {
+		flex-direction: row;
+		max-width: 800px;
+		justify-content: flex-start;
+	}
+
+	.paragraphBox {
+		max-width: 23em;
+	}
+
+	button.primary-button {
+		margin-top: 1em;
+		padding: 0.75em 0;
+		align-self: flex-end;
+	}
+}

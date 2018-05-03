@@ -1,0 +1,34 @@
+<form class="contact-form">
+	<div class="main">
+		<div class="input-row share">
+			<component src="components/form/FirstName.html" data-node-name="firstNameTextBox"></component>
+			<component src="components/form/LastName.html" data-node-name="lastNameTextBox"></component>
+		</div>
+
+		<div class="input-row">
+			<component src="components/form/EmailAddress.html" data-node-name="emailAddressTextBox"></component>
+		</div>
+
+		<div class="input-row">
+			<component src="components/form/PhoneNumber.html" data-node-name="phoneNumberTextBox"></component>
+		</div>
+
+		<div class="input-row">
+			<component src="components/form/QuestionSelect.html" data-node-name="questionSelect"></component>
+		</div>
+
+		<div class="input-row share">
+			<component src="components/form/QuestionInput.html" data-node-name="paragraphBox"></component>
+			<button type="submit" class="primary-button" data-node-name="submitButton">{{ lang.contactUs }}</button>
+		</div>
+
+		<div class="input-row mainContact">
+			<p>{{ lang.swarnjitSingh }}</p>
+		</div>
+
+		<div class="input-row mainContact">
+			<a href="mailto:{{ lang.contactEmail }}">{{ lang.contactEmail }}</a>
+		</div>
+
+	</div>
+</form>

@@ -30,6 +30,11 @@ module.exports = function (options = {}) {
 
 		plugins.push(require('reshape-minify')(minifyOptions));
 	}
+	else {
+		plugins.push(require('reshape-beautify')({
+			indent: options.indent,
+		}));
+	}
 
 	return {
 		locals: options.locals,

@@ -2,7 +2,6 @@
 	position: relative;
 
 	& label {
-		color: var(--input-color);
 		position: relative;
 	}
 
@@ -18,9 +17,10 @@
 		background: none;
 		border: 0;
 		border-radius: 0;
-		border-bottom: 1px solid var(--input-color);
+		border-bottom: 2px solid var(--light-gray);
 		font-size: 1.2rem;
-		padding: 1em 0.7em 0 0.7em;
+		margin-bottom: 0.25em;
+		padding: 0.25em 0 0 0.25em;
 		touch-action: manipulation;
 		height: var(--input-height);
 		width: 100%;
@@ -30,37 +30,76 @@
 		}
 	}
 
-	& input:focus,{
-		border-bottom-color: var(--input-focus-color);
+	& input:focus,
+	& .populated.invalid:focus,
+	& .populated.valid:focus {
+		border-bottom-color: var(--teal);
 		outline: none;
 	}
 
 	& .label {
+		color: var(--gray);
 		cursor: text;
 		font-size: 1rem;
-		left: 0.8em;
+		left: 0.25em;
 		position: absolute;
-		top: -0.4em;
+		top: 0em;
 		touch-action: manipulation;
 		transition: font-size 0.2s, font-weight 0.2s, left 0.2s, top 0.2s;
 	}
 
 	& input:focus ~ .label,
-	& .populated ~ .label, {
-		color: var(--input-focus-color);
+	& .populated ~ .label,
+	& .populated.invalid:focus ~ .label,
+	& .populated.valid:focus ~ .label {
+		color: var(--teal);
 		font-size: 0.8rem;
 		font-weight: var(--font-weight-semibold);
-		left: 1.1em;
-		top: -1.7em;
+		left: 0;
+		top: -2em;
+		width: 100%;
+		padding: 0.5em 0 0 0.5em;
 	}
 
 	& input:-webkit-autofill ~ .label,
 	& input:-webkit-autofill:hover ~ .label,
 	& input:-webkit-autofill:focus ~ .label {
-		color: var(--input-focus-color);
+		background-color: rgb(250, 255, 189);
+		color: var(--input-focus);
 		font-size: 0.8rem;
 		font-weight: var(--font-weight-semibold);
-		left: 1.1em;
-		top: -1.7em;
+		left: 0;
+		top: -2em;
+		width: 100%;
+		padding: 0.5em 0 0 0.5em;
 	}
+
+	& .description {
+		color: var(--dark-gray);
+		font-size: 0.8rem;
+		padding-left: 0.35em;
+	}
+
+	& .validation-message {
+		color: var(--red);
+		font-size: 0.8rem;
+		padding-left: 0.35em;
+	}
+
+	& .populated.invalid {
+		border-bottom-color: var(--red);
+	}
+
+	& .populated.invalid ~ .label {
+		color: var(--red);
+	}
+
+	& .populated.valid {
+		border-bottom-color: var(--teal);
+	}
+
+	& .populated.valid ~ .label {
+		color: var(--teal);
+	}
+
 }
