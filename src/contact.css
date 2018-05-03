@@ -1,0 +1,27 @@
+@import '../assets/css/_variables.css';
+
+.welcome {
+	padding: 2em 1em 0 1em;
+	max-width: 500px;
+	margin: 0 auto;
+
+	& h1 {
+		font-size: 1.25rem;
+		font-weight: var(--font-weight-regular);
+	}
+
+	& hr {
+		border: 1px solid var(--teal);
+	}
+}
+
+button.primary-button {
+	background-color: var(--green);
+	color: white;
+	font-size: 1.25rem;
+	padding: 0.75em;
+	text-transform: uppercase;
+	max-width: 200px;
+	border-radius: 3px;
+	cursor: pointer;
+}

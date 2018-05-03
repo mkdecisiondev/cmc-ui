@@ -3,50 +3,21 @@
 		<title>{{ lang.contactUs }}</title>
 	</block>
 
-	<!-- <block name="styles" type="append">
+	<block name="styles" type="append">
 		<link href="./contact.css" rel="stylesheet">
-	</block> -->
+	</block>
 
 	<block name="main">
-
 		<section class="welcome">
 			<h1>{{ lang.contactUs }}</h1>
 			<hr>
 		</section>
 
-		<div class="input-row">
-			<component src="components/form/FirstName.html" data-node-name="firstNameTextBox"></component>
-		</div>
+		<component type="ContactForm" id="contactForm"></component>
+	</block>
 
-		<div class="input-row">
-			<component src="components/form/LastName.html" data-node-name="lastNameTextBox"></component>
-		</div>
-
-		<div class="input-row">
-			<component src="components/form/EmailAddress.html" data-node-name="emailAddressTextBox"></component>
-		</div>
-
-		<div class="input-row">
-			<component src="components/form/PhoneNumber.html" data-node-name="phoneNumberTextBox"></component>
-		</div>
-
-		<div class="input-row">
-			<component src="components/form/QuestionSelect.html" data-node-name="questionSelect"></component>
-		</div>
-
-		<div class="input-row">
-			<component src="components/form/QuestionInput.html" data-node-name="questionTextBox"></component>
-		</div>
-
-		<button type="submit" class="primary-button" data-node-name="submitButton">{{ lang.contactUs }}</button>
-
-		<div class="input-row">
-			<p>{{ lang.contactName }}</p>
-		</div>
-
-		<div class="input-row">
-			<p>{{ lang.contactEmail }}</p>
-		</div>
-
+	<block name="scripts" type="append">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/hyperform/0.9.9/hyperform.min.js"></script>
+		<script src="js/contactus.js"></script>
 	</block>
 </extends>
