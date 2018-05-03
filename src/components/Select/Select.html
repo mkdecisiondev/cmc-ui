@@ -1,5 +1,9 @@
-<div class="select">
+<div class="select" data-required-message="${required-message}">
 	<label>
 		<select name="${name}" data-node-name="inputNode">${options}</select>
+		<span class="label">${label}</span>
 	</label>
+
+	<div class="description" data-node-name="descriptionNode">${description}</div>
+	<div class="validation-message hidden" data-node-name="validationNode">${validation-message}</div>
 </div>

@@ -4,13 +4,10 @@ class TextBox extends MkComponent {
 	init () {
 		this.mask = false;
 
-		if (this.node.dataset.requiredMessage === 'undefined') {
-			this.requiredMessage = window.lang.fieldIsRequired;
-		}
-		else {
+		if (this.node.dataset.requiredMessage) {
 			this.requiredMessage = this.node.dataset.requiredMessage;
 		}
-		this.validationMessage = this.validationNode.textContent || window.lang.fieldIsRequired;
+		this.validationMessage = this.validationNode.textContent;
 	}
 
 	registerEventHandlers () {

@@ -17,4 +17,9 @@
 	& ::-webkit-input-placeholder {
 		color: var(--gray);
 	}
+
+	& textarea.invalid::-webkit-input-placeholder {
+		color: var(--red);
+	}
+
 }

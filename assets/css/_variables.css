@@ -10,11 +10,11 @@
 
 	--almost-white: hsl(180, 33%, 99%);
 	--dark-gray: hsl(0, 0%, 46%);
-	--green: hsl(166, 100%, 30%);
 	--gray: hsl(0, 0%, 67%);
+	--green: hsl(166, 100%, 30%);
 	--light-gray: hsl(0, 0%, 90%);
-	--red: 	hsl(358, 85%, 52%);
-	--teal: hsl(177, 39%, 52%);
+	--red: hsl(358, 85%, 52%);
+	--teal: hsl(180, 7%, 3%);
 
 	--photos-splash-background: rgb(189, 183, 182);
 

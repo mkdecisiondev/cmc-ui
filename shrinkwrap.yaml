@@ -449,7 +449,7 @@ packages:
     dev: true
     engines:
       node: '>=4'
-    peerDependencies: &ref_0
+    peerDependencies:
       babel-core: '6'
       webpack: 2 || 3 || 4
     resolution:
@@ -465,7 +465,9 @@ packages:
     engines:
       node: '>=4'
     id: registry.npmjs.org/babel-loader/7.1.4
-    peerDependencies: *ref_0
+    peerDependencies:
+      babel-core: '6'
+      webpack: 2 || 3 || 4
     resolution:
       integrity: sha512-/hbyEvPzBJuGpk9o80R0ZyTej6heEOr59GoEUtn8qFKbnx4cJm9FWES6J/iv644sYgrtVw9JJQkjaLW/bqb5gw==
   /babel-messages/6.23.0:

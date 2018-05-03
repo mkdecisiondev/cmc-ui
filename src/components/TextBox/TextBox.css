@@ -56,30 +56,35 @@
 		color: var(--teal);
 		font-size: 0.8rem;
 		font-weight: var(--font-weight-semibold);
-		left: 0.25em;
-		top: -1.7em;
+		left: 0;
+		top: -2em;
+		width: 100%;
+		padding: 0.5em 0 0 0.5em;
 	}
 
 	& input:-webkit-autofill ~ .label,
 	& input:-webkit-autofill:hover ~ .label,
 	& input:-webkit-autofill:focus ~ .label {
-		color: var(--input-focus-color);
+		background-color: rgb(250, 255, 189);
+		color: var(--input-focus);
 		font-size: 0.8rem;
 		font-weight: var(--font-weight-semibold);
-		left: 0.25em;
-		top: -1.7em;
+		left: 0;
+		top: -2em;
+		width: 100%;
+		padding: 0.5em 0 0 0.5em;
 	}
 
 	& .description {
 		color: var(--dark-gray);
 		font-size: 0.8rem;
-		padding-left: 0.25rem;
+		padding-left: 0.35em;
 	}
 
 	& .validation-message {
 		color: var(--red);
 		font-size: 0.8rem;
-		padding-left: 0.25rem;
+		padding-left: 0.35em;
 	}
 
 	& .populated.invalid {
