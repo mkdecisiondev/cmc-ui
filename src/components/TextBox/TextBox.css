@@ -1,11 +1,8 @@
 .textbox {
 	position: relative;
-	width: 90%;
-	margin: 0 auto;
-	margin-bottom: 1.5em;
 
 	& label {
-		color: var(--input-color);
+		/* color: var(--input-invalid-color); */
 		position: relative;
 	}
 
@@ -21,9 +18,10 @@
 		background: none;
 		border: 0;
 		border-radius: 0;
-		border-bottom: 1px solid var(--input-color);
+		border-bottom: 2px solid var(--light-gray);
 		font-size: 1.2rem;
-		padding: 1em 0.7em 0 0.7em;
+		margin-bottom: 0.25em;
+		padding: 0.25em 0 0 0.25em;
 		touch-action: manipulation;
 		height: var(--input-height);
 		width: 100%;
@@ -36,16 +34,17 @@
 	& input:focus,
 	& .populated.invalid:focus,
 	& .populated.valid:focus {
-		border-bottom-color: var(--input-focus-color);
+		border-bottom-color: var(--teal);
 		outline: none;
 	}
 
 	& .label {
+		color: var(--gray);
 		cursor: text;
 		font-size: 1rem;
-		left: 0.8em;
+		left: 0.25em;
 		position: absolute;
-		top: -0.4em;
+		top: 0em;
 		touch-action: manipulation;
 		transition: font-size 0.2s, font-weight 0.2s, left 0.2s, top 0.2s;
 	}
@@ -54,10 +53,10 @@
 	& .populated ~ .label,
 	& .populated.invalid:focus ~ .label,
 	& .populated.valid:focus ~ .label {
-		color: var(--input-focus-color);
+		color: var(--teal);
 		font-size: 0.8rem;
 		font-weight: var(--font-weight-semibold);
-		left: 1.1em;
+		left: 0.25em;
 		top: -1.7em;
 	}
 
@@ -67,35 +66,36 @@
 		color: var(--input-focus-color);
 		font-size: 0.8rem;
 		font-weight: var(--font-weight-semibold);
-		left: 1.1em;
+		left: 0.25em;
 		top: -1.7em;
 	}
 
 	& .description {
-		color: var(--input-color);
+		color: var(--dark-gray);
 		font-size: 0.8rem;
-		padding-left: 1em;
+		padding-left: 0.25rem;
 	}
 
 	& .validation-message {
-		color: var(--input-invalid-color);
+		color: var(--red);
 		font-size: 0.8rem;
 		padding-left: 1em;
 	}
 
 	& .populated.invalid {
-		border-bottom-color: var(--input-invalid-color);
+		border-bottom-color: var(--red);
 	}
 
 	& .populated.invalid ~ .label {
-		color: var(--input-invalid-color);
+		color: var(--red);
 	}
 
 	& .populated.valid {
-		border-bottom-color: var(--input-valid-color);
+		border-bottom-color: var(--teal);
 	}
 
 	& .populated.valid ~ .label {
-		color: var(--input-valid-color);
+		color: var(--teal);
 	}
+
 }

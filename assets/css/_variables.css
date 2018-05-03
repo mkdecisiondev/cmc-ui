@@ -8,17 +8,21 @@
 	--font-weight-semibold: 600;
 	--font-weight-bold: 700;
 
-	--teal: #55B4B0;
 	--almost-white: #fdfefe;
+	--dark-gray: hsl(0, 0%, 46%);
+	--gray: #aaaaaa;
 	--green: #009b77;
 	--light-gray: #e6e6e6;
-	--grey: hsl(0, 0%, 46%);
+	--red: hsl(354, 83%, 40%);
+	--teal: #55B4B0;
 
 	--photos-splash-background: rgb(189, 183, 182);
 
-	--input-color: var(--grey);
+	--input-color: var(--gray);
+	--input-invalid-color: var(--red);
 	--input-focus-color: var(--teal);
 	--select-background-image: url('/img/icons/select-caret.svg');
+	--select-focus-background-image: url('/img/icons/select-caret-focus.svg');
 	--input-height: 50px;
 
 	--text-color: black;
@@ -28,6 +32,7 @@
 	--page-background-color: var(--almost-white);
 	--primary-button-background-color: var(--green);
 	--history-background-color: var(--light-gray);
+	--thankyou-text-color: var(--dark-gray);
 }
 
 /* Core breakpoints */
