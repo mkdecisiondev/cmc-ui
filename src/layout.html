@@ -8,6 +8,7 @@
 			<link href="css/main.css" rel="stylesheet">
 		</block>
 	</head>
+
 	<body>
 		<div class="page">
 			<block name="header">
@@ -16,23 +17,13 @@
 
 			<block name="main"></block>
 
-			<block name="footer"></block>
+			<block name="footer">
+				<component type="Footer" id="footer"></component>
+			</block>
 
 			<block name="scripts">
 				<script src="js/main.js"></script>
 			</block>
 		</div>
-		<block name="header">
-		</block>
-		<block name="main">
-		</block>
-		<block name="footer">
-				<include src="components/Footer/Footer.html"></include>
-		</block>
-		<block name="scripts">
-			<script src="js/main.js"></script>
-			<script src="config/lang/en-US/main.js"></script>
-			<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-		</block>
 	</body>
 </html>

@@ -2,16 +2,13 @@ footer {
 	background:#A1A1A1;
 
 	& .footer-nav{
-		background: yellow;
 		padding: 15px;
 
 		& ul {
-			background: green;
 			text-transform: uppercase;
 			padding: 12px;
 
 			& li {
-				background: pink;
 				list-style: none;
 				padding-top: 12px;
 			}
@@ -31,11 +28,9 @@ footer {
 				font-size: 30px;
 				padding-right: 15px;
 				white-space: nowrap;
-
 			}
 		}
 	}
-
 }
 
 @media (--small-down) {
@@ -54,56 +49,48 @@ footer {
 }
 
 @media (--medium-up) {
-
 	footer {
 
 		& .footer-nav {
 
-			& ul {
-
+			& ul a {
 			  justify-content: space-evenly;
-
+			  font-size: 15px;
 			}
+
+
 		}
 	}
-
 }
 
 @media (x-large-up) {
 	footer {
-    & .footer-nav{
+
+		& .footer-nav {
 
 		& ul a {
 			background: blue;
 			text-align: right;
-
+			}
 		}
-	}
-
 	}
 }
 
 @media (--large-up) {
-
 	footer {
-
-		background: violet;
 
 		& .footer-nav {
 
 			& ul {
 
 				& a {
-					font-size: 25px;
+					font-size: 24px;
 				}
 
 				& .social-media a {
 					font-size: 35px;
 				}
 			}
-
 		}
 	}
-
-
 }
