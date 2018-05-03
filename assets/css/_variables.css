@@ -29,6 +29,7 @@
 	--background-color: white;
 	--header-background-color: var(--teal);
 	--header-height: 88px;
+	--footer-height: 300px;
 	--page-background-color: var(--almost-white);
 	--primary-button-background-color: var(--green);
 	--history-background-color: var(--light-gray);
