@@ -16,6 +16,11 @@
 	--red: hsl(358, 85%, 52%);
 	--teal: hsl(177, 39%, 52%);
 
+	--gray: #676767;
+	--green: #009b77;
+	--light-gray: #e6e6e6;
+	--teal: #55B4B0;
+
 	--photos-splash-background: rgb(189, 183, 182);
 
 	--input-color: var(--gray);
@@ -28,6 +33,7 @@
 	--text-color: black;
 	--background-color: white;
 	--header-background-color: var(--teal);
+	--footer-background-color:#A1A1A1;
 	--header-height: 88px;
 	--footer-height: 300px;
 	--page-background-color: var(--almost-white);
@@ -47,3 +53,7 @@
 @custom-media --large-up (min-width: 992px);
 @custom-media --x-large-down (max-width: 1199px);
 @custom-media --x-large-up (min-width: 1200px);
+
+/*Cutsom brakpoints to support responsive footer*/
+@custom-media --mediumInterm-down (max-width: 620px);
+@cutsom-media --smallInterm-down(max-width: 472px);
