@@ -1,13 +1,143 @@
 <form class="registration-form">
     <h1>Registration Form</h1>
-    <div class="form-row">
+    <hr>
+    <div class="form-row user-info">
         <component src="components/form/FirstName.html"></component>
         <component src="components/form/MiddleName.html"></component>
         <component src="components/form/LastName.html"></component>
     </div>
-    <component src="components/form/GuestName.html"></component>
-    <div class="form-row">
+    <div class="form-row user-info">
+        <component src="components/form/GuestName.html"></component>
+    </div>
+    <div class="form-row user-info">
         <component src="components/form/Address.html"></component>
-        <component src="components/form/UnitNumber.html"></component>        
+        <component src="components/form/UnitNumber.html"></component>
+    </div>
+    <div class="form-row user-info">
+        <component src="components/form/ZipCode.html"></component>
+        <component src="components/form/City.html"></component>
+        <component src="components/form/State.html"></component>
+        <component src="components/form/Country.html"></component>
+    </div>
+    <div class="form-row user-info">
+        <component src="components/form/Email.html"></component>
+        <component src="components/form/PhoneNumber.html"></component>
+    </div>
+    <div class="form-row wrap">
+        <div class="form-col">
+            <br>
+            <h3>Card Information</h3>
+            <hr>
+            <component src="components/form/CardNumber.html"></component>
+            <div class="form-row">
+                <component src="components/form/MonthYear.html" class="card-info"></component>
+                <component src="components/form/CVC.html" class="card-info"></component>
+            </div>
+        </div>
+        <div class="form-col membership">
+            <div class="form-row">
+                <h3>Membership Fees</h3>
+                <h3>Price:</h3>
+            </div>
+            <hr>
+            <div class="form-row">
+                <p>Annual:</p>
+                <p class="membership-fee">$100</p>
+                <component type="Toggle">
+                    <name>annual</name>
+                </component>
+            </div>
+            <div class="form-row">
+                <p>Lifetime:</p>
+                <p class="membership-fee">$500</p>
+                <component type="Toggle">
+                    <name>lifetime</name>
+                </component>
+            </div>
+        </div>
+        <div class="form-col">
+            <div class="form-row alumni">
+                <h3>CMC Alumni Member*:</h3>
+                <component type="Toggle">
+                    <required />
+                    <name>alumni</name>
+                </component>
+            </div>
+            <hr>
+            <div class="form-row">
+                <p>Year of Admission*:</p>
+                <component src="components/form/AdmissionYear.html" class="card-info"></component>
+            </div>
+            <div class="form-row">
+                <p>Childrens' Ages:</p>
+                <component src="components/form/childrenAge.html" class="card-info"></component>
+            </div>
+        </div>
+    </div>
+    <div class="form-row event-fees wrap">
+        <div class="form-col">
+            <div class="form-row">
+                <p>Event Fees:</p>
+                <p>Price:</p>
+                <p>Qty:</p>
+            </div>
+            <hr>
+            <component type="NumberSlider">
+                <label>Adult Full Days:</label>
+                <price>$500</price>
+                <name>adultFullDays</name>
+            </component>
+            <hr>
+            <component type="NumberSlider">
+                <label>Adult One Day:</label>
+                <price>$200</price>
+                <name>adultOneDay</name>
+            </component>
+            <hr>
+            <component type="NumberSlider">
+                <label>Adult Two Days:</label>
+                <price>$500</price>
+                <name>adultTwoDays</name>
+            </component>
+            <hr>
+            <component type="NumberSlider">
+                <label>Residents & Fellows:</label>
+                <price>$250</price>
+                <name>residentsFellows</name>
+            </component>
+            <hr>
+        </div>
+        <div class="form-col">
+            <div class="form-row">
+                <p>Event Fees:</p>
+                <p>Price:</p>
+                <p>Qty:</p>
+            </div>
+            <hr>
+            <component type="NumberSlider">
+                <label>Spouse:</label>
+                <price>$250</price>
+                <name>spouse</name>
+            </component>
+            <hr>
+            <component type="NumberSlider">
+                <label>Children Under 12</label>
+                <price>$200</price>
+                <name>children</name>
+            </component>
+            <hr>
+            <component type="NumberSlider">
+                <label>Dinner Guests</label>
+                <price>
+                    <span>$</span>100</price>
+                <name>dinnerGuests</name>
+            </component>
+            <hr>
+            <div class="form-row">
+                <p>Total:</p>
+                <p>$--</p>
+                <input type="submit" label="submit">
+            </div>
+        </div>
     </div>
 </form>
