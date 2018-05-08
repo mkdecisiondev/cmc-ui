@@ -179,8 +179,6 @@ section {
 
 @media (--medium-up) {
 	.gradient {
-		/* max-width: 45%; */
-
 		& hr {
 			max-width: 410px;
 		}
@@ -318,23 +316,15 @@ section {
 }
 
 .link-to-top {
-	background: black;
-	color: white;
-	display: inline-block;
-	float: right;
+	background: var(--text-color);
+	color: var(--background-color);
+	display: block;
 	font-size: 18px;
-	margin-bottom: 2em;
-	margin-right: 5%;
-	padding: 1em 2em 0.5em;
+	margin: 0 5% 2em auto;
+	padding: 0.5em;
 	text-align: center;
 	text-decoration: none;
-}
-
-.link-to-top::before {
-	content: '\005E';
-	display: block;
-	font-size: 300%;
-	line-height: 24px;
+	width: 5rem;
 }
 
 @media (--medium-up) {

@@ -10,35 +10,35 @@ footer {
 			list-style: none;
 			padding-top: 30px;
 			font-size: 12px;
-			color: white;
+			color: var(--background-color);
 			text-decoration: none;
 			text-align: left;
 		}
 
 		& .social-media {
-			padding-top:25px;
+			padding-top: 25px;
 			font-size: 30px;
 			text-decoration: none;
 
 			& a {
 				color: white;
 				padding-right: 15px;
-				}
+				text-decoration: none;
+			}
 		}
 	}
 }
 
 @media (--medium-up) {
-
 	footer {
-
 		& .footer-nav {
 			padding-left: 13%;
-			padding-right:0;
+			padding-right: 0;
 
 			& .nav-item {
 				font-size: 17px;
-				padding-right:0;
+				padding-right: 0;
+				text-align: center;
 			}
 
 			& .social-media {

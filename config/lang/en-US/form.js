@@ -57,7 +57,6 @@ module.exports = {
 	phoneNumber: 'Phone Number',
 	price: 'Price',
 	quantity: 'Qty.',
-	registration: 'Registration',
 	registrationForm: 'Registration Form',
 	residentsFellows: 'Residents and Fellows',
 	selectAlumniMembership: "Please select if you're a CMC Alumni Member or not.",

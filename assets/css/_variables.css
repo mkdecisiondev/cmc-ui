@@ -11,17 +11,14 @@
 	--almost-white: hsl(180, 33%, 99%);
 	--dark-gray: hsl(0, 0%, 46%);
 	--gray: hsl(0, 0%, 67%);
+	--light-gray: hsl(0, 0%, 63%);
+	--lighter-gray: hsl(0, 0%, 90%);
 	--green: hsl(166, 100%, 30%);
-	--light-gray: hsl(0, 0%, 90%);
 	--red: hsl(358, 85%, 52%);
 	--teal: hsl(177, 39%, 52%);
 
-	--gray: #676767;
-	--green: #009b77;
-	--light-gray: #e6e6e6;
-	--teal: #55B4B0;
-
-	--photos-splash-background: rgb(189, 183, 182);
+	--text-color: black;
+	--background-color: white;
 
 	--input-color: var(--gray);
 	--input-invalid: var(--red);
@@ -30,19 +27,17 @@
 	--select-focus-background-image: url('/img/icons/select-caret-focus.svg');
 	--input-height: 50px;
 
-	--text-color: black;
-	--background-color: white;
 	--header-background-color: var(--teal);
-	--footer-background-color: #A1A1A1;
+	--footer-background-color: var(--light-gray);
 	--header-height: 88px;
 	--footer-height: 300px;
 	--page-background-color: var(--almost-white);
+	--photos-splash-background: rgb(189, 183, 182);
 	--primary-button-background-color: var(--green);
-	--history-background-color: var(--light-gray);
+	--history-background-color: var(--lighter-gray);
 	--thankyou-text-color: var(--dark-gray);
 }
 
-/* Core breakpoints */
 @custom-media --x-small-down (max-width: 359px);
 @custom-media --x-small-up (min-width: 360px);
 @custom-media --small-down (max-width: 575px);

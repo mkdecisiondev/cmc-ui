@@ -1,7 +1,7 @@
 <footer class="">
 	<div class="footer-nav row">
-		<each loop="navitem in siteLinks">
-			<a class="nav-item col-4 col-md-2" href="{{ navitem.url }}">{{ navitem.title }}</a>
+		<each loop="item in siteLinks">
+			<a class="nav-item col-4 col-md-2" href="{{ item.url }}">{{ item.title }}</a>
 		</each>
 		<div class="social-media col-4 col-md-2">
 			<each loop="link in socialMedia">
