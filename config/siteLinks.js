@@ -2,19 +2,23 @@ const lang = require('./lang/default.js');
 
 module.exports = [
 	{
-		title: 'events',
+		title: lang.home,
+		url: '/',
+	},
+	{
+		title: lang.events,
 		url: '/events.html',
 	},
 	{
-		title: 'registration',
+		title: lang.registration,
 		url: '/registration.html',
 	},
 	{
-		title: 'photos',
+		title: lang.photos,
 		url: '/photos.html',
 	},
 	{
-		title: 'contact us',
+		title: lang.contactUS,
 		url: '/contact-us.html',
 	},
 ];

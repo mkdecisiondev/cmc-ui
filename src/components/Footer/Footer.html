@@ -1,0 +1,12 @@
+<footer class="">
+	<div class="footer-nav row">
+		<each loop="item in siteLinks">
+			<a class="nav-item col-4 col-md-2" href="{{ item.url }}">{{ item.title }}</a>
+		</each>
+		<div class="social-media col-4 col-md-2">
+			<each loop="link in socialMedia">
+				<a href="{{ link.url }}" title="{{ link.title }}" target="_blank"><i class="{{ link.icon }}"></i></a>
+			</each>
+		</div>
+	</div>
+</footer>
