@@ -37,6 +37,9 @@ const spikeConfig = {
 		'package-lock.json',
 		'shrinkwrap.yaml',
 		'yarn.lock',
+		'Jenkinsfile',
+		'readme.md',
+		'shrinkwrap.yaml',
 	],
 	postcss: postcssConfig({
 		minify: env === 'production',
