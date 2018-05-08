@@ -27,10 +27,11 @@
 	--select-focus-background-image: url('/img/icons/select-caret-focus.svg');
 	--input-height: 50px;
 
-	--header-background-color: var(--teal);
-	--footer-background-color: var(--light-gray);
 	--header-height: 88px;
+	--header-background-color: var(--teal);
 	--footer-height: 300px;
+	--footer-background-color: var(--light-gray);
+	--footer-color: white;
 	--page-background-color: var(--almost-white);
 	--photos-splash-background: rgb(189, 183, 182);
 	--primary-button-background-color: var(--green);

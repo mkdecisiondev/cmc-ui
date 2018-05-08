@@ -10,18 +10,18 @@ footer {
 			list-style: none;
 			padding-top: 30px;
 			font-size: 12px;
-			color: var(--background-color);
+			color: var(--footer-color);
 			text-decoration: none;
 			text-align: left;
 		}
 
 		& .social-media {
-			padding-top: 25px;
 			font-size: 30px;
+			padding-top: 25px;
 			text-decoration: none;
 
 			& a {
-				color: white;
+				color: var(--footer-color);
 				padding-right: 15px;
 				text-decoration: none;
 			}
@@ -39,10 +39,6 @@ footer {
 				font-size: 17px;
 				padding-right: 0;
 				text-align: center;
-			}
-
-			& .social-media {
-				font-size: 30px;
 			}
 		}
 	}
