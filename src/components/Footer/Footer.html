@@ -1,20 +1,12 @@
 <footer class="">
-		<div class="footer-nav">
-			<ul class="row flex-container">
-				<each loop="navitem in siteLinks">
-				<div>
-					<li class="col-md">
-						<a href="{{ navitem.url }}">{{ navitem.title }}</a>
-					</li>
-				</div>
-				</each>
-
-				<div class="social-media">
-					<each loop="link in socialMedia">
-						<a href="{{ link.url }}" title="{{ link.title }}" target="_blank">
-						<i class="{{ link.icon }}"></i></a>
-					</each>
-				</div>
-			</ul>
+	<div class="footer-nav row">
+		<each loop="navitem in siteLinks">
+			<a class="nav-item col-4 col-md-2" href="{{ navitem.url }}">{{ navitem.title }}</a>
+		</each>
+		<div class="social-media col-4 col-md-2">
+			<each loop="link in socialMedia">
+				<a href="{{ link.url }}" title="{{ link.title }}" target="_blank"><i class="{{ link.icon }}"></i></a>
+			</each>
 		</div>
+	</div>
 </footer>

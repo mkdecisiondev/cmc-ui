@@ -110,8 +110,5 @@ h6 {
 	flex-basis: 0;
 	flex-grow: 1;
 	margin: 0.5em 1em;
-@media (--mediumInterm-down) {
-	.hide-mdInter-down {
-		display: none;
-	}
+
 }

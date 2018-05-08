@@ -4,11 +4,11 @@ const home = require('./home.js');
 const thankYou = require('./thankYou');
 
 const common = {
-	home: "home",
-	events: "events",
-	photos: "photos",
-	registration: "registration",
-	contactUS: "contact us",
+	home: 'home',
+	events: 'events',
+	photos: 'photos',
+	registration: 'registration',
+	contactUS: 'contact us',
 	siteName: 'Alumni Association of Christian Medical College',
 };
 

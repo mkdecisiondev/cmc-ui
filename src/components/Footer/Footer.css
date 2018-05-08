@@ -1,68 +1,48 @@
 footer {
 	background-color: var(--footer-background-color);
+	padding: 15px 2%;
 
-	& .footer-nav{
-		padding: 15px;
+	& .footer-nav {
+		width: 100%;
+		text-transform: uppercase;
 
-		& ul {
-			text-transform: uppercase;
-			padding: 12px;
-			justify-content:flex-end;
+		& .nav-item {
+			list-style: none;
+			padding-top: 30px;
+			font-size: 12px;
+			color: white;
+			text-decoration: none;
+			text-align: left;
+		}
 
-			& li {
-				list-style: none;
-				padding-top: 12px;
-			}
+		& .social-media {
+			padding-top:25px;
+			font-size: 30px;
+			text-decoration: none;
 
 			& a {
-				font-size: 21px;
 				color: white;
-				text-decoration: none;
-				white-space: nowrap;
-			}
-
-			& a:hover {
-				text-decoration: underline;
-			}
-
-			& .social-media a {
-				font-size: 36px;
 				padding-right: 15px;
-				white-space: nowrap;
-			}
+				}
 		}
 	}
 }
 
-@media (--medium-down) {
+@media (--medium-up) {
+
 	footer {
 
-		& ul {
-			justify-content: flex-start !important;
+		& .footer-nav {
+			padding-left: 13%;
+			padding-right:0;
 
-			& li {
-				padding-right: 90px !important;
+			& .nav-item {
+				font-size: 17px;
+				padding-right:0;
 			}
 
-			& a {
-				font-size : 20px;
-			}
-		}
-	}
-}
-
-@media (--mediumInterm-down) {
-	footer {
-
-		& ul {
-			justify-content: flex-start;
-
-			& li {
-				padding-right: 45px !important;
-			}
-
-			& a {
-				font-size : 17px;
+			& .social-media {
+				font-size: 30px;
 			}
 		}
 	}

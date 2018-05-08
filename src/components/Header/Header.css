@@ -21,7 +21,6 @@ header {
 		padding: 0 2%;
 	}
 
-
 	& nav.open {
 		background: none;
 		display: block;
@@ -47,7 +46,6 @@ header {
 		padding-top: 1em;
 		width: 100%;
 	}
-
 }
 
 nav.vertical-navigator {
@@ -95,7 +93,6 @@ nav.vertical-navigator {
 		}
 	}
 }
-
 
 .logo-hamburger.col-12 {
 	align-items: center;
@@ -168,7 +165,6 @@ nav.vertical-navigator {
 	}
 }
 
-
 @media (--medium-up) {
 	header {
 		height: var(--header-height);
@@ -226,8 +222,6 @@ nav.vertical-navigator {
 		}
 	}
 }
-
-
 
 @media (--large-up) {
 	header {
