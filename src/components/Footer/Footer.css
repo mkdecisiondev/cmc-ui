@@ -3,21 +3,28 @@ footer {
 	padding: 15px 2%;
 
 	& .footer-nav {
-		width: 100%;
 		text-transform: uppercase;
+		display: flex;
+
+		& .nav-item,
+		& .social-media {
+			flex-basis: 33.3%;
+			line-height: 33px;
+		}
 
 		& .nav-item {
-			list-style: none;
-			padding-top: 30px;
-			font-size: 12px;
 			color: var(--footer-color);
-			text-decoration: none;
+			font-size: 14px;
+			padding: 0 10px 0 0;
 			text-align: left;
+			text-decoration: none;
+			white-space: nowrap;
+
 		}
 
 		& .social-media {
 			font-size: 30px;
-			padding-top: 25px;
+			padding: 0;
 			text-decoration: none;
 
 			& a {
@@ -31,14 +38,28 @@ footer {
 
 @media (--medium-up) {
 	footer {
+		padding-left: 10%;
+
 		& .footer-nav {
-			padding-left: 13%;
-			padding-right: 0;
+			justify-content: space-between;
+
+			& .nav-item,
+			& .social-media {
+				flex-basis: auto;
+				text-align: left;
+			}
 
 			& .nav-item {
 				font-size: 17px;
-				padding-right: 0;
+				line-height: 42px;
+				max-width: auto;
+				padding: 0 5px;
 				text-align: center;
+				width: auto;
+			}
+
+			& .social-media {
+				line-height: 42px;
 			}
 		}
 	}

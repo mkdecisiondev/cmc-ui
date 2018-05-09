@@ -1,9 +1,9 @@
 <footer>
-	<div class="footer-nav row">
+	<div class="footer-nav row row-flush">
 		<each loop="item in siteLinks">
-			<a class="nav-item col-4 col-md-2" href="{{ item.url }}">{{ item.title }}</a>
+			<a class="nav-item" href="{{ item.url }}">{{ item.title }}</a>
 		</each>
-		<div class="social-media col-4 col-md-2">
+		<div class="social-media">
 			<each loop="link in socialMedia">
 				<a href="{{ link.url }}" title="{{ link.title }}" target="_blank"><i class="{{ link.icon }}"></i></a>
 			</each>
