@@ -1,19 +1,15 @@
 import { MkComponent } from '../MkComponent/MkComponent.js';
-import { NumberBox } from '../NumberBox/NumberBox.js';
+import { EventFees } from '../EventFees/EventFees.js';
 import { Select } from '../Select/Select.js';
 import { TextBox } from '../TextBox/TextBox.js';
 
 Object.assign(MkComponent._mkComponentConstructors, {
+	EventFees,
 	Select,
 	TextBox,
-	NumberBox,
 });
 
 class RegistrationForm extends MkComponent {
-	init () {
-		console.log(this.adultFullNode);
-	}
-
 	registerEventHandlers () {
 		hyperform(this.node, {
 			classes: {
@@ -22,10 +18,6 @@ class RegistrationForm extends MkComponent {
 			},
 			revalidate: 'onblur',
 		});
-		this.eventFeesNode.addEventListener('change', this.handleFeesChange.bind(this));
-	}
-
-	handleFeesChange () {
 	}
 }
 
