@@ -7,10 +7,10 @@ main {
 .welcome {
 
 	& h1 {
-		color: var(--dark-gray);
+		color: var(--gray);
 		font-size: 1.25rem;
 		font-weight: var(--font-weight-regular);
-		border-bottom: 1px solid var(--dark-gray);
+		border-bottom: 1px solid var(--gray);
 		display: inline-block;
 		padding-right: 3em;
 		padding-bottom: 0.5em;
@@ -62,7 +62,7 @@ main {
 	}
 
 	.paragraphBox {
-		max-width: 23em;
+		/* max-width: 23em; */
 	}
 
 	button.primary-button {
