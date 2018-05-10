@@ -2,9 +2,6 @@
 
 main {
 	padding: 2em var(--padding-mobile);
-}
-
-.welcome {
 
 	& h1 {
 		color: var(--gray);
@@ -45,6 +42,10 @@ main {
 
 	main {
 		padding: 2em var(--padding-desktop);
+
+		& h1 {
+			font-size: 1.5rem;
+		}
 	}
 
 	.primary-button {
