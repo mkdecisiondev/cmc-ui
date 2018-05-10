@@ -37,6 +37,9 @@
 	--primary-button-background-color: var(--green);
 	--history-background-color: var(--lighter-gray);
 	--thankyou-text-color: var(--dark-gray);
+
+	--padding-mobile: 2%;
+	--padding-desktop: 6%;
 }
 
 @custom-media --x-small-down (max-width: 359px);

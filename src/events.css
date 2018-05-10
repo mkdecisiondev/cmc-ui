@@ -1,19 +1,14 @@
 @import '../assets/css/_variables.css';
 
-figure {
-	margin: 0;
-	padding: 0;
-}
-
 .hero {
 	background-color: #d2c3c5;
 
-	& .image-outter {
+	& .outter {
 		height: 0;
 		padding-bottom: 34.41%;
 		position: relative;
 
-		& .image-inner {
+		& .inner {
 			background-image: url('img/1200x413-events.jpg');
 			background-position: center bottom;
 			background-repeat: no-repeat;
@@ -29,53 +24,12 @@ figure {
 }
 
 @media (--medium-up) {
-	.hero .image-outter .image-inner {
+	.hero .outter .inner {
 		background-image: url('img/cmc-1200x210.png'), url('img/1200x413-events.jpg');
 	}
 }
 
 
-.welcome {
-	font-family: var(--light-font);
-	text-align: center;
-
-	& h1 {
-		font-size: 34px;
-		font-weight: normal;
-		letter-spacing: 2px;
-		margin: 0.5em 0 0 0;
-		padding: 0;
-		text-transform: uppercase;
-	}
-
-	& p {
-		font-size: 18px;
-		line-height: 2;
-		margin-top: 0;
-	}
-
-	& hr {
-		display: none;
-	}
-}
-
-
-@media (--medium-up) {
-	.welcome {
-		padding-left: 8%;
-		padding-right: 8%;
-
-		& h1 {
-			font-size: 60px;
-			letter-spacing: 3px;
-		}
-
-		& p {
-			font-size: 24px;
-		}
-
-		& hr {
-			display: block;
-		}
-	}
+.welcome h1 {
+	text-transform: uppercase;
 }

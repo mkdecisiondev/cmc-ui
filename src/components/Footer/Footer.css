@@ -1,6 +1,6 @@
 footer {
 	background-color: var(--footer-background-color);
-	padding: 15px 2%;
+	padding: 15px var(--padding-mobile);
 
 	& .footer-nav {
 		text-transform: uppercase;
@@ -38,7 +38,8 @@ footer {
 
 @media (--medium-up) {
 	footer {
-		padding-left: 10%;
+		padding-left: var(--padding-desktop);
+		padding-right: var(--padding-desktop);
 
 		& .footer-nav {
 			justify-content: space-between;
@@ -46,12 +47,12 @@ footer {
 			& .nav-item,
 			& .social-media {
 				flex-basis: auto;
-				text-align: left;
+				line-height: 42px;
 			}
 
 			& .nav-item {
 				font-size: 17px;
-				line-height: 42px;
+
 				max-width: auto;
 				padding: 0 5px;
 				text-align: center;
@@ -59,7 +60,11 @@ footer {
 			}
 
 			& .social-media {
-				line-height: 42px;
+				text-align: right;
+
+				& a {
+					padding: 0 15px;
+				}
 			}
 		}
 	}

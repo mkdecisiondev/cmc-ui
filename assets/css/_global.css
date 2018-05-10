@@ -112,3 +112,78 @@ h6 {
 	margin: 0.5em 1em;
 
 }
+
+.primary-button {
+	border: none;
+	background: var(--primary-button-background-color);
+	border-radius: 3px;
+	color: white;
+	cursor: pointer;
+	font-size: 1.25rem;
+	padding: 0.9em 2em;
+	font-family: var(--primary-font);
+	text-transform: uppercase;
+}
+
+.primary-button:hover {
+	text-decoration: underline;
+}
+
+a.primary-button {
+	text-decoration: none;
+	display: inline-block;
+}
+
+button.primary-button {
+	max-width: 200px;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+
+.welcome {
+	font-family: var(--light-font);
+	text-align: center;
+
+	& h1 {
+		font-size: 34px;
+		font-weight: normal;
+		letter-spacing: 2px;
+		margin: 0.5em 0 0 0;
+		padding: 0;
+	}
+
+	& p {
+		font-size: 18px;
+		line-height: 2;
+		margin-top: 0;
+	}
+
+	& hr {
+		display: none;
+	}
+}
+
+
+@media (--medium-up) {
+	.welcome {
+		padding-left: var(--padding-desktop);
+		padding-right: var(--padding-desktop);
+
+		& h1 {
+			font-size: 60px;
+			letter-spacing: 3px;
+		}
+
+		& p {
+			font-size: 24px;
+		}
+
+		& hr {
+			display: block;
+		}
+	}
+}

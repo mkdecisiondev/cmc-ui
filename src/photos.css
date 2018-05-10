@@ -4,11 +4,6 @@ body {
 	font-family: var(--primary-font);
 }
 
-figure {
-	margin: 0;
-	padding: 0;
-}
-
 .photos-title {
 	font-family: var(--light-font);
 	font-size: 48px;
@@ -49,25 +44,8 @@ figure {
 }
 
 
-main.main-content.photos {
-	margin: 26px auto;
-	max-width: 1090px;
-	padding-left: 1%;
-	padding-right: 1%;
-}
-
-.introduction {
-	padding: 0;
-	text-align: center;
-
-	& p {
-		line-height: 160%;
-		margin: 10px 0 8px 0;
-	}
-
-	& h1 {
-		margin-bottom: 0;
-	}
+.welcome h1 {
+	text-transform: uppercase;
 }
 
 .album-container {
