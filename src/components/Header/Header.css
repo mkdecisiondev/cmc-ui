@@ -18,7 +18,7 @@ header {
 		display: flex;
 		height: var(--header-height);
 		justify-content: space-between;
-		padding: 0 2%;
+		padding: 0 var(--padding-mobile);
 	}
 
 	& nav.open {
@@ -64,7 +64,7 @@ nav.vertical-navigator {
 		& li {
 			border-bottom: 1px solid gray;
 			margin: 0;
-			padding: 15px calc(2% + 4px);
+			padding: 15px calc(var(--padding-mobile) + 4px);
 			width: 100%;
 		}
 
@@ -100,6 +100,7 @@ nav.vertical-navigator {
 	justify-content: space-between;
 	min-height:  var(--header-height);
 	width: 100%;
+	padding-left: 0;
 }
 
 .logo {
@@ -168,6 +169,7 @@ nav.vertical-navigator {
 @media (--medium-up) {
 	header {
 		height: var(--header-height);
+		padding: 0 var(--padding-desktop);
 
 
 		& .hamburger {
@@ -214,6 +216,7 @@ nav.vertical-navigator {
 			justify-content: space-around;
 			padding-bottom: 0;
 			padding-top: 0;
+			padding-right: 0;
 			white-space: nowrap;
 
 			& a {
@@ -227,7 +230,7 @@ nav.vertical-navigator {
 	header {
 
 		& nav.vertical-navigator ul  li  a {
-			font-size: 22px;
+			font-size: 20px;
 		}
 
 		& .social-media  a {

@@ -38,8 +38,8 @@ section {
 	font-family: var(--light-font);
 	font-size: 18px;
 	margin-bottom: 3em;
-	padding-left: 2%;
-	padding-right: 2%;
+	padding-left: var(--padding-mobile);
+	padding-right: var(--padding-mobile);
 
 	& hr {
 		background-size: contain;
@@ -65,8 +65,8 @@ section {
 
 @media (--medium-up) {
 	section {
-		padding-left: 4%;
-		padding-right: 4%;
+		padding-left: var(--padding-desktop);
+		padding-right: var(--padding-desktop);
 
 		& h2 {
 			font-size: 45px;
