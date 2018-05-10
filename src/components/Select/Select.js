@@ -28,6 +28,7 @@ class Select extends MkComponent {
 			this.validationNode.textContent = this.validationMessage;
 		}
 		else {
+
 			this.validationNode.textContent = this.requiredMessage;
 		}
 
