@@ -62,10 +62,6 @@ main {
 		justify-content: flex-start;
 	}
 
-	.paragraphBox {
-		/* max-width: 23em; */
-	}
-
 	button.primary-button {
 		margin-top: 1em;
 		align-self: flex-end;
