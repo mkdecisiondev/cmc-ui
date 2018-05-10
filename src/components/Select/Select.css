@@ -7,7 +7,6 @@
 	}
 
 	& label {
-		color: var(--input-color);
 		display: block;
 		flex: 1;
 	}
@@ -48,6 +47,7 @@
 	}
 
 	& .label {
+		color: var(--input-text-color);
 		cursor: text;
 		font-size: 1rem;
 		left: 0.8em;
@@ -79,5 +79,11 @@
 
 	& option {
 		font-size: 1rem;
+	}
+
+	& .validation-message {
+		color: var(--red);
+		font-size: 0.8rem;
+		padding-left: 0.35em;
 	}
 }
