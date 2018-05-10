@@ -1,31 +1,31 @@
 <div class="form-row event-fees wrap" data-node-name="eventFeesNumberBox">
 	<div class="form-col">
 		<div class="form-row">
-			<p>Event Fees:</p>
-			<p>Price:</p>
-			<p>Qty:</p>
+			<p>{{ lang.eventFees }}:</p>
+			<p>{{ lang.price }}:</p>
+			<p>{{ lang.quantity }}:</p>
 		</div>
 		<hr>
 		<component type="NumberBox" data-node-name="adultFullNumberBox">
-			<label>Adult Full Days:</label>
+			<label>{{ lang.adultFullDay }}:</label>
 			<price>500</price>
 			<name>adultFullDays</name>
 		</component>
 		<hr>
 		<component type="NumberBox" data-node-name="adultOneDayNumberBox">
-			<label>Adult One Day:</label>
+			<label>{{ lang.adultOneDay }}:</label>
 			<price>200</price>
 			<name>adultOneDay</name>
 		</component>
 		<hr>
 		<component type="NumberBox" data-node-name="adultTwoDayNumberBox">
-			<label>Adult Two Days:</label>
+			<label>{{ lang.adultTwoDay }}:</label>
 			<price>500</price>
 			<name>adultTwoDays</name>
 		</component>
 		<hr>
 		<component type="NumberBox" data-node-name="residentsNumberBox">
-			<label>Residents & Fellows:</label>
+			<label>{{ lang.residentsFellows }}:</label>
 			<price>250</price>
 			<name>residentsFellows</name>
 		</component>
@@ -33,33 +33,33 @@
 	</div>
 	<div class="form-col">
 		<div class="form-row">
-			<p>Event Fees:</p>
-			<p>Price:</p>
-			<p>Qty:</p>
+			<p>{{ lang.eventFees }}:</p>
+			<p>{{ lang.price }}:</p>
+			<p>{{ lang.quantity }}:</p>
 		</div>
 		<hr>
 		<component type="NumberBox" data-node-name="spouseNumberBox">
-			<label>Spouse:</label>
+			<label>{{ lang.spouse }}:</label>
 			<price>250</price>
 			<name>spouse</name>
 		</component>
 		<hr>
 		<component type="NumberBox" data-node-name="childrenNumberBox">
-			<label>Children Under 12</label>
+			<label>{{ lang.childrenUnder }}</label>
 			<price>200</price>
 			<name>children</name>
 		</component>
 		<hr>
 		<component type="NumberBox" data-node-name="guestsNumberBox">
-			<label>Dinner Guests</label>
+			<label>{{ lang.dinnerGuests }}</label>
 			<price>100</price>
 			<name>dinnerGuests</name>
 		</component>
 		<hr>
 		<div class="form-row">
-			<p>Total:</p>
+			<p>{{ lang.total }}:</p>
 			<p>$<span data-node-name="total">0</span></p>
-			<input type="submit" label="submit">
+			<input type="submit" label="submit" class="primary-button">
 		</div>
 	</div>
 </div>

@@ -1,5 +1,7 @@
 import { MkComponent } from '../MkComponent/MkComponent.js';
 
+const MAX_INPUT = 10;
+
 class NumberBox extends MkComponent {
 	init () {
 		this.total = 0;
@@ -10,6 +12,10 @@ class NumberBox extends MkComponent {
 	}
 
 	handleInput () {
+		if (this.inputNode.value > MAX_INPUT) {
+			this.inputNode.value = MAX_INPUT;
+		}
+
 		this.total = this.inputNode.dataset.price * this.inputNode.value;
 	}
 }

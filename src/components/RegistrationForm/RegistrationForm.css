@@ -11,7 +11,7 @@ form.registration-form {
 
 	& hr {
 		width: 280px;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
 
 	& br {
@@ -43,12 +43,25 @@ form.registration-form {
 
 	& input[type='number'] {
 		height: 2em;
-		width: 50px;
+		width: 70px;
+		padding-left: 0.5em;
 		margin-bottom: 0.5em;
 		margin-top: auto;
+		background-repeat: no-repeat;
+		background-position: 98% 55%;
+		background-size: 15px 15px;
+		border-radius: 3px;
+		border: 2px solid var(--lighter-gray);
+		color: var(--gray);
+		font-size: 1rem;
+		padding: 0 0.5em;
+		height: var(--input-height);
 	}
 
-	& input[name='middleName'],
+	& input[name='middleName'] {
+		width: 3em;
+	}
+
 	& input[name='zipCode'],
 	& select[name='state'] {
 		width: 4em;
@@ -62,7 +75,7 @@ form.registration-form {
 	& input[type='submit'] {
 		-moz-appearance: none;
 		-webkit-appearance: none;
-		background-color: var(--green);
+		background-color: var(--primary-button-background-color);
 		font-size: 1.2rem;
 		text-align: center;
 		color: white;
@@ -89,9 +102,9 @@ form.registration-form {
 			width: 340px;
 		}
 	}
-	}
+}
 
-	.form-row {
+.form-row {
 	display: flex;
 	align-content: flex-start;
 	min-width: 280px;
@@ -104,22 +117,22 @@ form.registration-form {
 	& input {
 		max-width: 200px;
 	}
-	}
+}
 
-	.card-info {
+.card-info {
 	margin: 0 0 0 auto;
 
 	& input {
 		width: 4em;
 		margin-right: 2em;
 	}
-	}
+}
 
-	.wrap {
+.wrap {
 	flex-flow: wrap;
-	}
+}
 
-	.event-fees {
+.event-fees {
 	justify-content: space-between;
 	padding-right: 2em;
 
@@ -143,48 +156,57 @@ form.registration-form {
 	& input {
 		margin-bottom: 5px;
 	}
-	}
+}
 
-	.divider {
+.divider {
 	height: 8px;
 	width: 200px;
 	background-color: var(--input-text-color);
 	margin: 3em 0 3em -3em;
-	}
+}
 
-	.membership p {
+.membership p {
 	height: 25px;
 	width: 80px;
-	}
+}
 
-	.membership-fee {
+.membership-fee {
 	max-width: 50px;
 	margin-left: 70px;
-	}
+}
 
-	.user-info {
+.user-info {
 	justify-content: flex-start;
-	}
+}
 
-	.radio {
+.radio {
 	margin-top: auto;
 	display: flex;
 	justify-content: space-between;
-	}
+}
 
-	span.radio {
+span.radio {
 	margin-right: 0.5em;
 	margin-bottom: 0.7em;
-	}
+}
 
-	.membership .radio {
+.membership .radio {
 	margin-bottom: 0.7em;
-	}
+}
 
-
-	@media (--small-down) {
+@media (--small-down) {
 	form.registration-form {
 		padding: 1em;
+
+		& input[type='submit'] {
+			margin: 0;
+			width: 80px;
+		}
+
+		& .textbox,
+		& select {
+			margin-right: 1em;
+		}
 	}
 
 	.form-col {

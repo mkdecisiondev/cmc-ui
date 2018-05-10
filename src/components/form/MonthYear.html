@@ -1,6 +1,9 @@
 <component type="TextBox">
 	<name>monthYear</name>
-	<label>MM/YY</label>
+	<required />
+	<label>{{ lang.cardDate }}</label>
 	<maxlength>5</maxlength>
 	<pattern>^[01]\d\/\d{2}$</pattern>
+	<required-message>{{ lang.enterYourExp }}</required-message>
+	<validation-message>{{ lang.enterValidExp }}</validation-message>
 </component>
