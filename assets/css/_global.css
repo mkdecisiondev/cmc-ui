@@ -137,3 +137,53 @@ a.primary-button {
 button.primary-button {
 	max-width: 200px;
 }
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+
+.welcome {
+	font-family: var(--light-font);
+	text-align: center;
+
+	& h1 {
+		font-size: 34px;
+		font-weight: normal;
+		letter-spacing: 2px;
+		margin: 0.5em 0 0 0;
+		padding: 0;
+	}
+
+	& p {
+		font-size: 18px;
+		line-height: 2;
+		margin-top: 0;
+	}
+
+	& hr {
+		display: none;
+	}
+}
+
+
+@media (--medium-up) {
+	.welcome {
+		padding-left: var(--padding-desktop);
+		padding-right: var(--padding-desktop);
+
+		& h1 {
+			font-size: 60px;
+			letter-spacing: 3px;
+		}
+
+		& p {
+			font-size: 24px;
+		}
+
+		& hr {
+			display: block;
+		}
+	}
+}

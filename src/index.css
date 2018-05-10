@@ -8,12 +8,12 @@ figure {
 .hero {
 	background-color: #d4d2d1;
 
-	& .image-outter {
+	& .outter {
 		height: 0;
 		padding-bottom: 31.67%;
 		position: relative;
 
-		& .image-inner {
+		& .inner {
 			background-image: url('img/1200x380-home.jpg');
 			background-position: center bottom;
 			background-repeat: no-repeat;
@@ -29,7 +29,7 @@ figure {
 }
 
 @media (--medium-up) {
-	.hero .image-outter .image-inner {
+	.hero .outter .inner {
 		background-image: url('img/cmc-1200x210.png'), url('img/1200x380-home.jpg');
 	}
 }
@@ -78,49 +78,6 @@ section {
 	}
 }
 
-.welcome {
-	font-family: var(--light-font);
-	text-align: center;
-
-	& h1 {
-		font-size: 34px;
-		font-weight: normal;
-		letter-spacing: 2px;
-		margin: 0.5em 0;
-		padding: 0;
-	}
-
-	& p {
-		font-size: 18px;
-		line-height: 2;
-	}
-
-	& hr {
-		display: none;
-	}
-}
-
-
-@media (--medium-up) {
-	.welcome {
-		padding-left: 8%;
-		padding-right: 8%;
-
-		& h1 {
-			font-size: 60px;
-			letter-spacing: 3px;
-		}
-
-		& p {
-			font-size: 24px;
-		}
-
-		& hr {
-			display: block;
-		}
-	}
-}
-
 .gradient {
 	background: linear-gradient(#f3faf9, #b3dddc);
 	border-radius: 6px;
@@ -133,13 +90,13 @@ section {
 		max-width: 200px;
 	}
 
-	& .image-outter {
+	& .outter {
 		height: 0;
 		margin-bottom: 1em;
 		padding-bottom: 66.22%;
 		position: relative;
 
-		& .image-inner {
+		& .inner {
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -151,11 +108,11 @@ section {
 			width: 100%;
 		}
 
-		& .image-inner.events {
+		& .inner.events {
 			background-image: url(img/450x298-events.jpg);
 		}
 
-		& .image-inner.photos {
+		& .inner.photos {
 			background-image: url(img/450x298-las-vegas.jpg);
 		}
 	}
