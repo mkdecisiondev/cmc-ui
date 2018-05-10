@@ -1,5 +1,9 @@
 @import '../assets/css/_variables.css';
 
+main {
+	padding-bottom: 2em;
+}
+
 .welcome {
 	padding: 2em 1em 0 1em;
 	max-width: 1000px;
@@ -23,18 +27,6 @@
 	flex-basis: 0;
 	flex-grow: 1;
 	margin: 0.5em 1em;
-}
-
-button.primary-button {
-	background-color: var(--green);
-	color: white;
-	font-size: 1.25rem;
-	padding: 0.75em 0 2em 0;
-	text-transform: uppercase;
-	max-width: 200px;
-	border-radius: 3px;
-	cursor: pointer;
-	max-height: 66px;
 }
 
 .input-row.mainContact {
@@ -72,7 +64,6 @@ button.primary-button {
 
 	button.primary-button {
 		margin-top: 1em;
-		padding: 0.75em 0;
 		align-self: flex-end;
 	}
 }
