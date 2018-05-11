@@ -109,8 +109,8 @@ form.registration-form {
 }
 
 .form-col {
-	margin-right: 2em;
-	width: 250px;
+	margin-right: 1em;
+	width: 320px;
 
 	& input {
 		max-width: 200px;
