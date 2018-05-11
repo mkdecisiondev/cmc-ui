@@ -26,11 +26,15 @@ class EventFees extends MkComponent {
 		this.guestsNumberBox.total +
 		this.membershipFees;
 
+<<<<<<< 52c6c765242714dbe037f07c24e71338e28cdd9f
 <<<<<<< d3f89efdaeaed7acc93b705bd1354b7a29c1f2d7
 		this.totalNode.textContent = this.totalFees;
 =======
 		this.total.textContent = this.totalFees;
 >>>>>>> event fees update
+=======
+		this.totalNode.textContent = this.totalFees;
+>>>>>>> fixed issues
 	}
 
 	handleAnnual () {
