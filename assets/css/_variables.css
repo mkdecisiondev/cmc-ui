@@ -20,7 +20,7 @@
 	--text-color: black;
 	--background-color: white;
 
-	--input-color: var(--gray);
+	--input-text-color: var(--gray);
 	--input-invalid: var(--red);
 	--input-focus: var(--teal);
 	--select-background-image: url('/img/icons/select-caret.svg');

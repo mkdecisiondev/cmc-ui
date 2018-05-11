@@ -11,6 +11,7 @@ const webpackConfig = {
 		'js/main': './assets/js/main.js',
 		'js/contactus': './src/contactus.js',
 		'js/photos': './src/photos.js',
+		'js/registration': './src/registration.js',
 	},
 };
 

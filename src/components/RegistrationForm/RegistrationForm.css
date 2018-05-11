@@ -1,0 +1,243 @@
+form.registration-form {
+	padding: 1em 3em;
+	font-family: var(--light-font);
+	overflow: hidden;
+
+	& h1,
+	& h3 {
+		font-weight: lighter;
+		margin: 0;
+	}
+
+	& hr {
+		width: 250px;
+		margin: 0 0 1em 0;
+	}
+
+	& br {
+		line-height: 1.45em;
+	}
+
+	& h3 {
+		width: 140px;
+		padding-top: 1em;
+		margin-top: auto;
+		margin-right: 10px;
+	}
+
+	& input,
+	& select,
+	& .select {
+		max-width: 300px;
+	}
+
+	& .select,
+	& .textbox {
+		margin-bottom: 1em;
+	}
+
+	& .textbox,
+	& select {
+		margin-right: 3em;
+	}
+
+	& input[type='number'] {
+		height: 2em;
+		width: 70px;
+		padding-left: 0.5em;
+		margin-bottom: 0.5em;
+		margin-top: auto;
+		background-repeat: no-repeat;
+		background-position: 98% 55%;
+		background-size: 15px 15px;
+		border-radius: 3px;
+		border: 2px solid var(--lighter-gray);
+		color: var(--gray);
+		font-size: 1rem;
+		padding: 0 0.5em;
+		height: var(--input-height);
+	}
+
+	& input[name='middleName'] {
+		width: 3em;
+	}
+
+	& input[name='zipCode'],
+	& select[name='state'] {
+		max-width: 4em;
+	}
+
+	& span.label {
+		font-weight: 600;
+		left: 0;
+	}
+
+	& input[type='submit'] {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		background-color: var(--primary-button-background-color);
+		font-size: 1.2rem;
+		text-align: center;
+		color: white;
+		height: 40px;
+		width: 120px;
+		padding: 0;
+		border: none;
+		margin-left: -70px;
+	}
+
+	& .alumni {
+
+		& h3 {
+			width: 200px;
+		}
+
+		& span.radio {
+			height: 1em;
+			margin: 5px;
+		}
+
+		& p {
+			width: 340px;
+		}
+	}
+}
+
+.form-row {
+	display: flex;
+	align-content: flex-start;
+}
+
+.form-col {
+	margin-right: 1em;
+	width: 320px;
+
+	& input {
+		max-width: 200px;
+	}
+}
+
+.card-info {
+
+	& input {
+		width: 4em;
+	}
+}
+
+.wrap {
+	flex-flow: wrap;
+}
+
+.event-fees {
+	align-content: flex-start;
+	padding-right: 2em;
+
+	& .form-row,
+	& .form-col {
+		width: 400px;
+	}
+
+	& hr {
+		min-width: 400px;
+	}
+
+	& p {
+		width: 160px;
+		margin-bottom: 5px;
+	}
+
+	& input {
+		margin-bottom: 5px;
+	}
+}
+
+.divider {
+	height: 8px;
+	width: 200px;
+	background-color: var(--input-text-color);
+	margin: 3em 0 3em -3em;
+}
+
+.form-middle {
+
+	& .form-row {
+		width: 100%;
+	}
+
+	& p {
+		height: 25px;
+		width: 60px;
+	}
+}
+
+.membership-fee {
+	max-width: 50px;
+	margin-left: 70px;
+}
+
+.user-info {
+	justify-content: flex-start;
+}
+
+.radio {
+	margin-top: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+span.radio {
+	margin-right: 0.5em;
+	margin-bottom: 0.7em;
+}
+
+.membership .radio {
+	margin-bottom: 0.7em;
+}
+
+@media (--small-down) {
+	form.registration-form {
+		padding: 1em;
+
+		& input[type='submit'] {
+			margin: 0;
+			width: 80px;
+		}
+
+		& .textbox,
+		& select {
+			margin-right: 1em;
+		}
+	}
+
+	.form-col {
+		width: 320px;
+	}
+
+	.form-row {
+		padding-right: 1em;
+	}
+
+	.event-fees {
+
+		&  hr {
+			min-width: 300px;
+		}
+
+		& p {
+			width: 100px;
+		}
+	}
+
+	.user-info {
+		flex-direction: column;
+	}
+
+	.membership p:nth-child(1) {
+		min-width: 60px;
+	}
+
+	.membership-fee {
+		margin-left: 90px;
+		margin-right: 1em;
+	}
+}

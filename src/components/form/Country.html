@@ -1,0 +1,11 @@
+<component type="Select">
+	<name>country</name>
+	<required />
+	<required-message>{{ lang.selectYourCountry }}</required-message>
+	<options>
+		<option value="">{{ lang.countries }}*</option>
+		<each loop="item in countries">
+			<option value="{{ item.code }}">{{ item.name }}</option>
+		</each>
+	</options>
+</component>

@@ -1,0 +1,12 @@
+<component type="Select">
+	<name>state</name>
+	<required />
+	<required-message>{{ lang.selectYourState }}</required-message>
+	<validation-message>{{ lang.selectYourState }}</validation-message>
+	<options>
+		<option value="">{{ lang.state }}*</option>
+		<each loop="item in states">
+			<option value="{{ item.abbreviation }}">{{ item.abbreviation }}</option>
+		</each>
+	</options>
+</component>

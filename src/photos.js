@@ -39,7 +39,7 @@ function datePull (callback) {
 	arr = albumIDs.albums.data;
 
 	for (let i = 0; i < arr.length; i++) {
-    arr[i].created_time = moment(arr[i].created_time);
+	arr[i].created_time = moment(arr[i].created_time);
 	}
 
 	let sortedArray = arr.sort(function (date2, date1) {

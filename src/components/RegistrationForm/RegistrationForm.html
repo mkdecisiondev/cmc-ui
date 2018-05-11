@@ -1,0 +1,31 @@
+<form class="registration-form" id="registrationForm">
+	<h1>{{ lang.registrationForm }}</h1>
+	<hr>
+	<div class="form-row user-info wrap">
+		<div class="form-row">
+			<component src="components/form/FirstName.html" data-node-name="firstNameTextBox"></component>
+			<component src="components/form/MiddleName.html"></component>
+		</div>
+		<component src="components/form/LastName.html"></component>
+	</div>
+	<div class="form-row user-info">
+		<component src="components/form/GuestName.html"></component>
+	</div>
+	<div class="form-row user-info">
+		<component src="components/form/Address.html"></component>
+		<component src="components/form/UnitNumber.html"></component>
+	</div>
+	<div class="form-row user-info wrap">
+		<component src="components/form/ZipCode.html"></component>
+		<div class="form-row">
+			<component src="components/form/City.html"></component>
+			<component src="components/form/State.html"></component>
+		</div>
+		<component src="components/form/Country.html"></component>
+	</div>
+	<div class="form-row user-info">
+		<component src="components/form/EmailAddress.html"></component>
+		<component src="components/form/PhoneNumber.html"></component>
+	</div>
+	<component type="EventFees"></component>
+</form>
