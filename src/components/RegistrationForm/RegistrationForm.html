@@ -1,7 +1,7 @@
 <form class="registration-form" id="registrationForm">
 	<h1>{{ lang.registrationForm }}</h1>
 	<hr>
-	<div class="form-row user-info">
+	<div class="form-row user-info wrap">
 		<div class="form-row">
 			<component src="components/form/FirstName.html" data-node-name="firstNameTextBox"></component>
 			<component src="components/form/MiddleName.html"></component>
@@ -15,7 +15,7 @@
 		<component src="components/form/Address.html"></component>
 		<component src="components/form/UnitNumber.html"></component>
 	</div>
-	<div class="form-row user-info">
+	<div class="form-row user-info wrap">
 		<component src="components/form/ZipCode.html"></component>
 		<div class="form-row">
 			<component src="components/form/City.html"></component>
@@ -27,51 +27,5 @@
 		<component src="components/form/EmailAddress.html"></component>
 		<component src="components/form/PhoneNumber.html"></component>
 	</div>
-	<div class="form-row wrap">
-		<div class="form-col">
-			<br>
-			<h3>{{ lang.cardInformation }}</h3>
-			<hr>
-			<component src="components/form/CardNumber.html"></component>
-			<div class="form-row">
-				<component src="components/form/MonthYear.html" class="card-info"></component>
-				<component src="components/form/CVC.html" class="card-info"></component>
-			</div>
-		</div>
-		<div class="form-col membership">
-			<div class="form-row">
-				<h3>{{ lang.membershipFee }}</h3>
-				<h3>{{ lang.price }}:</h3>
-			</div>
-			<hr>
-			<div class="form-row">
-				<p>Annual:</p>
-				<p class="membership-fee">$100</p>
-				<component type="Toggle" id="annualFee">
-					<name>annualFee</name>
-				</component>
-			</div>
-			<div class="form-row">
-				<p>{{ lang.lifetime }}:</p>
-				<p class="membership-fee">$500</p>
-				<component type="Toggle" id="lifetimeFee">
-					<name>lifetimeFee</name>
-				</component>
-			</div>
-		</div>
-		<div class="form-col alumni">
-			<div class="form-row">
-				<h3>{{ lang.alumniMember }}*:</h3>
-				<component type="Toggle">
-					<required />
-					<name>alumni</name>
-				</component>
-			</div>
-			<hr>
-			<component src="components/form/AdmissionYear.html" class="card-info"></component>
- 			<component src="components/form/ChildrenAge.html" class="card-info"></component>
-		</div>
-	</div>
-	<div class="divider hide-sm-down"></div>
 	<component type="EventFees"></component>
 </form>

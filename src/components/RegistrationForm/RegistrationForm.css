@@ -64,7 +64,7 @@ form.registration-form {
 
 	& input[name='zipCode'],
 	& select[name='state'] {
-		width: 4em;
+		max-width: 4em;
 	}
 
 	& span.label {
@@ -120,11 +120,9 @@ form.registration-form {
 }
 
 .card-info {
-	margin: 0 0 0 auto;
 
 	& input {
 		width: 4em;
-		margin-right: 2em;
 	}
 }
 
@@ -167,7 +165,7 @@ form.registration-form {
 
 .membership p {
 	height: 25px;
-	width: 80px;
+	width: 60px;
 }
 
 .membership-fee {
