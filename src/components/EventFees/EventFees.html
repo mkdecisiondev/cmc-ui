@@ -76,50 +76,38 @@
 			</component>
 			<hr>
 		</div>
-		<hr>
-		<component src="components/form/AdmissionYear.html"></component>
-		<component src="components/form/ChildrenAge.html"></component>
-	</div>
-</div>
-<div class="divider hide-sm-down"></div>
-<div class="form-row event-fees wrap">
-	<div class="form-col">
-		<div class="form-row">
-			<p>{{ lang.eventFees }}:</p>
-			<p>{{ lang.price }}:</p>
-			<p>{{ lang.quantity }}:</p>
-		</div>
-	</div>
-	<div class="form-col membership">
-		<br>
-		<div class="form-row">
-			<h3>{{ lang.membershipFee }}</h3>
-		</div>
-		<hr>
-		<component type="NumberBox" data-node-name="spouseNumberBox">
-			<label>{{ lang.spouse }}:</label>
-			<price>250</price>
-			<name>spouse</name>
-		</component>
-		<hr>
-		<component type="NumberBox" data-node-name="childrenNumberBox">
-			<label>{{ lang.childrenUnder }}</label>
-			<price>200</price>
-			<name>children</name>
-		</component>
-		<hr>
-		<component type="NumberBox" data-node-name="guestsNumberBox">
-			<label>{{ lang.dinnerGuests }}</label>
-			<price>100</price>
-			<name>dinnerGuests</name>
-		</component>
-		<hr>
-		<div class="form-row">
-			<p>{{ lang.total }}:</p>
-			<p>$
-				<span data-node-name="totalNode">0</span>
-			</p>
-			<input type="submit" label="submit" class="primary-button">
+		<div class="form-col">
+			<div class="hide-md-down">
+				<div class="form-row">
+					<p class="item-title">{{ lang.eventFees }}:</p>
+					<p>{{ lang.price }}:</p>
+					<p>{{ lang.quantity }}:</p>
+				</div>
+				<hr>
+			</div>
+			<component type="NumberBox" data-node-name="spouseNumberBox">
+				<label>{{ lang.spouse }}:</label>
+				<price>250</price>
+				<name>spouse</name>
+			</component>
+			<hr>
+			<component type="NumberBox" data-node-name="childrenNumberBox">
+				<label>{{ lang.childrenUnder }}</label>
+				<price>200</price>
+				<name>children</name>
+			</component>
+			<hr>
+			<component type="NumberBox" data-node-name="guestsNumberBox">
+				<label>{{ lang.dinnerGuests }}</label>
+				<price>100</price>
+				<name>dinnerGuests</name>
+			</component>
+			<hr>
+			<div class="form-row">
+				<p class="item-title">{{ lang.total }}:</p>
+				<p class="total"><span data-node-name="totalNode" class="total">$0</span></p>
+				<input type="submit" label="submit" class="primary-button">
+			</div>
 		</div>
 	</div>
 </div>
