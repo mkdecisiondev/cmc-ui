@@ -8,6 +8,8 @@ Object.assign(MkComponent._mkComponentConstructors, {
 class EventFees extends MkComponent {
 	init () {
 		this.membershipFees = 0;
+		console.log(this.node);
+
 	}
 
 	registerEventHandlers () {
@@ -26,6 +28,7 @@ class EventFees extends MkComponent {
 		this.guestsNumberBox.total +
 		this.membershipFees;
 
+<<<<<<< e43b388b4eb1c365273e041515bc72effbb06677
 <<<<<<< 52c6c765242714dbe037f07c24e71338e28cdd9f
 <<<<<<< d3f89efdaeaed7acc93b705bd1354b7a29c1f2d7
 		this.totalNode.textContent = this.totalFees;
@@ -35,6 +38,9 @@ class EventFees extends MkComponent {
 =======
 		this.totalNode.textContent = this.totalFees;
 >>>>>>> fixed issues
+=======
+		this.totalNode.textContent = '$' + this.totalFees;
+>>>>>>> updated form style
 	}
 
 	handleAnnual () {
