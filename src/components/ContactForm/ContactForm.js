@@ -16,6 +16,11 @@ class ContactForm extends MkComponent {
 			},
 			revalidate: 'onblur',
 		});
+		this.node.addEventListener('submit', this.handleSubmit.bind(this));
+	}
+
+	handleSubmit (event) {
+		event.preventDefault();
 	}
 }
 

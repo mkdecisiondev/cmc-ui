@@ -1,8 +1,7 @@
 @import '_common.css';
+@import '../../src/components/Footer/Footer.css';
 @import '../../src/components/Header/Header.css';
-@import '../../src/components/ParagraphBox/ParagraphBox.css';
 @import '../../src/components/RegistrationForm/RegistrationForm.css';
 @import '../../src/components/Select/Select.css';
+@import '../../src/components/TextArea/TextArea.css';
 @import '../../src/components/TextBox/TextBox.css';
-@import '../../src/components/ParagraphBox/ParagraphBox.css';
-@import '../../src/components/Footer/Footer.css';
