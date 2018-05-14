@@ -3,19 +3,19 @@ module.exports = [
 		members: [
 			{
 				title: 'President',
-				name: 'Dr. Elizabeth Paul (Laly)',
+				name: 'Dr. Meenakshi Singh',
 			},
 			{
 				title: 'Vice President',
-				name: 'Dr. Arun Adlakha',
+				name: 'Dr. Gaurav Malhotra',
 			},
 			{
 				title: 'Secretary',
-				name: 'Dr. Neena Grewal',
+				name: 'Dr. Veena Antony',
 			},
 			{
 				title: 'Treasurer',
-				name: 'Dr. Geeta Chhibber',
+				name: 'Dr. Swaranjit Singh',
 			},
 			{
 				title: 'Web & Technical Assistant',
@@ -34,11 +34,12 @@ module.exports = [
 	{
 		title: 'Members at large',
 		members: [
-			'Dr. Swaranjit Singh',
-			'Dr. Ananthakrishnan',
 			'Dr. Deepa Gupta',
-			'Dr. Nutan Gill',
-			'Dr. Mandeep Rair',
+			'Dr. Navdeep Loomba',
+			'Dr. Neena Grewal',
+			'Dr. Surinder Pal Minhas',
+			'Dr. Ajay Sandhir',
+			'Dr. Kapil Sethi',
 		],
 	},
 ];
