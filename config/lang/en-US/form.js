@@ -22,7 +22,7 @@ module.exports = {
 	enterValidAddress: 'Please enter a valid address using only letters, numbers, spaces, and - or #.',
 	enterValidCVC: 'Please enter a valid CVC',
 	enterValidCard: 'Please enter a valid card number.',
-	enterValidChildrensAges: 'Please enter the ages using only numbers, spaces and comma for separation.',
+	enterValidChildrensAges: 'Please enter the ages using only numbers, spaces and/or commas for separation. i.e. 6, 10',
 	enterValidCity: 'Please enter your city using only letters, apostrophes or hyphens.',
 	enterValidEmailAddress: 'Please enter a valid email address.',
 	enterValidExp: 'Please enter a valid expiration month and year',
