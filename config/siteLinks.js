@@ -19,6 +19,6 @@ module.exports = [
 	},
 	{
 		title: lang.contactUS,
-		url: '/contact-us.html',
+		url: '/contact.html',
 	},
 ];

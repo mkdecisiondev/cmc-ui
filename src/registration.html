@@ -1,14 +1,10 @@
 <extends src="layout.html">
 	<block name="title">
-		<title>{{ registration }}</title>
-	</block>
-
-	<block name="styles" type="append">
-		<link href="index.css" rel="stylesheet">
+		<title>{{ lang.registration }}</title>
 	</block>
 
 	<block name="main">
-		<component type="RegistrationForm"></component>
+		<component type="RegistrationForm" id="registrationForm"></component>
 	</block>
 
 	<block name="scripts" type="append">

@@ -9,7 +9,7 @@ const webpackConfig = {
 	devtool: 'source-map',
 	entry: {
 		'js/main': './assets/js/main.js',
-		'js/contactus': './src/contactus.js',
+		'js/contact': './src/contact.js',
 		'js/photos': './src/photos.js',
 		'js/registration': './src/registration.js',
 	},
