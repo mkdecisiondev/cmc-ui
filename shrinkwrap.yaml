@@ -449,7 +449,7 @@ packages:
     dev: true
     engines:
       node: '>=4'
-    peerDependencies:
+    peerDependencies: &ref_0
       babel-core: '6'
       webpack: 2 || 3 || 4
     resolution:
@@ -465,9 +465,7 @@ packages:
     engines:
       node: '>=4'
     id: registry.npmjs.org/babel-loader/7.1.4
-    peerDependencies:
-      babel-core: '6'
-      webpack: 2 || 3 || 4
+    peerDependencies: *ref_0
     resolution:
       integrity: sha512-/hbyEvPzBJuGpk9o80R0ZyTej6heEOr59GoEUtn8qFKbnx4cJm9FWES6J/iv644sYgrtVw9JJQkjaLW/bqb5gw==
   /babel-messages/6.23.0:
@@ -2179,7 +2177,6 @@ packages:
     optional: true
     os:
       - darwin
-    requiresBuild: true
     resolution:
       integrity: sha512-WIr7iDkdmdbxu/Gh6eKEZJL6KPE74/5MEsf2whTOFNxbIoIixogroLdKYqB6FDav4Wavh/lZdzzd3b2KxIXC5Q==
   /function-bind/1.1.1:
@@ -5268,7 +5265,6 @@ packages:
       node: '>=4.3.0 <5.0.0 || >=5.10'
     peerDependencies:
       webpack: ^1.9 || ^2 || ^2.1.0-beta || ^2.2.0-rc || ^3.0.0
-    requiresBuild: true
     resolution:
       integrity: sha1-uVH0q7a9YX5m9j64kUmOORdj4wk=
   /ultron/1.1.1:
@@ -5382,7 +5378,6 @@ packages:
     engines:
       node: '>=4'
     optional: true
-    requiresBuild: true
     resolution:
       integrity: sha512-HNMztPP5A1sKuVFmdZ6BPVpBQd5bUjNC8EFMFiICK+oho/OQsAJy5hnIx4btMHiOk8j04f/DbIlqnEZ9d72dqg==
   /validate-npm-package-license/3.0.3:
@@ -5658,7 +5653,7 @@ packages:
       tarball: 'https://codeload.github.com/mkdecisiondev/spike-core/tar.gz/e5dcb7eea72f01b18b8aea6693967a42860127aa'
     version: 2.2.0
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 5
+shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   autoprefixer: ^7.2.6

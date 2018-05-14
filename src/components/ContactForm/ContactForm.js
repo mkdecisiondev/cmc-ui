@@ -32,6 +32,13 @@ class ContactForm extends MkComponent {
 
 	handleSubmit (event) {
 		event.preventDefault();
+		let formData = {};
+		formData.firstName = this.node[0].value;
+		formData.lastName = this.node[1].value;
+		formData.emailAddress = this.node[2].value;
+		formData.phoneNumber = this.node[3].value;
+		formData.questionText = this.node[4].value;
+		formData.questionType = this.node[5].value;
 	}
 }
 
