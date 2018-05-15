@@ -4,6 +4,7 @@ const roles = require('./roles.js');
 const siteLinks = require('./siteLinks.js');
 const socialMedia = require('./socialMedia');
 const states = require('./states.js');
+const quantity = require('./quantity.js');
 
 module.exports = {
 	lang,
@@ -12,4 +13,5 @@ module.exports = {
 	siteLinks,
 	socialMedia,
 	states,
+	quantity,
 };

@@ -7,9 +7,9 @@ class NumberBox extends MkComponent {
 		this.total = 0;
 	}
 
-	// registerEventHandlers () {
-	// 	this.inputNode.addEventListener('change', this.handleInput.bind(this));
-	// }
+	registerEventHandlers () {
+		this.inputNode.addEventListener('change', this.handleInput.bind(this));
+	}
 
 	handleInput () {
 		if (this.inputNode.value > MAX_INPUT) {
