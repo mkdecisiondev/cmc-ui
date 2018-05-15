@@ -14,6 +14,7 @@ module.exports = {
 	childrensAges: "Children's Ages",
 	city: 'City',
 	contactEmail: 'sss786sss@aol.com',
+	contactInformation: 'Contact Information',
 	contactUs: 'Contact Us',
 	country: 'Country',
 	dinnerGuests: 'Dinner Guests',
