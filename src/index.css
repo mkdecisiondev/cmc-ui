@@ -125,6 +125,12 @@ section {
 	}
 }
 
+@media all and (-ms-high-contrast: none) {
+	.gradient-articles .gradient {
+		flex-basis: 40%;
+	}
+}
+
 @media (--medium-up) {
 	.gradient {
 		flex-basis: calc(50% - 12px);
@@ -257,6 +263,13 @@ section {
 		&  p {
 			line-height: 2;
 		}
+	}
+}
+
+@media all and (-ms-high-contrast: none) {
+	section.history summary img {
+		height: 130px;
+		max-height: 130px;
 	}
 }
 
