@@ -9,7 +9,6 @@ Object.assign(MkComponent._mkComponentConstructors, {
 });
 
 class ContactForm extends MkComponent {
-
 	init () {
 		/* eslint-disable no-magic-numbers */
 		forms.constrainInput({
