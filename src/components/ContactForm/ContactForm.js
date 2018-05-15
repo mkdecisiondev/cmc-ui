@@ -9,6 +9,7 @@ Object.assign(MkComponent._mkComponentConstructors, {
 });
 
 class ContactForm extends MkComponent {
+
 	init () {
 		/* eslint-disable no-magic-numbers */
 		forms.constrainInput({
@@ -18,7 +19,6 @@ class ContactForm extends MkComponent {
 		});
 		/* eslint-enable no-magic-numbers */
 	}
-
 	registerEventHandlers () {
 		hyperform(this.node, {
 			classes: {
@@ -36,9 +36,22 @@ class ContactForm extends MkComponent {
 		formData.firstName = this.node[0].value;
 		formData.lastName = this.node[1].value;
 		formData.emailAddress = this.node[2].value;
-		formData.phoneNumber = this.node[3].value;
-		formData.questionText = this.node[4].value;
-		formData.questionType = this.node[5].value;
+		formData.primaryPhoneNumber = this.node[3].value;
+		formData.questionText = this.node[5].value;
+		formData.questionType = this.node[4].value;
+
+		axios.post('prod-api-url-goes-here',
+			JSON.stringify(formData), {
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			})
+			.then(() => {
+				window.location.assign('../../confirmation.html');
+			})
+			.catch(() => {
+				window.alert('We\'re sorry, an error occurred. Please try again.');
+			});
 	}
 }
 
