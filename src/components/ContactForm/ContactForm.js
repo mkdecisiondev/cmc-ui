@@ -51,7 +51,7 @@ class ContactForm extends MkComponent {
 		};
 		formData = removeEmpty(formData);
 
-		axios.post('prod-api-url-goes-here',
+		axios.post('https://api.cmcnaa.org/live/contact',
 			JSON.stringify(formData), {
 				headers: {
 					'Content-Type': 'application/json',
