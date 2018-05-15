@@ -1,7 +1,16 @@
 <div class="numberbox">
 	<div class="form-row">
 		<p class="item-title">${label}</p>
-		<p>$${price}</p>
-		${quantity-select}
+		<p data-node-name="feePriceNode" data-price="${price}">$${price}</p>
+
+		<div class="select">
+			<label>
+				<select name="${name}" data-node-name="inputNode">
+					<each loop="item in eventFeesQuantity">
+						<option value="{{ item }}">{{ item }}</option>
+					</each>
+				</select>
+			</label>
+		</div>
 	</div>
 </div>
