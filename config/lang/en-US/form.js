@@ -7,6 +7,7 @@ module.exports = {
 	alumniMember: 'CMC Alumni Member',
 	annual: 'Annual',
 	attendees: 'Attendees',
+	byContinuingYouAgree: 'By continuing, you are agreeing that you have selected the right person(s) and will be charged a total of $<span data-node-name="totalFeesNode"></span> for the event fee',
 	cardCVC: 'CVC',
 	cardDate: 'MM/YY',
 	cardInformation: 'Card Information',

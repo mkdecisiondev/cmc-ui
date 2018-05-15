@@ -9,6 +9,7 @@
 				<component src="components/form/CVC.html" class="card-info"></component>
 			</div>
 		</div>
+
 		<div class="form-col membership">
 			<div class="form-row">
 				<h3>{{ lang.membershipFee }}</h3>
@@ -29,6 +30,7 @@
 				</component>
 			</div>
 		</div>
+
 		<div class="form-col alumni">
 			<div class="form-row">
 				<h3>{{ lang.alumniMember }}</h3>
@@ -41,9 +43,11 @@
 			<component src="components/form/AdmissionYear.html"></component>
 		</div>
 	</div>
+
 	<h3>{{ lang.attendees }}</h3>
 	<hr>
-	<div class="form-row event-fees wrap">
+	<div class="validation-message hidden" data-node-name="eventFeesErrorNode">{{ lang.selectNumberOfAttendees }}</div>
+	<div class="form-row event-fees wrap" data-node-name="eventFeesNode">
 		<div class="form-col">
 			<div class="form-row">
 				<p class="item-title">{{ lang.eventFees }}:</p>
@@ -55,30 +59,22 @@
 				<label>{{ lang.adultOneDay }}:</label>
 				<price>200</price>
 				<name>adultOneDay</name>
-				<quantity-select>
-					<component src="components/form/adultOneDayQuantity.html" data-node-name="adultOneDayQuantity"></component>
-				</quantity-select>
 			</component>
 			<hr>
 			<component type="NumberBox" data-node-name="adultTwoDayNumberBox">
 				<label>{{ lang.adultTwoDay }}:</label>
 				<price>500</price>
 				<name>adultTwoDays</name>
-				<quantity-select>
-					<component src="components/form/adultTwoDayQuantity.html" data-node-name="adultTwoDayQuantity"></component>
-				</quantity-select>
 			</component>
 			<hr>
 			<component type="NumberBox" data-node-name="residentsNumberBox">
 				<label>{{ lang.residentsFellows }}:</label>
 				<price>250</price>
 				<name>residentsFellows</name>
-				<quantity-select>
-					<component src="components/form/residentsAndFellowsQuantity.html" data-node-name="residentAndFellowsQuantity"></component>
-				</quantity-select>
 			</component>
 			<hr>
 		</div>
+
 		<div class="form-col">
 			<div class="hide-md-down">
 				<div class="form-row">
@@ -92,33 +88,26 @@
 				<label>{{ lang.spouse }}:</label>
 				<price>250</price>
 				<name>spouse</name>
-				<quantity-select>
-					<component src="components/form/spouseQuantity.html" data-node-name="spouseQuantity"></component>
-				</quantity-select>
 			</component>
 			<hr>
 			<component type="NumberBox" data-node-name="childrenNumberBox">
 				<label>{{ lang.children }}:</label>
 				<price>200</price>
 				<name>children</name>
-				<quantity-select>
-					<component src="components/form/childrenQuantity.html" data-node-name="childrenQuantity"></component>
-				</quantity-select>
 			</component>
 			<hr>
 			<component type="NumberBox" data-node-name="guestsNumberBox">
 				<label>{{ lang.dinnerGuests }}:</label>
 				<price>100</price>
 				<name>dinnerGuests</name>
-				<quantity-select>
-					<component src="components/form/dinnerGuestQuantity.html" data-node-name="dinnerGuestQuantity"></component>
-				</quantity-select>
 			</component>
 			<hr>
 			<div class="form-row">
 				<p class="item-title">{{ lang.total }}:</p>
-				<p class="total"><span data-node-name="totalNode" class="total">$0</span></p>
-				<input type="submit" label="submit" class="primary-button">
+				<p class="total">
+					$<span data-node-name="totalNode" class="total">0</span>
+				</p>
+				<input type="submit" class="primary-button" data-node-name="submitButton" label="{{ lang.submit }}">
 			</div>
 		</div>
 	</div>

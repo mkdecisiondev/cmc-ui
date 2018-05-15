@@ -1,4 +1,4 @@
-form.registration-form {
+.registration-form {
 	padding: 1em 3em;
 	font-family: var(--light-font);
 	overflow: hidden;
@@ -101,6 +101,10 @@ form.registration-form {
 		& p {
 			width: 340px;
 		}
+	}
+
+	& .validation-message {
+		color: var(--input-invalid);
 	}
 }
 
@@ -219,7 +223,7 @@ span.radio {
 }
 
 @media (--small-down) {
-	form.registration-form {
+	.registration-form {
 		padding: 1em;
 
 		& input[type='submit'] {
