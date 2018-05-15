@@ -3,6 +3,14 @@
 		<title>{{ lang.registration }}</title>
 	</block>
 
+	<block name="styles" type="append">
+		<style type="text/css">
+			nav.vertical-navigator ul a.registration:after {
+				background: white;
+			}
+		</style>
+	</block>
+
 	<block name="main">
 		<component type="RegistrationForm" id="registrationForm"></component>
 	</block>

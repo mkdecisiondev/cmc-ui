@@ -1,5 +1,9 @@
 @import '../assets/css/_variables.css';
 
+nav.vertical-navigator ul a.contact:after {
+	background: white;
+}
+
 main {
 	padding: 2em var(--padding-mobile);
 

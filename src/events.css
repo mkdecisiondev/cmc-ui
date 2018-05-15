@@ -1,5 +1,9 @@
 @import '../assets/css/_variables.css';
 
+nav.vertical-navigator ul a.events:after {
+	background: white;
+}
+
 .hero {
 	background-color: #d2c3c5;
 

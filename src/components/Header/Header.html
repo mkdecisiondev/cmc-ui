@@ -16,7 +16,7 @@
 			<each loop="navitem, index in siteLinks">
 				<if condition="index != 0">
 					<li>
-						<a href="{{ navitem.url }}">{{ navitem.title }}</a>
+						<a href="{{ navitem.url }}" class="{{ navitem.class }}">{{ navitem.title }}</a>
 					</li>
 				</if>
 			</each>

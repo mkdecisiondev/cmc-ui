@@ -1,5 +1,9 @@
 @import '../assets/css/_variables.css';
 
+nav.vertical-navigator ul a.photos:after {
+	background: white;
+}
+
 body {
 	font-family: var(--primary-font);
 }
