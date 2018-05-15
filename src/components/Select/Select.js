@@ -5,7 +5,9 @@ class Select extends MkComponent {
 		if (this.node.dataset.requiredMessage) {
 			this.requiredMessage = this.node.dataset.requiredMessage;
 		}
-		this.validationMessage = this.validationNode.textContent;
+		if (this.validationMessage) {
+			this.validationMessage = this.validationNode.textContent;
+		}
 	}
 
 	registerEventHandlers () {

@@ -6,6 +6,7 @@ module.exports = {
 	},
 	extends: 'eslint:recommended',
 	globals: {
+		axios: true,
 		JSJoda: true,
 		hyperform: true,
 		lang: true,
