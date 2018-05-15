@@ -88,6 +88,11 @@ form.registration-form {
 			width: 200px;
 		}
 
+		& div.radio {
+			width: 7em;
+			padding-bottom: 1em;
+		}
+
 		& span.radio {
 			height: 1em;
 			margin: 5px;
@@ -228,9 +233,6 @@ span.radio {
 			margin-right: 1em;
 		}
 
-		& .mobile input {
-			width: 170px;
-		}
 	}
 
 	.event-fees .form-col {
