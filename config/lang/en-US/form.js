@@ -30,7 +30,7 @@ module.exports = {
 	enterValidFirstName: 'Please enter your first name using only letters, apostrophes or hyphens.',
 	enterValidLastName: 'Please enter your last name using only letters, apostrophes or hyphens.',
 	enterValidMiddleInitial: 'Please enter your middle initial using a single letter.',
-	enterValidPhoneNumber: 'Please enter your country code and phone number using only numbers and dashes.',
+	enterValidPhoneNumber: 'Please enter your phone number using only numbers and dashes.',
 	enterValidSpouse: 'Please enter your Spouse or Guest Name using only letters, apostrophes or hyphens.',
 	enterValidZipCode: 'Please enter a valid ZIP code.',
 	enterYourAddress: 'Please enter your address.',
