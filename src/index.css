@@ -87,6 +87,7 @@ section {
 	padding-left: 4%;
 	padding-right: 4%;
 	text-align: center;
+	margin-bottom: 3em;
 
 	& p {
 		min-height: 2.5em;
@@ -121,7 +122,10 @@ section {
 
 	& .primary-button {
 		float: right;
+		font-size: 15px;
+		font-weight: normal;
 		align-self: flex-end;
+		min-width: 50%;
 	}
 }
 
@@ -134,13 +138,10 @@ section {
 @media (--medium-up) {
 	.gradient {
 		flex-basis: calc(50% - 12px);
+		margin-bottom: 0;
 
 		& hr {
 			max-width: 410px;
-		}
-
-		& .primary-button {
-			font-size: 20px;
 		}
 	}
 
