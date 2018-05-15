@@ -42,8 +42,10 @@ section {
 	padding-right: var(--padding-mobile);
 
 	& hr {
+		background-image: url('img/text-divider-454x30.png');
+		background-position: center bottom;
+		background-repeat: no-repeat;
 		background-size: contain;
-		background: url('img/text-divider-454x30.png') no-repeat center bottom;
 		border: none;
 		height: 30px;
 		margin: 0 auto 1em;
@@ -86,8 +88,8 @@ section {
 	padding-right: 4%;
 	text-align: center;
 
-	& hr {
-		max-width: 200px;
+	& p {
+		min-height: 2.5em;
 	}
 
 	& .outter {
@@ -119,11 +121,14 @@ section {
 
 	& .primary-button {
 		float: right;
+		align-self: flex-end;
 	}
 }
 
 @media (--medium-up) {
 	.gradient {
+		flex-basis: calc(50% - 12px);
+
 		& hr {
 			max-width: 410px;
 		}
@@ -135,11 +140,6 @@ section {
 
 	.gradient:nth-child(odd) {
 		margin-right: 24px;
-		flex-basis: calc(50% - 12px);
-	}
-
-	.gradient:nth-child(even) {
-		flex-basis: calc(50% - 12px);
 	}
 }
 
