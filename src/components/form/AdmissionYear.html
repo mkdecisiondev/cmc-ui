@@ -1,6 +1,9 @@
 <component type="TextBox">
 	<name>admissionYear</name>
-	<label>{{ lang.yearOfAdmission }}</label>
+	<label>{{ lang.yearOfAdmission }}*</label>
+	<required/>
 	<pattern>^[0-9]*$</pattern>
 	<maxlength>4</maxlength>
+	<validation-message>{{ lang.enterValidAdmissionYear }}</validation-message>
+	<required-message>{{ lang.enterYourAddmissionYear }}</required-message>
 </component>

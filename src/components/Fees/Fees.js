@@ -5,28 +5,29 @@ Object.assign(MkComponent._mkComponentConstructors, {
 	NumberBox,
 });
 
-class EventFees extends MkComponent {
+class Fees extends MkComponent {
 	init () {
 		this.membershipFees = 0;
+		this.eventFees = 0;
 	}
 
 	registerEventHandlers () {
-		this.node.addEventListener('change', this.handleFeesChange.bind(this));
 		this.annualFeeToggle.addEventListener('change', this.handleAnnual.bind(this));
 		this.lifetimeFeeToggle.addEventListener('change', this.handleLifetime.bind(this));
+		this.eventFeesNode.addEventListener('change', this.updateTotalFees.bind(this));
+		this.submitButton.addEventListener('click', this.validateEventFees.bind(this));
 	}
 
-	handleFeesChange () {
-		this.totalFees = this.adultFullNumberBox.total +
-		this.adultOneDayNumberBox.total +
+	updateTotalFees () {
+		this.eventFees = this.adultOneDayNumberBox.total +
 		this.adultTwoDayNumberBox.total +
 		this.residentsNumberBox.total +
 		this.spouseNumberBox.total +
 		this.childrenNumberBox.total +
-		this.guestsNumberBox.total +
-		this.membershipFees;
+		this.guestsNumberBox.total;
 
-		this.totalNode.textContent = this.totalFees;
+		this.totalNode.textContent = this.eventFees + this.membershipFees;
+		this.validateEventFees();
 	}
 
 	handleAnnual () {
@@ -37,6 +38,8 @@ class EventFees extends MkComponent {
 		else {
 			this.membershipFees = 0;
 		}
+
+		this.totalNode.textContent = this.eventFees + this.membershipFees;
 	}
 
 	handleLifetime () {
@@ -47,7 +50,21 @@ class EventFees extends MkComponent {
 		else {
 			this.membershipFees = 0;
 		}
+
+		this.totalNode.textContent = this.eventFees + this.membershipFees;
+	}
+
+	validateEventFees (event) {
+		if (this.eventFees) {
+			this.eventFeesErrorNode.classList.add('hidden');
+		}
+		else {
+			if (event) {
+				event.preventDefault();
+			}
+			this.eventFeesErrorNode.classList.remove('hidden');
+		}
 	}
 }
 
-export { EventFees };
+export { Fees };

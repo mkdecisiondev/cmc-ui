@@ -33,20 +33,13 @@ class Select extends MkComponent {
 			this.validationNode.textContent = this.requiredMessage;
 		}
 
-		this.descriptionNode.classList.add('hidden');
 		this.validationNode.classList.remove('hidden');
 	}
 
 	handleValidInput () {
 		if (!this.inputNode.required || this.inputNode.classList.contains('populated')) {
 			this.validationNode.classList.add('hidden');
-			this.descriptionNode.classList.remove('hidden');
 		}
-	}
-
-	validate () {
-		this.handleInput();
-		hyperform.checkValidity(this.inputNode);
 	}
 }
 
