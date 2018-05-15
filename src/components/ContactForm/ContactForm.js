@@ -13,8 +13,8 @@ class ContactForm extends MkComponent {
 		/* eslint-disable no-magic-numbers */
 		forms.constrainInput({
 			inputNode: this.phoneNumberTextBox.inputNode,
-			allow: [ '-' ],
-			positions: [ 3, 7 ],
+			allow: ['-'],
+			positions: [3, 7],
 		});
 		/* eslint-enable no-magic-numbers */
 	}
@@ -38,6 +38,18 @@ class ContactForm extends MkComponent {
 		formData.primaryPhoneNumber = this.node[3].value;
 		formData.questionText = this.node[5].value;
 		formData.questionType = this.node[4].value;
+
+		const removeEmpty = function (data) {
+			let cleanedObject = {};
+			Object.keys(data).forEach(function (key) {
+				if (data[key] !== '') {
+					cleanedObject[key] = data[key];
+				}
+			});
+
+			return cleanedObject;
+		};
+		formData = removeEmpty(formData);
 
 		axios.post('prod-api-url-goes-here',
 			JSON.stringify(formData), {
