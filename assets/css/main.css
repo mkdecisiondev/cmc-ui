@@ -1,4 +1,5 @@
 @import '_common.css';
+@import '../../src/components/Dialog/Dialog.css';
 @import '../../src/components/Footer/Footer.css';
 @import '../../src/components/Header/Header.css';
 @import '../../src/components/RegistrationForm/RegistrationForm.css';

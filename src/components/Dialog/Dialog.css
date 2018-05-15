@@ -1,0 +1,53 @@
+.dialog-overlay {
+	align-items: center;
+	background: var(--overlay-background-color);
+	cursor: pointer;
+	display: none;
+	height: 100%;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 1001;
+}
+
+.dialog {
+	background-color: var(--background-color);
+	border-radius: 4px;
+	cursor: auto;
+	margin: 1em;
+	max-width: 1200px;
+	padding: 1em;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	& .dialog-title {
+		font-size: 1rem;
+		font-weight: var(--font-weight-semibold);
+		margin-bottom: 0.25em;
+		text-align: left;
+	}
+
+	& .close-button {
+		cursor: pointer;
+		font-size: 1.5rem;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+	}
+
+	& .dialog-content {
+		max-height: 80vh;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	& iframe {
+		border: 0;
+		display: block;
+		height: 80vh;
+		width: 100%;
+	}
+}
