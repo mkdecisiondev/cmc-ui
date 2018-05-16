@@ -19,5 +19,5 @@ module.exports = Object.assign(
 	home,
 	htmlResources,
 	links,
-	thankYou,
+	thankYou
 );
