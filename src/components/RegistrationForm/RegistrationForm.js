@@ -75,7 +75,6 @@ class RegistrationForm extends MkComponent {
 				return t.token.id;
 			})
 				.then((token) => {
-					console.log(token);
 					this.formData.stripeToken = token;
 					this.formData.amount = this.feesNode.eventFees;
 				})
