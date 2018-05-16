@@ -1,6 +1,7 @@
 header {
 	background-color: var(--header-background-color);
 	color: white;
+	height: var(--header-height);
 	width: 100%;
 
 	& .top {
@@ -50,8 +51,8 @@ header {
 
 header.fixed {
 	position: fixed;
-	z-index: 999;
 	top: 0;
+	z-index: 999;
 }
 
 .page.header-height-padding {
