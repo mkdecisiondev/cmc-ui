@@ -3,10 +3,12 @@ const form = require('./form.js');
 const home = require('./home.js');
 const links = require('./links.js');
 const thankYou = require('./thankYou');
-const confirmation = require('./confirmation')
+const confirmation = require('./confirmation');
+// const htmlResources = require('./htmlResources.js');
 
 const common = {
 	alumniAssociationChristianMedicalCollege: 'Alumni Association of Christian Medical College',
+	privacyPolicy: 'Privacy Policy',
 };
 
 module.exports = Object.assign(
@@ -16,5 +18,6 @@ module.exports = Object.assign(
 	form,
 	home,
 	links,
-	thankYou
+	thankYou,
+	//htmlResources,
 );

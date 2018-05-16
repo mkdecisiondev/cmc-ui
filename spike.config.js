@@ -13,6 +13,11 @@ const webpackConfig = {
 		'js/photos': './src/photos.js',
 		'js/registration': './src/registration.js',
 	},
+	// resolve: {
+	// 	alias: {
+	// 		'./htmlResources.js': './htmlResources-shim.js',
+	// 	},
+	// },
 };
 
 const spikeConfig = {
