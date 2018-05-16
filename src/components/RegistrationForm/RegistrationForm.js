@@ -76,7 +76,9 @@ class RegistrationForm extends MkComponent {
 			})
 				.then((token) => {
 					this.formData.token = token;
+					this.formData.amount = this.feesNode.totalNode.innerHTML;
 				});
+			this.formData = removeEmpty(this.formData);
 		}
 		catch (error) {
 			window.alert('We\'re sorry, an error occurred. Please try again.');
@@ -87,6 +89,17 @@ class RegistrationForm extends MkComponent {
 				.then((result) => {
 					return result;
 				});
+		}
+
+		function removeEmpty (data) {
+			let cleanedObject = {};
+			Object.keys(data).forEach(function (key) {
+				if (data[key] !== '') {
+					cleanedObject[key] = data[key];
+				}
+			});
+
+			return cleanedObject;
 		}
 	}
 }
