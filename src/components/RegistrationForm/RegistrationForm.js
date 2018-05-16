@@ -79,6 +79,17 @@ class RegistrationForm extends MkComponent {
 					this.formData.amount = this.feesNode.totalNode.innerHTML;
 				});
 			this.formData = removeEmpty(this.formData);
+			axios.post(
+				'https://cbj6udiqj4.execute-api.us-west-2.amazonaws.com/Stage/registration',
+				JSON.stringify(this.formData), {
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				})
+				.then((result) => {
+					console.log(result);
+				});
+
 		}
 		catch (error) {
 			window.alert('We\'re sorry, an error occurred. Please try again.');
