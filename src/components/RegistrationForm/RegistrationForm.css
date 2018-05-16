@@ -64,10 +64,6 @@
 		padding: 0;
 		text-align: center;
 	}
-
-	& .validation-message {
-		color: var(--input-field-invalid-color);
-	}
 }
 
 .form-row {
@@ -136,6 +132,11 @@
 
 	& input {
 		margin-bottom: 5px;
+	}
+
+	& .validation-message {
+		color: var(--input-field-invalid-color);
+		font-size: 0.8rem;
 	}
 }
 
