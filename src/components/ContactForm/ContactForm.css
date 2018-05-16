@@ -20,7 +20,7 @@
 		width: 100%;
 	}
 
-	& button {
+	& .primary-button {
 		margin-top: 1em;
 	}
 
