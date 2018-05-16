@@ -20,10 +20,8 @@
 
 	<div class="form-row user-info wrap">
 		<component src="components/form/ZipCode.html" data-node-name="zipCodeTextBox"></component>
-		<div class="form-row">
-			<component src="components/form/City.html" data-node-name="cityTextBox" class="mobile"></component>
-			<component src="components/form/State.html" data-node-name="stateSelect"></component>
-		</div>
+		<component src="components/form/City.html" data-node-name="cityTextBox" class="mobile"></component>
+		<component src="components/form/State.html" data-node-name="stateSelect"></component>
 	</div>
 
 	<div class="form-row user-info">
@@ -36,7 +34,7 @@
 	<component type="Dialog" data-node-name="registrationFeesDialog" id="registrationFeesDialog">
 		<content>
 			{{ lang.byContinuingYouAgree }}
-		<p><button class="primary-button" data-node-name="continueButton">{{ lang.continue }}</button></p>
+			<p><button class="primary-button" data-node-name="continueButton">{{ lang.continue }}</button></p>
 		</content>
 	</component>
 </form>
