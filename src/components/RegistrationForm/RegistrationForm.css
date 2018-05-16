@@ -75,7 +75,8 @@
 }
 
 .form-col {
-	margin-right: 0.5em;
+	margin-right: 1em;
+	margin-bottom: 1em;
 	min-width: 330px;
 
 	& input {
@@ -97,35 +98,12 @@
 	flex-flow: wrap;
 }
 
-.form-middle {
-	& form-col {
-		margin-right: auto;
-	}
-
-	& .form-row {
-		width: 100%;
-	}
-
-	& p {
-		height: 25px;
-		width: 60px;
-	}
-}
-
 .event-fees {
 	justify-content: space-between;
-	max-width: 900px;
-
-	& .form-col {
-		width: 40%;
-	}
-
-	& .form-row {
-		justify-content: space-between;
-	}
+	max-width: 750px;
 
 	& hr {
-		min-width: 400px;
+		width: 100%;
 	}
 
 	& p {
@@ -146,7 +124,7 @@
 	margin: 3em 0 3em -3em;
 }
 
-.radio {
+/* .radio {
 	margin-top: auto;
 	display: flex;
 	justify-content: space-between;
@@ -155,7 +133,7 @@
 span.radio {
 	margin-right: 1em;
 	margin-bottom: 0.7em;
-}
+} */
 
 .item-title {
 	width: 125px;
@@ -164,17 +142,6 @@ span.radio {
 .total {
 	min-width: 90px;
 	text-align: center;
-}
-
-
-@media (--large-down) {
-	.event-fees {
-		justify-content: space-between;
-
-		&  hr {
-			min-width: 330px;
-		}
-	}
 }
 
 @media (--small-down) {
@@ -192,11 +159,6 @@ span.radio {
 			margin-right: 1em;
 		}
 
-	}
-
-	.event-fees .form-col {
-		padding: 0 1em;
-		width: 100%;
 	}
 
 	.event-fees hr {
