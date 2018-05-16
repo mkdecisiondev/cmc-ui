@@ -15,6 +15,8 @@ class Header extends MkComponent {
 
 	openNavigator () {
 		this.isNavigatorOpen = true;
+		this.node.classList.add('fixed');
+		this.node.parentNode.classList.add('header-height-padding');
 		this.verticalNavigatorNode.classList.add('open');
 		this.hamburgerNode.classList.add('open');
 		this.socialMediaNode.classList.add('open');
@@ -23,6 +25,8 @@ class Header extends MkComponent {
 
 	closeNavigator () {
 		this.isNavigatorOpen = false;
+		this.node.classList.remove('fixed');
+		this.node.parentNode.classList.remove('header-height-padding');
 		this.verticalNavigatorNode.classList.remove('open');
 		this.hamburgerNode.classList.remove('open');
 		this.socialMediaNode.classList.remove('open');
