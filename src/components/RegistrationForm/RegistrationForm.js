@@ -12,7 +12,7 @@ Object.assign(MkComponent._mkComponentConstructors, {
 	Select,
 	TextBox,
 });
-const stripe = Stripe('pk_test_jZZnE8X4va0KaR2T7McLcaC2');
+const stripe = Stripe('pk_test_2LGkBPerOovneoO2isQ6aq6H');
 const elements = stripe.elements({
 	fonts: [
 		{
@@ -75,16 +75,21 @@ class RegistrationForm extends MkComponent {
 				return t.token.id;
 			})
 				.then((token) => {
-					this.formData.token = token;
-					this.formData.amount = this.feesNode.totalNode.innerHTML;
-				});
-			this.formData = removeEmpty(this.formData);
-			axios.post(
-				'https://cbj6udiqj4.execute-api.us-west-2.amazonaws.com/Stage/registration',
-				JSON.stringify(this.formData), {
-					headers: {
-						'Content-Type': 'application/json',
-					},
+					console.log(token);
+					this.formData.stripeToken = token;
+					this.formData.amount = this.feesNode.eventFees;
+				})
+				.then(() => {
+					this.formData = removeEmpty(this.formData);
+				})
+				.then(() => {
+					return axios.post(
+						'https://cbj6udiqj4.execute-api.us-west-2.amazonaws.com/Stage/registration',
+						JSON.stringify(this.formData), {
+							headers: {
+								'Content-Type': 'application/json',
+							},
+						});
 				})
 				.then((result) => {
 					console.log(result);
