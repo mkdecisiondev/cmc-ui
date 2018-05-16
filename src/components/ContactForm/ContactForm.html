@@ -1,7 +1,9 @@
 <form class="contact-form">
-	<div class="main">
-		<div class="input-row share">
+	<div class="main row row-flush">
+		<div class="col col-md-6">
 			<component src="components/form/FirstName.html" data-node-name="firstNameTextBox"></component>
+		</div>
+		<div class="col-12 col-md-6">
 			<component src="components/form/LastName.html" data-node-name="lastNameTextBox"></component>
 		</div>
 
@@ -19,8 +21,9 @@
 
 		<div class="input-row share">
 			<component src="components/form/QuestionInput.html" data-node-name="questionInputTextArea"></component>
-			<button type="submit" class="primary-button">{{ lang.contactUs }}</button>
+
 		</div>
+		<button type="submit" class="primary-button">{{ lang.contactUs }}</button>
 
 		<div class="input-row mainContact">
 			<p>{{ lang.swarnjitSingh }}</p>

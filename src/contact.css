@@ -62,7 +62,7 @@ main {
 
 	.input-row.share {
 		flex-direction: row;
-		max-width: 800px;
+		/* max-width: 800px; */
 		justify-content: flex-start;
 	}
 
@@ -70,4 +70,14 @@ main {
 		margin-top: 1em;
 		align-self: flex-end;
 	}
+}
+
+
+.col-md-6 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+input {
+	width: 100%;
 }
