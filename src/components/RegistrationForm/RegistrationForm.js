@@ -13,23 +13,24 @@ Object.assign(MkComponent._mkComponentConstructors, {
 	TextBox,
 });
 const stripe = Stripe('pk_test_jZZnE8X4va0KaR2T7McLcaC2');
+const elements = stripe.elements({
+	fonts: [
+		{
+			cssSrc: 'https://fonts.googleapis.com/css?family=Source+Code+Pro',
+		},
+	],
+	locale: window.__exampleLocale,
+});
+
+const cardNumber = elements.create('cardNumber');
+const cardExpiry = elements.create('cardExpiry');
+const cardCvc = elements.create('cardCvc');
+cardNumber.mount('#cardNumber');
+cardExpiry.mount('#cardExpiry');
+cardCvc.mount('#cardCvc');
 
 class RegistrationForm extends MkComponent {
-	init() {
-		const elements = stripe.elements({
-			fonts: [
-				{
-					cssSrc: 'https://fonts.googleapis.com/css?family=Source+Code+Pro',
-				},
-			],
-			locale: window.__exampleLocale,
-		});
-		const cardNumber = elements.create('cardNumber');
-		const cardExpiry = elements.create('cardExpiry');
-		const cardCvc = elements.create('cardCvc');
-		cardNumber.mount('#cardNumber');
-		cardExpiry.mount('#cardExpiry');
-		cardCvc.mount('#cardCvc');
+	init () {
 		this.registrationFeesDialog.closeable = true;
 
 		/* eslint-disable no-magic-numbers */
@@ -69,13 +70,21 @@ class RegistrationForm extends MkComponent {
 	handleSubmit (event) {
 		event.preventDefault();
 		this.formData = this.form.value;
-		console.log(this.formData);
-		// console.log(elements);
-		const stripeToken = stripe.createToken(this.formData).then((result) => {
-			return result;
-		});
-		console.log(stripeToken);
-		// window.location.href = '/thank-you.html';
+		try {
+			registerElements([ cardNumber, cardExpiry, cardCvc ]).then((t) => {
+				const token = t.id;
+			});
+		}
+		catch (error) {
+			window.alert('We\'re sorry, an error occurred. Please try again.');
+		}
+
+		function registerElements (el) {
+			return stripe.createToken(el[0])
+				.then((result) => {
+					return result;
+				});
+		}
 	}
 }
 
