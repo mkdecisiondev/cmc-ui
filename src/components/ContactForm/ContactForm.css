@@ -1,0 +1,43 @@
+.contact-form {
+
+	& .row.row-flush {
+		margin-bottom: 1em;
+	}
+
+	& .row.bottom {
+		align-items: flex-end;
+	}
+
+
+	& .col-6,
+	& .col-8,
+	& .col-12 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	& input {
+		width: 100%;
+	}
+
+	& .primary-button {
+		margin-top: 1em;
+	}
+
+	& .validation-message {
+		margin-bottom: 1em;
+	}
+
+	& .main-contact {
+		color: var(--thankyou-text-color);
+
+		& a {
+			color: var(--thankyou-text-color);
+		}
+
+		& a:hover {
+			color: var(--teal);
+		}
+	}
+
+}

@@ -19,28 +19,7 @@ main {
 	}
 }
 
-.input-row.share {
-	flex-direction: column;
-}
 
-.input-row > * {
-	flex-basis: 0;
-	flex-grow: 1;
-	margin: 0.5em 0;
-}
-
-.input-row.mainContact {
-	margin-top: 0;
-	color: var(--thankyou-text-color);
-
-	& a {
-		color: var(--thankyou-text-color);
-	}
-
-	& a:hover {
-		color: var(--teal);
-	}
-}
 
 @media (--medium-up) {
 
@@ -50,24 +29,5 @@ main {
 		& h1 {
 			font-size: 1.5rem;
 		}
-	}
-
-	.primary-button {
-		margin-left: 0.5em;
-	}
-
-	.input-row {
-		margin: 0;
-	}
-
-	.input-row.share {
-		flex-direction: row;
-		max-width: 800px;
-		justify-content: flex-start;
-	}
-
-	button.primary-button {
-		margin-top: 1em;
-		align-self: flex-end;
 	}
 }
