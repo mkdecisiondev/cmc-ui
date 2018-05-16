@@ -20,7 +20,6 @@
 		border-bottom: 2px solid var(--lighter-gray);
 		font-size: 1.2rem;
 		margin-bottom: 0.25em;
-		margin-right: 0.5em;
 		padding: 0.25em 0 0 0;
 		touch-action: manipulation;
 		height: var(--input-height);
@@ -28,6 +27,10 @@
 		&.hide-input {
 			color: var(--background-color);
 		}
+	}
+
+	& input:invalid {
+		box-shadow: none;
 	}
 
 	& input:focus,
