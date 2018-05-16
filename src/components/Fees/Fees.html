@@ -1,12 +1,12 @@
 <div>
-	<h3>{{ lang.attendees }}</h3>
-	<hr>
 	<div class="form-row event-fees wrap" data-node-name="eventFeesNode">
 		<div class="form-col">
+			<h3>{{ lang.attendees }}</h3>
+			<hr>
 			<div class="form-row">
 				<p class="item-title">{{ lang.eventFees }}:</p>
 				<p>{{ lang.price }}:</p>
-				<p>{{ lang.quantity }}:</p>
+				<p>{{ lang.numberAttendees }}:</p>
 			</div>
 			<hr>
 			<component type="NumberBox" data-node-name="adultNumberBox">
@@ -23,15 +23,12 @@
 			<hr>
 			<div class="validation-message hidden" data-node-name="eventFeesErrorNode">{{ lang.selectNumberOfAttendees }}</div>
 			<div class="form-row">
-				<p class="item-title">{{ lang.total }}:</p>
+				<p class="item-title">{{ lang.totalEventFees }}:</p>
 				<p class="total">
 					$<span data-node-name="totalNode" class="total">0</span>
 				</p>
 			</div>
 		</div>
-	</div>
-
-	<div class="form-row wrap form-middle">
 		<div class="form-col">
 			<h3>{{ lang.cardInformation }}</h3>
 			<hr>
@@ -43,5 +40,5 @@
 		</div>
 	</div>
 
-	<input type="submit" class="primary-button" data-node-name="submitButton" label="{{ lang.submit }}">
+	<input type="submit" class="primary-button" data-node-name="submitButton" value="{{ lang.submit }}">
 </div>

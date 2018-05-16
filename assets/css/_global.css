@@ -112,6 +112,9 @@ h6 {
 }
 
 .primary-button {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
 	border: none;
 	background: var(--primary-button-background-color);
 	border-radius: 3px;
