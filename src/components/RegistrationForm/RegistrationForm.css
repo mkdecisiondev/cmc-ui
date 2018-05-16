@@ -42,23 +42,6 @@
 		margin-right: 3em;
 	}
 
-	& input[type='number'] {
-		height: 2em;
-		width: 70px;
-		padding-left: 0.5em;
-		margin-bottom: 0.5em;
-		margin-top: auto;
-		background-repeat: no-repeat;
-		background-position: 98% 55%;
-		background-size: 15px 15px;
-		border-radius: 3px;
-		border: 2px solid var(--lighter-gray);
-		color: var(--gray);
-		font-size: 1rem;
-		padding: 0 0.5em;
-		height: var(--input-height);
-	}
-
 	& div[data-node-name='zipCodeTextBox'] .validation-message {
 		max-width: 7em;
 	}
@@ -73,7 +56,7 @@
 		left: 0;
 	}
 
-	& input[type='submit'] {
+	& .primary-button {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		height: 40px;
@@ -82,29 +65,8 @@
 		text-align: center;
 	}
 
-	& .alumni {
-
-		& h3 {
-			width: 200px;
-		}
-
-		& div.radio {
-			width: 7em;
-			padding-bottom: 1em;
-		}
-
-		& span.radio {
-			height: 1em;
-			margin: 5px;
-		}
-
-		& p {
-			width: 340px;
-		}
-	}
-
 	& .validation-message {
-		color: var(--input-invalid);
+		color: var(--input-field-invalid-color);
 	}
 }
 
@@ -122,7 +84,6 @@
 }
 
 .card-info {
-
 	& input {
 		width: 4em;
 	}
@@ -137,7 +98,6 @@
 }
 
 .form-middle {
-
 	& form-col {
 		margin-right: auto;
 	}
@@ -182,13 +142,8 @@
 .divider {
 	height: 8px;
 	width: 200px;
-	background-color: var(--input-text-color);
+	background-color: var(--input-field-text-color);
 	margin: 3em 0 3em -3em;
-}
-
-.membership-fee {
-	max-width: 50px;
-	margin-left: 70px;
 }
 
 .radio {
@@ -199,10 +154,6 @@
 
 span.radio {
 	margin-right: 1em;
-	margin-bottom: 0.7em;
-}
-
-.membership .radio {
 	margin-bottom: 0.7em;
 }
 
@@ -230,7 +181,7 @@ span.radio {
 	.registration-form {
 		padding: 1em;
 
-		& input[type='submit'] {
+		& .primary-button {
 			margin: 0;
 			width: 80px;
 			font-size: 1em;
@@ -254,14 +205,5 @@ span.radio {
 
 	.user-info {
 		flex-direction: column;
-	}
-
-	.membership p:nth-child(1) {
-		min-width: 60px;
-	}
-
-	.membership-fee {
-		margin-left: 90px;
-		margin-right: 1em;
 	}
 }

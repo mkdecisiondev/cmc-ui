@@ -47,7 +47,7 @@
 	}
 
 	& .label {
-		color: var(--input-text-color);
+		color: var(--input-field-text-color);
 		cursor: text;
 		font-size: 1rem;
 		left: 0.8em;
