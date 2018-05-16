@@ -34,6 +34,19 @@ footer {
 			}
 		}
 	}
+
+	& .other-links {
+		text-align: right;
+		padding: 1em 0;
+
+		& .privacy-policy {
+			text-decoration: none;
+			color: white;
+			margin-bottom: 2em;
+			text-align: right;
+			font-size: 14px;
+		}
+	}
 }
 
 @media (--medium-up) {

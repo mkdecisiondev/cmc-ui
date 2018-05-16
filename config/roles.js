@@ -17,10 +17,6 @@ module.exports = [
 				title: 'Treasurer',
 				name: 'Dr. Swaranjit Singh',
 			},
-			{
-				title: 'Web & Technical Assistant',
-				name: 'Dr. Pradeep Sharma',
-			},
 		],
 	},
 	{
