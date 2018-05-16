@@ -72,8 +72,11 @@ class RegistrationForm extends MkComponent {
 		this.formData = this.form.value;
 		try {
 			registerElements([ cardNumber, cardExpiry, cardCvc ]).then((t) => {
-				const token = t.id;
-			});
+				return t.token.id;
+			})
+				.then((token) => {
+					this.formData.token = token;
+				});
 		}
 		catch (error) {
 			window.alert('We\'re sorry, an error occurred. Please try again.');
