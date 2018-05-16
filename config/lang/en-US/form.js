@@ -66,7 +66,7 @@ module.exports = {
 	state: 'State',
 	submit: 'Submit',
 	swarnjitSingh: 'Swarnjit Singh',
-	totalFees: 'Total Event Fees',
+	totalEventFees: 'Total Event Fees',
 	upcomingEvents: 'Upcoming Events',
 	yes: 'Yes',
 	zipCode: 'ZIP Code',
