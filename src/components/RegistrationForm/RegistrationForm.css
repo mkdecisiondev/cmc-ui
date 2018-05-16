@@ -5,7 +5,7 @@
 
 	& h1,
 	& h3 {
-		font-weight: lighter;
+		font-weight: regular;
 		margin: 0;
 		font-size: 1.17em;
 	}
@@ -59,13 +59,13 @@
 		height: var(--input-height);
 	}
 
-	& input[name='middleName'] {
-		width: 3em;
+	& div[data-node-name='zipCodeTextBox'] .validation-message {
+		max-width: 7em;
 	}
 
 	& input[name='zipCode'],
 	& select[name='state'] {
-		max-width: 4em;
+		max-width: 5em;
 	}
 
 	& span.label {
@@ -125,6 +125,10 @@
 
 	& input {
 		width: 4em;
+	}
+
+	& div.validation-message {
+		max-width: 4em;
 	}
 }
 
@@ -240,6 +244,7 @@ span.radio {
 	}
 
 	.event-fees .form-col {
+		padding: 0 1em;
 		width: 100%;
 	}
 

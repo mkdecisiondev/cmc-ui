@@ -67,6 +67,18 @@
 		top: 0.4em;
 	}
 
+	& select:-webkit-autofill,
+	& select:-webkit-autofill:hover,
+	& select:-webkit-autofill:focus {
+		background: var(--select-focus-background-image);
+		background-repeat: no-repeat;
+		background-position: 98% 55%;
+		background-size: 15px 15px;
+		border: 2px solid var(--teal);
+		color: var(--text-color);
+		outline: none;
+	}
+
 	& select:-webkit-autofill ~ .label,
 	& select:-webkit-autofill:hover ~ .label,
 	& select:-webkit-autofill:focus ~ .label {
