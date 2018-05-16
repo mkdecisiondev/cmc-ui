@@ -1,35 +1,43 @@
 <form class="contact-form">
-	<div class="main row row-flush">
-		<div class="col-12 col-md-5">
-			<component src="components/form/FirstName.html" data-node-name="firstNameTextBox"></component>
+	<div class="main">
+		<div class="row row-flush">
+			<div class="col-12 col-md-6">
+				<component src="components/form/FirstName.html" data-node-name="firstNameTextBox"></component>
+			</div>
+			<div class="col-12 col-md-5 offset-md-1">
+				<component src="components/form/LastName.html" data-node-name="lastNameTextBox"></component>
+			</div>
 		</div>
-		<div class="col-12 col-md-5 offset-md-2">
-			<component src="components/form/LastName.html" data-node-name="lastNameTextBox"></component>
+		<div class="row row-flush">
+			<div class="col-8 col-md-6">
+				<component src="components/form/EmailAddress.html" data-node-name="emailAddressTextBox"></component>
+			</div>
+		</div>
+		<div class="row row-flush">
+			<div class="col-8 col-md-6">
+				<component src="components/form/PhoneNumber.html" data-node-name="phoneNumberTextBox"></component>
+			</div>
+		</div>
+		<div class="row row-flush">
+			<div class="col-12 col-md-6">
+				<component src="components/form/QuestionTypeSelect.html" data-node-name="questionTypeSelect"></component>
+			</div>
+		</div>
+		<div class="row row-flush bottom">
+			<div class="col-12 col-md-6">
+				<component src="components/form/QuestionInput.html" data-node-name="questionInputTextArea"></component>
+			</div>
+			<div class="col-12 col-md-5 offset-md-1">
+				<button type="submit" class="primary-button">{{ lang.contactUs }}</button>
+			</div>
 		</div>
 
-		<div class="col-12 col-md-5">
-			<component src="components/form/EmailAddress.html" data-node-name="emailAddressTextBox"></component>
-		</div>
 
-		<div class="input-row">
-			<component src="components/form/PhoneNumber.html" data-node-name="phoneNumberTextBox"></component>
-		</div>
-
-		<div class="input-row">
-			<component src="components/form/QuestionTypeSelect.html" data-node-name="questionTypeSelect"></component>
-		</div>
-
-		<div class="input-row share">
-			<component src="components/form/QuestionInput.html" data-node-name="questionInputTextArea"></component>
-
-		</div>
-		<button type="submit" class="primary-button">{{ lang.contactUs }}</button>
-
-		<div class="input-row mainContact">
+		<div class="row row-flush main-contact">
 			<p>{{ lang.swarnjitSingh }}</p>
 		</div>
 
-		<div class="input-row mainContact">
+		<div class="row row-flush main-contact">
 			<a href="mailto:{{ lang.contactEmail }}">{{ lang.contactEmail }}</a>
 		</div>
 	</div>

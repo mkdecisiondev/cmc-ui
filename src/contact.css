@@ -19,18 +19,7 @@ main {
 	}
 }
 
-.input-row.share {
-	flex-direction: column;
-}
-
-.input-row > * {
-	flex-basis: 0;
-	flex-grow: 1;
-	margin: 0.5em 0;
-}
-
-.input-row.mainContact {
-	margin-top: 0;
+.main-contact {
 	color: var(--thankyou-text-color);
 
 	& a {
@@ -51,28 +40,19 @@ main {
 			font-size: 1.5rem;
 		}
 	}
+}
 
-	.primary-button {
-		margin-left: 0.5em;
-	}
+.row.row-flush {
+	margin-bottom: 1em;
+}
 
-	.input-row {
-		margin: 0;
-	}
-
-	.input-row.share {
-		flex-direction: row;
-		/* max-width: 800px; */
-		justify-content: flex-start;
-	}
-
-	button.primary-button {
-		margin-top: 1em;
-		align-self: flex-end;
-	}
+.row.bottom {
+	align-items: flex-end;
 }
 
 
+.col-6,
+.col-8,
 .col-12 {
 	padding-left: 0;
 	padding-right: 0;
@@ -80,4 +60,12 @@ main {
 
 input {
 	width: 100%;
+}
+
+button {
+	margin-top: 1em;
+}
+
+.validation-message {
+	margin-bottom: 1em;
 }
