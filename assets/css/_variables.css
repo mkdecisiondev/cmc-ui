@@ -41,6 +41,8 @@
 
 	--padding-mobile: 2%;
 	--padding-desktop: 6%;
+
+	--header-height: 88px;
 }
 
 @custom-media --x-small-down (max-width: 359px);

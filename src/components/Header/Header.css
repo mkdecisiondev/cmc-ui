@@ -48,6 +48,16 @@ header {
 	}
 }
 
+header.fixed {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+}
+
+.page.header-height-padding {
+	padding-top: var(--header-height);
+}
+
 nav.vertical-navigator {
 	border-top: 1px solid gray;
 	display: none;
