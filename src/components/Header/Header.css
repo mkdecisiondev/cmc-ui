@@ -1,6 +1,7 @@
 header {
 	background-color: var(--header-background-color);
 	color: white;
+	height: var(--header-height);
 	width: 100%;
 
 	& .top {
@@ -22,7 +23,7 @@ header {
 	}
 
 	& nav.open {
-		background: none;
+		background-color: var(--header-background-color);
 		display: block;
 		width: 100%;
 	}
@@ -41,11 +42,22 @@ header {
 	}
 
 	& .social-media.open {
+		background-color: var(--header-background-color);
 		display: flex;
 		justify-content: space-around;
 		padding-top: 1em;
 		width: 100%;
 	}
+}
+
+header.fixed {
+	position: fixed;
+	top: 0;
+	z-index: 9;
+}
+
+.page.header-height-padding {
+	padding-top: var(--header-height);
 }
 
 nav.vertical-navigator {
@@ -54,6 +66,7 @@ nav.vertical-navigator {
 	padding-left: 0;
 	padding-right: 0;
 	font-family: var(--medium-font);
+	z-index: 9;
 
 	& ul {
 		list-style: none;
