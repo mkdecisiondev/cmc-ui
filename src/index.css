@@ -42,8 +42,10 @@ section {
 	padding-right: var(--padding-mobile);
 
 	& hr {
+		background-image: url('img/text-divider-454x30.png');
+		background-position: center bottom;
+		background-repeat: no-repeat;
 		background-size: contain;
-		background: url('img/text-divider-454x30.png') no-repeat center bottom;
 		border: none;
 		height: 30px;
 		margin: 0 auto 1em;
@@ -85,9 +87,10 @@ section {
 	padding-left: 4%;
 	padding-right: 4%;
 	text-align: center;
+	margin-bottom: 3em;
 
-	& hr {
-		max-width: 200px;
+	& p {
+		min-height: 2.5em;
 	}
 
 	& .outter {
@@ -119,27 +122,31 @@ section {
 
 	& .primary-button {
 		float: right;
+		font-size: 15px;
+		font-weight: normal;
+		align-self: flex-end;
+		min-width: 50%;
+	}
+}
+
+@media all and (-ms-high-contrast: none) {
+	.gradient-articles .gradient {
+		flex-basis: 40%;
 	}
 }
 
 @media (--medium-up) {
 	.gradient {
+		flex-basis: calc(50% - 12px);
+		margin-bottom: 0;
+
 		& hr {
 			max-width: 410px;
-		}
-
-		& .primary-button {
-			font-size: 20px;
 		}
 	}
 
 	.gradient:nth-child(odd) {
 		margin-right: 24px;
-		max-width: calc(50% - 12px);
-	}
-
-	.gradient:nth-child(even) {
-		max-width: calc(50% - 12px);
 	}
 }
 
@@ -257,6 +264,13 @@ section {
 		&  p {
 			line-height: 2;
 		}
+	}
+}
+
+@media all and (-ms-high-contrast: none) {
+	section.history summary img {
+		height: 130px;
+		max-height: 130px;
 	}
 }
 

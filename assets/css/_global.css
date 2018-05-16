@@ -119,8 +119,8 @@ h6 {
 	border-radius: 3px;
 	color: white;
 	cursor: pointer;
-	font-size: 1.25rem;
-	padding: 0.9em 2em;
+	font-size: 15px;
+	padding: 0.8em 1.5em;
 	font-family: var(--primary-font);
 	text-transform: uppercase;
 }
@@ -152,7 +152,7 @@ figure {
 		font-size: 34px;
 		font-weight: normal;
 		letter-spacing: 2px;
-		margin: 0.5em 0 0 0;
+		margin: 0.5em 0;
 		padding: 0;
 	}
 
@@ -174,7 +174,7 @@ figure {
 		padding-right: var(--padding-desktop);
 
 		& h1 {
-			font-size: 60px;
+			font-size: 55px;
 			letter-spacing: 3px;
 		}
 
