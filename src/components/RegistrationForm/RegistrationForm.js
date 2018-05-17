@@ -4,6 +4,7 @@ import { forms } from '../form/forms.js';
 import { MkComponent } from '../MkComponent/MkComponent.js';
 import { Select } from '../Select/Select.js';
 import { TextBox } from '../TextBox/TextBox.js';
+import { FormManager } from '../FormManager/FormManager.js';
 
 Object.assign(MkComponent._mkComponentConstructors, {
 	Dialog,
@@ -11,6 +12,15 @@ Object.assign(MkComponent._mkComponentConstructors, {
 	Select,
 	TextBox,
 });
+const stripe = Stripe('pk_live_oHVXTcFPqsDHPt7VPS1Di4bO');
+const elements = stripe.elements();
+
+const cardNumber = elements.create('cardNumber');
+const cardExpiry = elements.create('cardExpiry');
+const cardCvc = elements.create('cardCvc');
+cardNumber.mount('#cardNumber');
+cardExpiry.mount('#cardExpiry');
+cardCvc.mount('#cardCvc');
 
 class RegistrationForm extends MkComponent {
 	init () {
@@ -23,6 +33,7 @@ class RegistrationForm extends MkComponent {
 			positions: [ 3, 7 ],
 		});
 		/* eslint-enable no-magic-numbers */
+		this.form = new FormManager(this.node);
 	}
 
 	registerEventHandlers () {
@@ -49,8 +60,56 @@ class RegistrationForm extends MkComponent {
 		this.registrationFeesDialog.show();
 	}
 
-	handleSubmit () {
-		window.location.href = '/thank-you.html';
+	handleSubmit (event) {
+		event.preventDefault();
+		this.registrationFeesDialog.continueButton.disabled = true;
+		this.formData = this.form.value;
+		try {
+			registerElements([ cardNumber, cardExpiry, cardCvc ]).then((t) => {
+				return t.token.id;
+			})
+				.then((token) => {
+					this.formData.stripeToken = token;
+					this.formData.amount = this.feesNode.eventFees;
+				})
+				.then(() => {
+					this.formData = removeEmpty(this.formData);
+				})
+				.then(() => {
+					return axios.post(
+						'https://api.cmcnaa.org/live/registration',
+						JSON.stringify(this.formData), {
+							headers: {
+								'Content-Type': 'application/json',
+							},
+						});
+				})
+				.then(() => {
+					window.location.href = '/thank-you.html';
+				});
+		}
+		catch (error) {
+			this.registrationFeesDialog.continueButton.disabled = false;
+			window.alert('We\'re sorry, an error occurred with your request.');
+		}
+
+		function registerElements (el) {
+			return stripe.createToken(el[0])
+				.then((result) => {
+					return result;
+				});
+		}
+
+		function removeEmpty (data) {
+			let cleanedObject = {};
+			Object.keys(data).forEach(function (key) {
+				if (data[key] !== '') {
+					cleanedObject[key] = data[key];
+				}
+			});
+
+			return cleanedObject;
+		}
 	}
 }
 
