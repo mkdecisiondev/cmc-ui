@@ -69,6 +69,7 @@ class RegistrationForm extends MkComponent {
 
 	handleSubmit (event) {
 		event.preventDefault();
+		this.registrationFeesDialog.continueButton.disabled = true;
 		this.formData = this.form.value;
 		try {
 			registerElements([ cardNumber, cardExpiry, cardCvc ]).then((t) => {
@@ -95,6 +96,7 @@ class RegistrationForm extends MkComponent {
 				});
 		}
 		catch (error) {
+			this.registrationFeesDialog.continueButton.disabled = false;
 			window.alert('We\'re sorry, an error occurred with your request.');
 		}
 
