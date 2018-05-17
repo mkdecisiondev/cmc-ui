@@ -12,7 +12,7 @@ Object.assign(MkComponent._mkComponentConstructors, {
 	Select,
 	TextBox,
 });
-const stripe = Stripe('pk_test_2LGkBPerOovneoO2isQ6aq6H');
+const stripe = Stripe('pk_live_oHVXTcFPqsDHPt7VPS1Di4bO');
 const elements = stripe.elements({
 	fonts: [
 		{
@@ -84,7 +84,7 @@ class RegistrationForm extends MkComponent {
 				})
 				.then(() => {
 					return axios.post(
-						'https://cbj6udiqj4.execute-api.us-west-2.amazonaws.com/Stage/registration',
+						'https://api.cmcnaa.org/live/registration',
 						JSON.stringify(this.formData), {
 							headers: {
 								'Content-Type': 'application/json',
