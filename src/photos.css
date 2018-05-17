@@ -96,3 +96,11 @@ body {
 	padding: 0 62px 20px 62px;
 	text-align: center;
 }
+
+figure {
+	overflow: hidden;
+
+	& img {
+		width: 100%;
+	}
+}
