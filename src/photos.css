@@ -53,59 +53,35 @@ body {
 }
 
 .album-container {
-	padding: 10px 0 50px 0;
+	background-image: url('img/photos_bg.jpg');
+	background-size:    ;
+	background-repeat: repeat-y;
+	background-color: #79bdc1;
+	padding: 20px 45px 20px 10px;
 	margin: 0;
 }
 
-.album-wrap {
-	padding: 0;
-}
-
-.album-image-wrap {
-	height: 206px;
-	padding-left: 0;
-	padding-right: 0;
-	width: 100%;
-}
-
-.album-image {
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	display: block;
-	height: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 301px;
-	min-width:  300px;
-	object-fit: cover;
-	position: relative;
-}
-
-.album-image:hover {
-	cursor: pointer;
-}
-
-.album-description {
-	margin: 0;
-	padding: 12px 2% 5px 2%;
-	text-align: center;
-}
-
-.album-date {
-	margin: 0;
-	padding: 0 62px 20px 62px;
-	text-align: center;
+@media (--medium-up) {
+	.album-container {
+		padding: 20px 35px 20px 10px;
+	}
 }
 
 figure {
-	overflow: hidden;
+	/* overflow: hidden; */
 	margin-bottom: 2em;
+
 
 	& img {
 		width: 100%;
+		display: block;
+		margin: 10px 30px 20px 10px;
+		box-shadow: 10px 10px 20px 10px rgba(0,0,0,0.5);
 	}
 
 	& figcaption {
 		text-align: center;
+		color: white;
+		text-shadow: 1px 1px 1px #000;
 	}
 }
