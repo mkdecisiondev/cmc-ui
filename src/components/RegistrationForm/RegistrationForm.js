@@ -90,13 +90,12 @@ class RegistrationForm extends MkComponent {
 							},
 						});
 				})
-				.then((result) => {
-					console.log(result);
+				.then(() => {
+					window.location.href = '/thank-you.html';
 				});
-
 		}
 		catch (error) {
-			window.alert('We\'re sorry, an error occurred. Please try again.');
+			window.alert('We\'re sorry, an error occurred with your request.');
 		}
 
 		function registerElements (el) {
