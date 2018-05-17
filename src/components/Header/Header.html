@@ -14,11 +14,9 @@
 	<nav class="vertical-navigator col-12 col-md-9" role="navigation" data-node-name="verticalNavigatorNode">
 		<ul>
 			<each loop="navitem, index in siteLinks">
-				<if condition="index != 0">
-					<li>
-						<a href="{{ navitem.url }}" class="{{ navitem.class }}">{{ navitem.title }}</a>
-					</li>
-				</if>
+				<li>
+					<a href="{{ navitem.url }}" class="{{ navitem.class }}">{{ navitem.title }}</a>
+				</li>
 			</each>
 		</ul>
 	</nav>

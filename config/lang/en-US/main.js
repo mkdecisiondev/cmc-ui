@@ -4,6 +4,7 @@ const form = require('./form.js');
 const home = require('./home.js');
 const htmlResources = require('./htmlResources.js');
 const links = require('./links.js');
+const photos = require('./photos.js');
 const thankYou = require('./thankYou');
 
 const common = {
@@ -19,5 +20,6 @@ module.exports = Object.assign(
 	home,
 	htmlResources,
 	links,
+	photos,
 	thankYou
 );

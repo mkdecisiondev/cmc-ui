@@ -16,8 +16,18 @@
 		</figure>
 		<section class="welcome">
 			<h1>{{ lang.photos }}</h1>
+			<p>{{ lang.enjoyPhotosFromEvents }}</p>
 		</section>
-		<div class="album-container row" id="albumListing"></div>
+		<div class="album-container row row-flush">
+
+			<each loop="photo in photoGallery">
+				<figure class="col-12 col-md-4">
+					<img src="{{ photo.imageUrl }}" alt="">
+					<figcaption>{{ photo.caption }}</figcaption>
+				</figure>
+			</each>
+
+		</div>
 	</block>
 </extends>
 
