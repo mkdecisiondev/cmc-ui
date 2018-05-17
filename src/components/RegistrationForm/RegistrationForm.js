@@ -13,14 +13,7 @@ Object.assign(MkComponent._mkComponentConstructors, {
 	TextBox,
 });
 const stripe = Stripe('pk_live_oHVXTcFPqsDHPt7VPS1Di4bO');
-const elements = stripe.elements({
-	fonts: [
-		{
-			cssSrc: 'https://fonts.googleapis.com/css?family=Source+Code+Pro',
-		},
-	],
-	locale: window.__exampleLocale,
-});
+const elements = stripe.elements();
 
 const cardNumber = elements.create('cardNumber');
 const cardExpiry = elements.create('cardExpiry');
@@ -36,8 +29,8 @@ class RegistrationForm extends MkComponent {
 		/* eslint-disable no-magic-numbers */
 		forms.constrainInput({
 			inputNode: this.phoneNumberTextBox.inputNode,
-			allow: ['-'],
-			positions: [3, 7],
+			allow: [ '-' ],
+			positions: [ 3, 7 ],
 		});
 		/* eslint-enable no-magic-numbers */
 		this.form = new FormManager(this.node);
