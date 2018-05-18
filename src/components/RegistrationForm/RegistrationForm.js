@@ -12,20 +12,12 @@ Object.assign(MkComponent._mkComponentConstructors, {
 	Select,
 	TextBox,
 });
-const stripe = Stripe('pk_live_oHVXTcFPqsDHPt7VPS1Di4bO');
-const elements = stripe.elements();
 
-const cardNumber = elements.create('cardNumber');
-const cardExpiry = elements.create('cardExpiry');
-const cardCvc = elements.create('cardCvc');
-cardNumber.mount('#cardNumber');
-cardExpiry.mount('#cardExpiry');
-cardCvc.mount('#cardCvc');
+const stripe = Stripe('pk_test_2LGkBPerOovneoO2isQ6aq6H');
+const elements = stripe.elements();
 
 class RegistrationForm extends MkComponent {
 	init () {
-		this.registrationFeesDialog.closeable = true;
-
 		/* eslint-disable no-magic-numbers */
 		forms.constrainInput({
 			inputNode: this.phoneNumberTextBox.inputNode,
@@ -33,6 +25,13 @@ class RegistrationForm extends MkComponent {
 			positions: [ 3, 7 ],
 		});
 		/* eslint-enable no-magic-numbers */
+
+		this.card = elements.create('card');
+		this.card.mount(this.feesNode.cardInformation);
+		this.card.valid = false;
+		this.card.requiredMessage = this.feesNode.cardInformationErrorNode.textContent;
+
+		this.registrationFeesDialog.closeable = true;
 		this.form = new FormManager(this.node);
 	}
 
@@ -45,27 +44,59 @@ class RegistrationForm extends MkComponent {
 			revalidate: 'onblur',
 		});
 
+		this.card.addEventListener('change', this.validateCardInformation.bind(this));
+		this.card.addEventListener('blur', this.handleCardInformationValidity.bind(this));
 		this.feesNode.submitButton.addEventListener('click', this.validateForm.bind(this));
-		this.node.addEventListener('submit', this.showDialog.bind(this));
+		this.node.addEventListener('submit', function (event) {
+			event.preventDefault();
+		});
 		this.registrationFeesDialog.continueButton.addEventListener('click', this.handleSubmit.bind(this));
+	}
+
+	validateCardInformation (event) {
+		if (event.error) {
+			this.feesNode.cardInformationErrorNode.textContent = event.error.message;
+			this.card.valid = false;
+		}
+		else {
+			this.feesNode.cardInformationErrorNode.textContent = this.card.requiredMessage;
+			this.card.valid = true;
+		}
+
+		this.handleCardInformationValidity();
+	}
+
+	handleCardInformationValidity () {
+		if (this.feesNode.cardInformation.classList.contains('StripeElement--empty')) {
+			this.card.valid = false;
+		}
+
+		if (this.card.valid) {
+			this.feesNode.cardInformationErrorNode.classList.add('hidden');
+		}
+		else {
+			this.feesNode.cardInformationErrorNode.classList.remove('hidden');
+		}
 	}
 
 	validateForm () {
 		this.node.checkValidity();
-	}
+		this.feesNode.validateEventFees();
+		this.handleCardInformationValidity();
 
-	showDialog (event) {
-		event.preventDefault();
-		this.registrationFeesDialog.totalFeesNode.textContent = this.feesNode.totalNode.textContent;
-		this.registrationFeesDialog.show();
+		if (this.node.checkValidity() && this.card.valid && this.feesNode.validateEventFees()) {
+			this.registrationFeesDialog.totalFeesNode.textContent = this.feesNode.totalNode.textContent;
+			this.registrationFeesDialog.show();
+		}
 	}
 
 	handleSubmit (event) {
 		event.preventDefault();
 		this.registrationFeesDialog.continueButton.disabled = true;
 		this.formData = this.form.value;
+
 		try {
-			registerElements([ cardNumber, cardExpiry, cardCvc ]).then((t) => {
+			registerElements([ this.card ]).then((t) => {
 				return t.token.id;
 			})
 				.then((token) => {
@@ -90,6 +121,8 @@ class RegistrationForm extends MkComponent {
 		}
 		catch (error) {
 			this.registrationFeesDialog.continueButton.disabled = false;
+
+			// TODO: add Dialog
 			window.alert('We\'re sorry, an error occurred with your request.');
 		}
 

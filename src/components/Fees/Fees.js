@@ -12,7 +12,6 @@ class Fees extends MkComponent {
 
 	registerEventHandlers () {
 		this.eventFeesNode.addEventListener('change', this.updateTotalFees.bind(this));
-		this.submitButton.addEventListener('click', this.validateEventFees.bind(this));
 	}
 
 	updateTotalFees () {
@@ -21,15 +20,16 @@ class Fees extends MkComponent {
 		this.validateEventFees();
 	}
 
-	validateEventFees (event) {
+	validateEventFees () {
 		if (this.eventFees) {
 			this.eventFeesErrorNode.classList.add('hidden');
+
+			return true;
 		}
 		else {
-			if (event) {
-				event.preventDefault();
-			}
 			this.eventFeesErrorNode.classList.remove('hidden');
+
+			return false;
 		}
 	}
 }

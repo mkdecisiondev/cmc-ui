@@ -63,6 +63,33 @@
 		padding: 0;
 		text-align: center;
 	}
+
+	/* CSS styling for Stripe elements */
+	& .StripeElement {
+		background-color: var(--background-color);
+		border: 0;
+		border-bottom: 1px solid var(--lighter-gray);
+		height: 30px;
+		margin-bottom: 0.5em;
+		padding: 0;
+	}
+
+	& .CardField--ltr .CardBrandIcon-container:not(.is-hidden)+.CardField-input-wrapper {
+		left: 0 !important;
+	}
+
+	& .CardField--ltr .CardBrandIcon-container {
+		display: none !important;
+	}
+
+	& .StripeElement--focus,
+	& .StripeElement--complete {
+		border-color: var(--input-field-valid-color);
+	}
+
+	& .StripeElement--invalid {
+		border-color: var(--input-field-invalid-color);
+	}
 }
 
 .form-row {
