@@ -13,7 +13,7 @@ Object.assign(MkComponent._mkComponentConstructors, {
 	TextBox,
 });
 
-const stripe = Stripe('pk_test_2LGkBPerOovneoO2isQ6aq6H');
+const stripe = Stripe('pk_live_1IgIzbbHhnbZ4B5VaphlzDXF');
 const elements = stripe.elements();
 
 class RegistrationForm extends MkComponent {
@@ -96,7 +96,7 @@ class RegistrationForm extends MkComponent {
 		this.formData = this.form.value;
 
 		try {
-			registerElements([ this.card ]).then((t) => {
+			registerElements(this.card).then((t) => {
 				return t.token.id;
 			})
 				.then((token) => {
@@ -108,7 +108,7 @@ class RegistrationForm extends MkComponent {
 				})
 				.then(() => {
 					return axios.post(
-						'https://api.cmcnaa.org/live/registration',
+						'https://api.cmcnaa.org/live/registration/',
 						JSON.stringify(this.formData), {
 							headers: {
 								'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ class RegistrationForm extends MkComponent {
 		}
 
 		function registerElements (el) {
-			return stripe.createToken(el[0])
+			return stripe.createToken(el)
 				.then((result) => {
 					return result;
 				});
