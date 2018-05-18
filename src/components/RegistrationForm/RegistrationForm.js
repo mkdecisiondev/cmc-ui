@@ -26,7 +26,7 @@ class RegistrationForm extends MkComponent {
 		});
 		/* eslint-enable no-magic-numbers */
 
-		this.card = elements.create('card');
+		this.card = elements.create('card', { hidePostalCode: true });
 		this.card.mount(this.feesNode.cardInformation);
 		this.card.valid = false;
 		this.card.requiredMessage = this.feesNode.cardInformationErrorNode.textContent;
