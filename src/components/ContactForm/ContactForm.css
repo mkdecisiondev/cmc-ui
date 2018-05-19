@@ -40,4 +40,7 @@
 		}
 	}
 
+	& .primary-button {
+		color: var(--green);
+	}
 }

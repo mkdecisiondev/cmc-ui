@@ -14,8 +14,16 @@
 			</div>
 		</figure>
 		<section class="welcome">
-			<h1>{{ lang.events }}</h1>
-			<p>{{ lang.stayTunedForEvents }}</p>
+			<div class="welcome-message">
+				<img src="/img/logo.png" alt="{{ organizationName }}" class="hide-md-down">
+				<div>
+					<h1>{{ lang.events }}</h1>
+					<span>{{ lang.joinUsAtEvents }}</span>
+				</div>
+			</div>
+		</section>
+		<section class="current-events">
+			<p>{{ lang.noUpcomingEvents }}</p>
 		</section>
 	</block>
 </extends>

@@ -2,6 +2,7 @@
 
 nav.vertical-navigator ul a.contact:after {
 	background: white;
+	box-shadow: var(--drop-shadow);
 }
 
 main {
@@ -18,8 +19,6 @@ main {
 		margin-bottom: 1.5em;
 	}
 }
-
-
 
 @media (--medium-up) {
 

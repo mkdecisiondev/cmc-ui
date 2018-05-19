@@ -1,5 +1,6 @@
 body {
 	font-family: var(--primary-font);
+	background-color: #29856E;
 	padding: 0;
 	margin: 0;
 }
@@ -118,16 +119,35 @@ h6 {
 	border: none;
 	background: var(--primary-button-background-color);
 	border-radius: 3px;
+	color: var(--primary-button-font-color);
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0.8em 1.5em;
+	font-family: var(--medium-font);
+	text-transform: uppercase;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.secondary-button {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: none;
+	background: var(--secondary-button-background);
+	border-radius: 3px;
 	color: white;
 	cursor: pointer;
-	font-size: 15px;
+	font-size: 18px;
 	padding: 0.8em 1.5em;
-	font-family: var(--primary-font);
+	font-family: var(--medium-font);
 	text-transform: uppercase;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .primary-button:hover {
-	text-decoration: underline;
+	margin-top: -2px;
+	box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
 a.primary-button {
@@ -147,13 +167,13 @@ figure {
 
 .welcome {
 	font-family: var(--light-font);
-	text-align: center;
+	text-align: left;
+	padding: 25px;
 
 	& h1 {
-		font-size: 34px;
+		font-size: 40px;
 		font-weight: normal;
 		letter-spacing: 2px;
-		margin: 0.5em 0;
 		padding: 0;
 	}
 
@@ -168,15 +188,14 @@ figure {
 	}
 }
 
-
 @media (--medium-up) {
 	.welcome {
 		padding-left: var(--padding-desktop);
 		padding-right: var(--padding-desktop);
 
 		& h1 {
-			font-size: 55px;
-			letter-spacing: 3px;
+			font-size: 60px;
+			letter-spacing: 1px;
 		}
 
 		& p {
@@ -185,6 +204,15 @@ figure {
 
 		& hr {
 			display: block;
+		}
+	}
+
+}
+
+@media (--x-small-down) {
+	.welcome {
+		& h1 {
+			font-size: 32px;
 		}
 	}
 }

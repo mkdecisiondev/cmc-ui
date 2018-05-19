@@ -2,6 +2,7 @@
 
 nav.vertical-navigator ul a.events:after {
 	background: white;
+	box-shadow: var(--drop-shadow);
 }
 
 .hero {
@@ -27,13 +28,76 @@ nav.vertical-navigator ul a.events:after {
 	}
 }
 
-@media (--medium-up) {
-	.hero .outter .inner {
-		background-image: url('img/cmc-1200x210.png'), url('img/1200x413-events.jpg');
+.current-events {
+	font-family: var(--light-font);
+	width: 100%;
+	background: url(img/cmc-green-back.png);
+	text-shadow:  var(--drop-shadow);
+	padding: 80px 50px;
+
+	& p {
+		color: white;
+		font-size: 45px;
+		width: 720px;
+		margin: 0;
 	}
 }
 
+.welcome-message {
+	display: flex;
+	margin: auto;
+	max-width: 420px;
+	padding-left: 1em;
 
-.welcome h1 {
-	text-transform: uppercase;
+	& h1 {
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	& span {
+		font-size: 22px;
+	}
+
+	& img {
+		height: 70px;
+		margin: auto 10px;
+	}
+}
+
+@media(--large-down) {
+	.current-events {
+		& p {
+			width: 640px;
+			font-size: 40px;
+		}
+	}
+}
+
+@media(--medium-down) {
+	.current-events {
+		padding: 2em;
+
+		& p {
+			width: 320px;
+			font-size: 19px;
+		}
+	}
+
+	.welcome-message {
+		max-width: 330px;
+		padding: 0;
+
+		& span {
+			font-size: 16px;
+		}
+	}
+}
+
+@media(--x-small-down) {
+	.current-events {
+		& p {
+			width: unset;
+			font-size: 18px;
+		}
+	}
 }
