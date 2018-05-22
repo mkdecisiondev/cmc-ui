@@ -236,7 +236,11 @@ section {
 }
 
 .welcome {
-	max-width: 800px;
+	max-width: 780px;
+
+	& img {
+		margin-right: 1.5em;
+	}
 }
 
 @media (--medium-up) {
