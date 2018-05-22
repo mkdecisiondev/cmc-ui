@@ -39,8 +39,4 @@
 			color: var(--teal);
 		}
 	}
-
-	& .primary-button {
-		color: var(--green);
-	}
 }
