@@ -32,25 +32,14 @@ figure {
 section {
 	font-family: var(--light-font);
 	font-size: 18px;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 	padding-left: var(--padding-mobile);
 	padding-right: var(--padding-mobile);
 
-	& hr {
-		background-image: url('img/text-divider-454x30.png');
-		background-position: center bottom;
-		background-repeat: no-repeat;
-		background-size: contain;
-		border: none;
-		height: 30px;
-		margin: 0 auto 1em;
-		max-width: 70%;
-	}
-
 	& h2 {
-		font-size: 28px;
+		font-size: 36px;
 		font-weight: normal;
-		margin: 1em 0 0.8em 0;
+		margin: 0;
 		padding: 0;
 	}
 
@@ -69,23 +58,23 @@ section {
 			font-size: 45px;
 		}
 
-		& hr {
-			max-width: 454px;
+		& p {
+			font-size: 24px;
 		}
 	}
 }
 
 .gradient {
 	background: url(img/cmc-green-back.png);
+	color: white;
 	border-radius: 6px;
-	padding-bottom: 1em;
-	padding-left: 4%;
-	padding-right: 4%;
+	padding: 2em;
 	text-align: center;
 	margin-bottom: 3em;
 
+	& h2,
 	& p {
-		min-height: 2.5em;
+		text-shadow: var(--drop-shadow);
 	}
 
 	& .outter {
@@ -152,7 +141,7 @@ section {
 
 	& img {
 		display: block;
-		margin: 0 auto;
+		margin: 1em auto;
 		max-width: 626px;
 		width: 100%;
 	}
@@ -168,7 +157,11 @@ section {
 
 
 	& dl.one-to-one {
-		margin-top: 1em;
+		margin-bottom: 1em;
+
+		& dl {
+			font-family: var(--primary-font);
+		}
 
 		& dt {
 			clear: both;
@@ -185,8 +178,7 @@ section {
 	& dt {
 		font-family: var(--primary-font);
 		font-weight: normal;
-		margin-bottom: 0.5em;
-		margin-top: 1em;
+		margin-bottom: 1em;
 	}
 
 	& dd {
@@ -197,8 +189,9 @@ section {
 }
 
 .history {
-	background: var(--history-background-color);
-	font-size: 14px;
+	background: url('img/cmc-gray-back.png');
+	background-color: var(--history-background-color);
+	font-size: 16px;
 	margin-bottom: 0;
 	padding: 4em 5%;
 
@@ -242,24 +235,8 @@ section {
 	}
 }
 
-.welcome-message {
-	display: flex;
-	max-width: 700px;
-	margin: 0 auto;
-
-	& div {
-		max-width: 600px;
-	}
-
-	& img {
-		margin: auto 1em;
-		width: 150px;
-		height: auto;
-	}
-
-	& span {
-		font-size: 24px;
-	}
+.welcome {
+	max-width: 800px;
 }
 
 @media (--medium-up) {

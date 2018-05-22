@@ -39,9 +39,8 @@ body {
 	text-align: center;
 }
 
-
-.welcome h1 {
-	text-transform: uppercase;
+.welcome  {
+	max-width: 600px;
 }
 
 .album-container {
@@ -71,39 +70,5 @@ figure {
 		text-align: center;
 		color: white;
 		text-shadow: 1px 1px 1px #000;
-	}
-}
-
-.welcome-message {
-	display: flex;
-	max-width: 500px;
-	margin: 0 auto;
-
-	& img {
-		margin: auto 10px;
-		width: 90px;
-		height: auto;
-	}
-
-	& span {
-		font-size: 24px;
-	}
-}
-
-@media (--medium-down) {
-	.welcome-message {
-		max-width: 340px;
-
-		& span {
-			font-size: 16px;
-		}
-
-		& img {
-			width: 60px;
-		}
-
-		& div {
-			margin: auto 0;
-		}
 	}
 }

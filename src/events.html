@@ -14,16 +14,53 @@
 			</div>
 		</figure>
 		<section class="welcome">
-			<div class="welcome-message">
-				<img src="/img/logo.png" alt="{{ organizationName }}" class="hide-md-down">
-				<div>
-					<h1>{{ lang.events }}</h1>
-					<span>{{ lang.joinUsAtEvents }}</span>
-				</div>
+			<img src="/img/logo.png" alt="{{ organizationName }}" class="hide-md-down">
+			<div>
+				<h1>{{ lang.events }}</h1>
+				<span>{{ lang.joinUsAtEvents }}</span>
 			</div>
 		</section>
-		<section class="current-events">
-			<p>{{ lang.noUpcomingEvents }}</p>
+		<section class="events">
+			<each loop="event in events">
+				<if condition="event.title">
+					<div class="current-event">
+						<div class="event-info">
+							<p>{{ event.title }}</p>
+							<p>{{ event.date }}</p>
+							<p>
+								{{ event.location }}
+								<a class="primary-button">placeholder</a>
+							</p>
+						</div>
+						<div class="event-address">
+							<img src="{{ event.image }}">
+							<p>{{ event.address }}</p>
+						</div>
+						<a class="primary-button mobile-button" >placeholder</a>
+					</div>
+				</if>
+				<else>
+					<p>{{ lang.noUpcomingEvents }}</p>
+				</else>
+			</each>
+		</section>
+		<section class="event-content">
+			<each loop="index in eventContent">
+				<if condition="index.mainContent">
+					<article>
+						<each loop="item in index.mainContent">
+							{{ item.content }}
+						</each>
+					</article>
+				</if>
+				<else>
+					<aside class="hide-md-down">
+						<each loop="item in index.asideContent">
+							{{ item.content }}
+						</each>
+					</aside>
+				</else>
+			</each>
 		</section>
 	</block>
 </extends>

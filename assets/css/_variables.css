@@ -18,6 +18,7 @@
 	--red: hsl(358, 85%, 52%);
 	--teal: hsl(177, 39%, 52%);
 	--light-teal: hsl(177,39%,79%);
+	--dark-green : #4F6E6C;
 
 	--text-color: black;
 	--background-color: white;
@@ -29,6 +30,7 @@
 	--select-focus-background-image: url('/img/icons/select-caret-focus.svg');
 	--input-height: 50px;
 
+	--page-padding-color: var(--dark-green);
 	--header-height: 88px;
 	--header-background-color: var(--green);
 	--footer-height: 300px;
@@ -48,7 +50,7 @@
 
 	--header-height: 80px;
 
-	--drop-shadow: 0px 0px 5px black;
+	--drop-shadow: 0px 0px 2px black;
 }
 
 @custom-media --x-small-down (max-width: 359px);
