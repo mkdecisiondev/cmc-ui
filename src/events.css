@@ -44,15 +44,10 @@ section.events {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	min-height: 200px;
-	margin-bottom: 1em;
+	margin: 1em 0;
 
 	& a {
-		position: relative;
 		display: none;
-		text-shadow: none;
-		margin-left: 5em;
-		bottom: 1em;
-		right: 0;
 	}
 
 	& p {
@@ -64,17 +59,17 @@ section.events {
 	& .event-address,
 	& .event-info {
 		padding: 0.3em;
+		margin: 0 auto;
 	}
 
 	& .event-info {
 		font-size: 34px;
-		margin: 0;
-		width: 300px;
+		max-width: 300px;
 	}
 
 	& .event-address {
 		display: flex;
-		flex-grow: 0.6;
+		flex-grow: unset;
 		font-size: 18px;
 		text-shadow:  var(--drop-shadow);
 
@@ -82,7 +77,7 @@ section.events {
 			display: block;
 			height: 150px;
 			margin-right: 0.5em;
-			width: 150px;
+			width: 130px;
 		}
 	}
 
@@ -94,15 +89,26 @@ section.events {
 }
 
 .welcome {
-	max-width: 600px;
+	max-width: 560px;
 }
 
 section.event-content {
 	display: flex;
+	padding: 1em;
+	font-family: var(--light-font);
+
+	& a {
+		color: var(--primary-link-color);
+	}
+
+	& b {
+		font-weight: var(--font-weight-semibold: 600);
+	}
 
 	& article {
-		max-width: 500px;
-		padding: 2em;
+		line-height: 2em;
+		max-width: 600px;
+		margin: 0 auto;
 
 		& img {
 			width: 100%;
@@ -110,47 +116,75 @@ section.event-content {
 	}
 
 	& aside {
+		font-size: 18px;
+		line-height: 1.3em;
 		max-width: 400px;
-		padding: 2em;
+		padding: 2em 0 0 2em;
 
 		& img {
-			width: 300px;
+			width: 330px;
 			padding: 0.5em;
+			margin: 0.5em 0;
 		}
+	}
+
+	& .signature {
+		padding-left: 2em;
 	}
 }
 
-
-
-@media(--medium-up) {
+@media(--small-up) {
 	section.events {
-		padding: 2em;
-		padding-bottom: 1em;
+		padding: 0 var(--padding-desktop);
 	}
+
 	.current-event {
 		flex-direction: row;
 
 		& a {
+			bottom: 1em;
 			display: inline-block;
+			margin-left: 5em;
+			position: relative;
+			right: 0;
+			text-shadow: none;
 		}
 
 		& .event-address {
+			flex-grow: 0.3;
 			font-size: 24px;
 
 			& img {
 				height: 190px;
-				width: 190px;
+				width: 170px;
 			}
 		}
 
 		& .event-info {
-			font-size: 43px;
-			width: unset;
+			margin: 0;
+			font-size: 36px;
+			max-width: unset;
 		}
 
 		& .mobile-button {
 			display: none;
 		}
+	}
+}
+
+@media(--large-up) {
+	section.event-content {
+		padding: 1em var(--padding-desktop);
+		padding-bottom: 1em;
+
+		& article {
+			font-size: 22px;
+			max-width: 900px;
+		}
+	}
+
+	.current-event .event-info {
+		font-size: 42px;
 	}
 }
 

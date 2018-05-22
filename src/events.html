@@ -29,14 +29,14 @@
 							<p>{{ event.date }}</p>
 							<p>
 								{{ event.location }}
-								<a class="primary-button">placeholder</a>
+								<a href="/register.html" class="primary-button">{{ lang.register }}</a>
 							</p>
 						</div>
 						<div class="event-address">
 							<img src="{{ event.image }}">
 							<p>{{ event.address }}</p>
 						</div>
-						<a class="primary-button mobile-button" >placeholder</a>
+						<a href="/register.html" class="primary-button mobile-button" >{{ lang.register }}</a>
 					</div>
 				</if>
 				<else>
@@ -54,7 +54,7 @@
 					</article>
 				</if>
 				<else>
-					<aside class="hide-md-down">
+					<aside class="hide-lg-down">
 						<each loop="item in index.asideContent">
 							{{ item.content }}
 						</each>

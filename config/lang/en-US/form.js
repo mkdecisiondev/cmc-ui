@@ -52,6 +52,7 @@ module.exports = {
 	other: 'Other',
 	phoneNumber: 'Phone Number',
 	price: 'Price',
+	register: 'Register Now',
 	registrationForm: 'Registration Form',
 	selectAlumniMembership: "Please select if you're a CMC Alumni Member or not.",
 	selectNumberOfAttendees: 'Please select the number of attendees for the event.',

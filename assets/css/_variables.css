@@ -40,6 +40,7 @@
 	--photos-splash-background: rgb(189, 183, 182);
 	--primary-button-background-color: var(--light-teal);
 	--primary-button-font-color: var(--green);
+	--primary-link-color: var(--green);
 	--secondary-button-background: var(--green);
 	--history-background-color: var(--lighter-gray);
 	--thankyou-text-color: var(--dark-gray);
