@@ -1,3 +1,4 @@
 module.exports = {
+	eventContent: '',
 	privacyPolicyContent: '',
 };

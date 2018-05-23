@@ -2,6 +2,7 @@
 
 nav.vertical-navigator ul a.photos:after {
 	background: white;
+	box-shadow: var(--drop-shadow);
 }
 
 body {
@@ -14,8 +15,6 @@ body {
 }
 
 .outer {
-	background-color: var(--photos-splash-background);
-
 	& .splash-outer {
 		height: 0;
 		padding-bottom: 34.3%;
@@ -25,7 +24,7 @@ body {
 			background-image: url('img/412x1200-photos.jpg');
 			background-position: center bottom;
 			background-repeat: no-repeat;
-			background-size: contain;
+			background-size: cover;
 			clear: both;
 			height: 100%;
 			left: 0;
@@ -36,25 +35,17 @@ body {
 	}
 }
 
-@media (--medium-up) {
-	.outer .splash-outer .splash-inner {
-		background-image: url('img/cmc-1200x210.png'), url('img/412x1200-photos.jpg');
-
-	}
-}
-
 .introduction {
 	text-align: center;
 }
 
-
-.welcome h1 {
-	text-transform: uppercase;
+.welcome  {
+	max-width: 600px;
 }
 
 .album-container {
 	background-color: #79bdc1;
-	background-image: url('img/photos_bg.jpg');
+	background-image: url('img/cmc-green-back.png');
 	background-repeat: repeat-y;
 	margin: 0;
 	padding: 20px 45px 20px 10px;
@@ -67,14 +58,12 @@ body {
 }
 
 figure {
-	margin-bottom: 2em;
-
 
 	& img {
 		width: 100%;
 		display: block;
 		margin: 10px 30px 20px 10px;
-		box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.5);
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 	}
 
 	& figcaption {

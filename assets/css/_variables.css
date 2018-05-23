@@ -10,12 +10,15 @@
 
 	--almost-white: hsl(180, 33%, 99%);
 	--dark-gray: hsl(0, 0%, 46%);
+	--darker-gray: hsl(0, 0%, 34%);
 	--gray: hsl(0, 0%, 67%);
 	--light-gray: hsl(0, 0%, 63%);
 	--lighter-gray: hsl(0, 0%, 90%);
-	--green: hsl(166, 100%, 30%);
+	--green: hsl(131, 53%, 34%);
 	--red: hsl(358, 85%, 52%);
 	--teal: hsl(177, 39%, 52%);
+	--light-teal: hsl(177,39%,79%);
+	--dark-green : #4F6E6C;
 
 	--text-color: black;
 	--background-color: white;
@@ -27,14 +30,18 @@
 	--select-focus-background-image: url('/img/icons/select-caret-focus.svg');
 	--input-height: 50px;
 
+	--page-padding-color: var(--dark-green);
 	--header-height: 88px;
-	--header-background-color: var(--teal);
+	--header-background-color: var(--green);
 	--footer-height: 300px;
-	--footer-background-color: var(--light-gray);
+	--footer-background-color: var(--darker-gray);
 	--footer-color: white;
 	--page-background-color: var(--almost-white);
 	--photos-splash-background: rgb(189, 183, 182);
-	--primary-button-background-color: var(--green);
+	--primary-button-background-color: var(--light-teal);
+	--primary-button-font-color: var(--green);
+	--primary-link-color: var(--green);
+	--secondary-button-background: var(--green);
 	--history-background-color: var(--lighter-gray);
 	--thankyou-text-color: var(--dark-gray);
 	--overlay-background-color: hsla(177, 39%, 52%, 0.7);
@@ -42,7 +49,9 @@
 	--padding-mobile: 2%;
 	--padding-desktop: 6%;
 
-	--header-height: 88px;
+	--header-height: 80px;
+
+	--drop-shadow: 0px 0px 2px black;
 }
 
 @custom-media --x-small-down (max-width: 359px);

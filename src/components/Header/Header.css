@@ -73,6 +73,7 @@ nav.vertical-navigator {
 		margin: 0;
 		padding: 0;
 		text-transform: uppercase;
+		max-width: 600px;
 
 		& li {
 			border-bottom: 1px solid gray;
@@ -83,27 +84,28 @@ nav.vertical-navigator {
 
 		& a {
 			display: inline-block;
-			font-size: 21px;
+			font-size: 20px;
 			letter-spacing: 2px;
 			line-height: 21px;
 			text-decoration: none;
 			white-space: nowrap;
 			width: auto;
 			padding-right: 100%;
+			font-weight: var(--font-weight-bold);
+			text-shadow: var(--drop-shadow);
 		}
 
 		& a::after {
-				background: var(--teal);
-				border-radius: 3px;
+				background: var(--header-background-color);
 				content: '';
 				float: left;
-				height: 6px;
-				margin-top: 3px;
+				height: 3px;
 				width: 100%;
 		}
 
 		& a:hover:after {
 			background: white;
+			box-shadow: var(--drop-shadow);
 		}
 	}
 }
@@ -117,10 +119,11 @@ nav.vertical-navigator {
 }
 
 .logo {
+	height: 65px;
 
 	& img {
-		height: 75px;
-		width: 75px;
+		height: 65px;
+		width: 65px;
 	}
 }
 
@@ -203,8 +206,8 @@ nav.vertical-navigator {
 				align-items: center;
 				display: flex;
 				height: var(--header-height);
-				justify-content: space-between;
-				margin: 0 2rem 0 0;
+				justify-content: space-evenly;
+				margin-left: auto;
 				padding: 0;
 
 				& li {
@@ -217,7 +220,7 @@ nav.vertical-navigator {
 				}
 
 				& a {
-					background: var(--teal);
+					background: var(--header-background-color);
 					color:white;
 					font-size: 15px;
 					font-weight: normal;
@@ -234,7 +237,9 @@ nav.vertical-navigator {
 			align-items: center;
 			display: block;
 			display: flex;
+			justify-content: space-between;
 			height: var(--header-height);
+			width: 100px;
 			justify-content: flex-end;
 			padding-bottom: 0;
 			padding-top: 0;

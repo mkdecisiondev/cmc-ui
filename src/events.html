@@ -14,8 +14,38 @@
 			</div>
 		</figure>
 		<section class="welcome">
-			<h1>{{ lang.events }}</h1>
-			<p>{{ lang.stayTunedForEvents }}</p>
+			<img src="/img/logo.png" alt="{{ organizationName }}" class="hide-md-down">
+			<div>
+				<h1>{{ lang.events }}</h1>
+				<span>{{ lang.joinUsAtEvents }}</span>
+			</div>
+		</section>
+		<section class="events">
+			<each loop="event in events">
+				<if condition="event.title">
+					<div class="current-event">
+						<div class="event-info">
+							<p>{{ event.title }}</p>
+							<p>{{ event.date }}</p>
+							<p>
+								{{ event.location }}
+								<a href="/register.html" class="primary-button">{{ lang.registerNow }}</a>
+							</p>
+						</div>
+						<div class="event-address">
+							<img src="{{ event.image }}">
+							<p>{{ event.address }}</p>
+						</div>
+						<a href="/register.html" class="primary-button mobile-button" >{{ lang.registerNow }}</a>
+					</div>
+				</if>
+				<else>
+					<p>{{ lang.noUpcomingEvents }}</p>
+				</else>
+			</each>
+		</section>
+		<section class="event-content">
+			{{ lang.eventContent }}
 		</section>
 	</block>
 </extends>
