@@ -25,7 +25,7 @@
 
 	--input-field-text-color: var(--gray);
 	--input-field-invalid-color: var(--red);
-	--input-field-valid-color: var(--teal);
+	--input-field-valid-color: var(--green);
 	--select-background-image: url('/img/icons/select-caret.svg');
 	--select-focus-background-image: url('/img/icons/select-caret-focus.svg');
 	--input-height: 50px;

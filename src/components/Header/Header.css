@@ -73,7 +73,7 @@ nav.vertical-navigator {
 		margin: 0;
 		padding: 0;
 		text-transform: uppercase;
-		max-width: 600px;
+		max-width: 700px;
 
 		& li {
 			border-bottom: 1px solid gray;
@@ -187,12 +187,10 @@ nav.vertical-navigator {
 		height: var(--header-height);
 		padding: 0 var(--padding-desktop);
 
-
 		& .logo-hamburger {
 			padding-left: 0;
 			padding-right: 0;
 		}
-
 
 		& .hamburger {
 			display: none;
@@ -247,7 +245,7 @@ nav.vertical-navigator {
 			white-space: nowrap;
 
 			& a {
-				font-size: 30px;
+				font-size: 24px;
 			}
 		}
 	}
@@ -262,6 +260,10 @@ nav.vertical-navigator {
 
 		& .social-media  {
 			justify-content: space-between;
+
+			& a {
+				font-size: 30px;
+			}
 		}
 	}
 }
