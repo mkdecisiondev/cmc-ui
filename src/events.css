@@ -135,7 +135,7 @@ section.event-content {
 
 @media(--small-up) {
 	section.events {
-		padding: 0 var(--padding-desktop);
+		padding: 0 var(--padding-mobile);
 	}
 
 	.current-event {
@@ -161,7 +161,6 @@ section.event-content {
 		}
 
 		& .event-info {
-			margin: 0;
 			font-size: 36px;
 			max-width: unset;
 		}

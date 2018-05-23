@@ -11,11 +11,11 @@ module.exports = [
 			},
 			{
 				title: 'Secretary',
-				name: 'Dr. Veena Antony',
+				name: 'Dr. Veena Anthony',
 			},
 			{
 				title: 'Treasurer',
-				name: 'Dr. Swaranjit Singh',
+				name: 'Dr. Swarnjit Singh',
 			},
 		],
 	},
