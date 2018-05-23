@@ -103,14 +103,6 @@ footer {
 	}
 }
 
-/* @media (--small-down) {
-	footer {
-		& .footer-nav {
-			margin: 0 auto;
-		}
-	}
-} */
-
 @media (--x-small-down) {
 	footer {
 		& .footer-logo {

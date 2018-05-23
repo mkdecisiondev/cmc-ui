@@ -61,7 +61,6 @@ module.exports = {
 	spouseName: 'Spouse or Guest Name',
 	state: 'State',
 	submit: 'Submit',
-	swarnjitSingh: 'Swarnjit Singh',
 	totalEventFees: 'Total Event Fees',
 	upcomingEvents: 'Upcoming Events',
 	yes: 'Yes',

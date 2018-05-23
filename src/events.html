@@ -45,22 +45,7 @@
 			</each>
 		</section>
 		<section class="event-content">
-			<each loop="index in eventContent">
-				<if condition="index.mainContent">
-					<article>
-						<each loop="item in index.mainContent">
-							{{ item.content }}
-						</each>
-					</article>
-				</if>
-				<else>
-					<aside class="hide-lg-down">
-						<each loop="item in index.asideContent">
-							{{ item.content }}
-						</each>
-					</aside>
-				</else>
-			</each>
+			{{ lang.eventContent }}
 		</section>
 	</block>
 </extends>
