@@ -1,9 +1,17 @@
 const path = require('path');
+const webpack = require('webpack');
 const babelConfig = require('./config/build/babel');
 const postcssConfig = require('./config/build/postcss');
 const reshapeConfig = require('./config/build/reshape');
 const config = require('./config/main');
 const env = process.env.SPIKE_ENV;
+
+const endpoints = {
+	master: '',
+	production: 'https://gnn3szkqtb.execute-api.us-west-2.amazonaws.com/Prod',
+};
+
+const serviceUrl = endpoints[process.env.RELEASE] || endpoints.master;
 
 const webpackConfig = {
 	devtool: 'source-map',
@@ -13,6 +21,11 @@ const webpackConfig = {
 		'js/photos': './src/photos.js',
 		'js/registration': './src/registration.js',
 	},
+	plugins: [
+		new webpack.DefinePlugin({
+			WD_SERVICE_URL: `"${serviceUrl}"`,
+		}),
+	],
 	resolve: {
 		alias: {
 			'./htmlResources.js': './htmlResources-shim.js',

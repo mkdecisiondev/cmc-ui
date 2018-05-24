@@ -108,7 +108,7 @@ class RegistrationForm extends MkComponent {
 				})
 				.then(() => {
 					return axios.post(
-						'https://api.cmcnaa.org/live/registration/',
+						`${WD_SERVICE_URL}/registration/`,
 						JSON.stringify(this.formData), {
 							headers: {
 								'Content-Type': 'application/json',
