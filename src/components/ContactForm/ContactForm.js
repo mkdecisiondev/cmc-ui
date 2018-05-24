@@ -48,7 +48,7 @@ class ContactForm extends MkComponent {
 		};
 		this.formData = removeEmpty(this.form.value);
 
-		axios.post('https://api.cmcnaa.org/live/contact',
+		axios.post(`${WD_SERVICE_URL}/contact`,
 			JSON.stringify(this.formData), {
 				headers: {
 					'Content-Type': 'application/json',
