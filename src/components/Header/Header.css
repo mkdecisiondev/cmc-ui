@@ -204,7 +204,7 @@ nav.vertical-navigator {
 				align-items: center;
 				display: flex;
 				height: var(--header-height);
-				justify-content: space-evenly;
+				justify-content: space-between;
 				margin-left: auto;
 				padding: 0;
 
@@ -235,7 +235,6 @@ nav.vertical-navigator {
 			align-items: center;
 			display: block;
 			display: flex;
-			justify-content: space-between;
 			height: var(--header-height);
 			width: 100px;
 			justify-content: flex-end;

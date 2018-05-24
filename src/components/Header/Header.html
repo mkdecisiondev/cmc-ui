@@ -11,7 +11,7 @@
 			</div>
 		</div>
 	</div>
-	<nav class="vertical-navigator col-12 col-md-9" role="navigation" data-node-name="verticalNavigatorNode">
+	<nav class="vertical-navigator col-12 col-md-8" role="navigation" data-node-name="verticalNavigatorNode">
 		<ul>
 			<each loop="navitem, index in siteLinks">
 				<li>
@@ -20,7 +20,7 @@
 			</each>
 		</ul>
 	</nav>
-	<div class="social-media col-12 col-md-1" data-node-name="socialMediaNode">
+	<div class="social-media col-12 col-md-1 offset-md-1" data-node-name="socialMediaNode">
 		<each loop="link in socialMedia">
 			<a href="{{ link.url }}" title="{{ link.title }}" target="_blank">
 				<i class="{{ link.icon }}"></i>
