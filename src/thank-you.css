@@ -16,13 +16,7 @@ h1 {
 	line-height: 2;
 	margin-bottom: 2em;
 	font-size: 22px;
-
-	& img {
-		width: 25%;
-		vertical-align: text-top;
-		margin-left: 1em;
-		max-width: 255px;
-	}
+	text-align: center;
 }
 
 @media (--medium-up) {

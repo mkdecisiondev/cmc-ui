@@ -7,7 +7,7 @@ const config = require('./config/main');
 const env = process.env.SPIKE_ENV;
 
 const endpoints = {
-	master: '',
+	master: 'https://2bddu8ljp9.execute-api.us-west-2.amazonaws.com/Prod',
 	production: 'https://gnn3szkqtb.execute-api.us-west-2.amazonaws.com/Prod',
 };
 
