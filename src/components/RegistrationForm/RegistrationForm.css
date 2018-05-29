@@ -197,7 +197,7 @@
 }
 
 
-.row-flush {
+.registration-form {
 
 	& .col {
 		padding-left: 0;
@@ -206,7 +206,7 @@
 }
 
 @media (--medium-up) {
-	.row-flush {
+	.registration-form {
 
 		& .col-md-6 {
 			padding-right: 4rem;
