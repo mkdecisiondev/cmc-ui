@@ -1,5 +1,5 @@
 .registration-form {
-	padding: 1em 3em;
+	padding: 1em var(--padding-mobile);
 	font-family: var(--light-font);
 	overflow: hidden;
 	margin-bottom: 2em;
@@ -11,11 +11,6 @@
 		font-size: 1.17em;
 		border-bottom: 1px solid black;
 		width: 250px;
-	}
-
-	& hr {
-		/* width: 250px; */
-		margin: 0 0 1em 0;
 	}
 
 	& br {
@@ -31,7 +26,6 @@
 	& input,
 	& select,
 	& .select {
-		/* max-width: 300px; */
 		max-width: 100%;
 		width: 100%;
 	}
@@ -46,39 +40,16 @@
 		margin-bottom: 1em;
 	}
 
-	& .textbox,
-	& select {
-		/* margin-right: 3em; */
-	}
-
-	& div[data-node-name='zipCodeTextBox'] .validation-message {
-		/* max-width: 7em; */
-	}
-
-	& input[name='zipCode'],
-	& select[name='state'] {
-		/* max-width: 5em; */
-	}
-
 	& span.label {
 		font-weight: 600;
 		left: 0;
-	}
-
-	& .primary-button {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		height: 40px;
-		width: 100px;
-		padding: 0;
-		text-align: center;
 	}
 
 	/* CSS styling for Stripe elements */
 	& .StripeElement {
 		background-color: var(--background-color);
 		border: 0;
-		border-bottom: 1px solid var(--lighter-gray);
+		border-bottom: 2px solid var(--lighter-gray);
 		height: 30px;
 		margin-bottom: 0.5em;
 		padding: 0;
@@ -102,111 +73,20 @@
 	}
 }
 
-.form-row {
-	display: flex;
-}
-
-.form-col {
-	margin-right: 1em;
-	margin-bottom: 1em;
-	min-width: 330px;
-
-	& input {
-		max-width: 200px;
-	}
-}
-
-.card-info {
-	& input {
-		width: 4em;
-	}
-
-	& div.validation-message {
-		/* max-width: 4em; */
-	}
-}
-
-.wrap {
-	flex-flow: wrap;
-}
-
-.event-fees {
-	justify-content: space-between;
-	max-width: 750px;
-
-	& hr {
-		width: 100%;
-	}
-
-	& p {
-		margin-bottom: 5px;
-		margin-right: 5px;
-		min-width: 60px;
-	}
-
-	& input {
-		margin-bottom: 5px;
-	}
-}
-
 .validation-message {
 	color: var(--input-field-invalid-color);
 	font-size: 0.8rem;
 }
 
-.divider {
-	height: 8px;
-	width: 200px;
-	background-color: var(--input-field-text-color);
-	margin: 3em 0 3em -3em;
-}
 
-.item-title {
-	width: 125px;
-}
-/*
-.total {
-	min-width: 90px;
-	text-align: center;
-} */
-
-@media (--small-down) {
-	.registration-form {
-		padding: 1em;
-
-		& .primary-button {
-			margin: 0;
-			width: 80px;
-			font-size: 1em;
-		}
-
-		& .textbox,
-		& select {
-			margin-right: 1em;
-		}
-
-	}
-
-	.event-fees hr {
-		min-width: 100%;
-	}
-
-	.user-info {
-		flex-direction: column;
-	}
-}
-
-
-.registration-form {
-
-	& .col {
-		padding-left: 0;
-		padding-right: 0;
-	}
+.registration-form .col {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 @media (--medium-up) {
 	.registration-form {
+		padding: 1em var(--padding-desktop);
 
 		& .col-md-6 {
 			padding-right: 4rem;
@@ -235,7 +115,9 @@
 	margin-bottom: 1em;
 }
 
-
+.row.table-headers {
+	padding-bottom: 0.7em;
+}
 .numberbox {
 	& select {
 		max-width: 5em;
