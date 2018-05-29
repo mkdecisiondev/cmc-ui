@@ -2,6 +2,7 @@
 	padding: 1em 3em;
 	font-family: var(--light-font);
 	overflow: hidden;
+	margin-bottom: 2em;
 
 	& h1,
 	& h3 {
@@ -28,7 +29,13 @@
 	& input,
 	& select,
 	& .select {
-		max-width: 300px;
+		/* max-width: 300px; */
+		max-width: 100%;
+		width: 100%;
+	}
+
+	& input[type="submit"] {
+		max-width: 200px;
 	}
 
 	& .select,
@@ -38,7 +45,7 @@
 
 	& .textbox,
 	& select {
-		margin-right: 3em;
+		/* margin-right: 3em; */
 	}
 
 	& div[data-node-name='zipCodeTextBox'] .validation-message {
@@ -47,7 +54,7 @@
 
 	& input[name='zipCode'],
 	& select[name='state'] {
-		max-width: 5em;
+		/* max-width: 5em; */
 	}
 
 	& span.label {
@@ -183,5 +190,38 @@
 
 	.user-info {
 		flex-direction: column;
+	}
+}
+
+
+.row-flush {
+
+	& .col {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (--medium-up) {
+	.row-flush {
+
+		& .col-md-6 {
+			padding-right: 4rem;
+		}
+
+		& .col-md-6:nth-child(even) {
+			padding-right: 0;
+		}
+	}
+
+	.row-flush.zip-city-state {
+
+		& .col-md-3:first-child {
+			padding-right: 4rem;
+		}
+
+		& .col-md-6 {
+			padding-right: 4rem;
+		}
 	}
 }
