@@ -1,41 +1,38 @@
-<div>
-	<div class="form-row event-fees wrap" data-node-name="eventFeesNode">
-		<div class="form-col">
+<div class="fees-wrapper">
+	<div class="row row-flush" data-node-name="eventFeesNode">
+		<div class="col col-12 col-md-6 fees-calculator">
 			<h3>{{ lang.attendees }}</h3>
-			<hr>
-			<div class="form-row">
-				<p class="item-title">{{ lang.eventFees }}:</p>
-				<p>{{ lang.price }}:</p>
-				<p>{{ lang.numberAttendees }}:</p>
+			<div class="row row-flush table-headers">
+				<div class="col col-6">{{ lang.eventFees }}:</div>
+				<div class="col col-3">{{ lang.price }}:</div>
+				<div class="col col-3">{{ lang.numberAttendees }}:</div>
 			</div>
-			<hr>
-			<component type="NumberBox" data-node-name="adultNumberBox">
+			<component type="NumberBox" data-node-name="adultNumberBox" class="row row-flush">
 				<label>{{ lang.adult }}:</label>
 				<price>650</price>
 				<name>adult</name>
 			</component>
-			<hr>
-			<component type="NumberBox" data-node-name="childrenNumberBox">
+			<component type="NumberBox" data-node-name="childrenNumberBox" class="row row-flush">
 				<label>{{ lang.childrenLessThan12 }}:</label>
 				<price>350</price>
 				<name>children</name>
 			</component>
-			<hr>
 			<div class="validation-message hidden" data-node-name="eventFeesErrorNode">{{ lang.selectNumberOfAttendees }}</div>
-			<div class="form-row">
-				<p class="item-title">{{ lang.totalEventFees }}:</p>
-				<p class="total">
+			<div class="row row-flush">
+				<div class="col col-6">{{ lang.totalEventFees }}:</div>
+				<div class="col col-3 total">
 					$<span data-node-name="totalNode" class="total">0</span>
-				</p>
+				</div>
 			</div>
 		</div>
 
-		<div class="form-col">
+		<div class="col col-12 col-md-6">
 			<h3>{{ lang.cardInformation }}</h3>
-			<hr>
 			<div data-node-name="cardInformation"></div>
 			<div data-node-name="cardInformationErrorNode" class="validation-message hidden">{{ lang.enterYourCardInformation }}</div>
 		</div>
 	</div>
-	<input type="submit" class="secondary-button" data-node-name="submitButton" value="{{ lang.submit }}">
+	<div class="flex">
+		<input type="submit" class="secondary-button" data-node-name="submitButton" value="{{ lang.submit }}">
+	</div>
 </div>

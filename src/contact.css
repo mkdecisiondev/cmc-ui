@@ -9,12 +9,11 @@ main {
 	padding: 2em var(--padding-mobile);
 
 	& h1 {
-		color: var(--gray);
 		font-size: 1.25rem;
 		font-weight: var(--font-weight-regular);
-		border-bottom: 1px solid var(--gray);
+		border-bottom: 1px solid black;
 		display: inline-block;
-		padding-right: 3em;
+		width: 250px;
 		padding-bottom: 0.5em;
 		margin-bottom: 1.5em;
 	}
@@ -28,5 +27,17 @@ main {
 		& h1 {
 			font-size: 1.5rem;
 		}
+	}
+}
+
+
+@media all and (-ms-high-contrast: none) {
+
+	h1 {
+		margin-top: 1em;
+	}
+
+	.contact-form {
+		padding: 1em var(--padding-desktop);
 	}
 }
