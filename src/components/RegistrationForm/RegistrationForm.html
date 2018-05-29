@@ -1,14 +1,10 @@
 <form class="registration-form">
 	<h1>{{ lang.contactInformation }}</h1>
 	<div class="row row-flush">
-
 		<component src="components/form/FirstName.html" data-node-name="firstNameTextBox" class="col col-12 col-md-6"></component>
-
 		<component src="components/form/LastName.html" data-node-name="lastNameTextBox" class="col col-12 col-md-6"></component>
-
 		<component src="components/form/GuestName.html" data-node-name="guestNameTextBox" class="col col-12 col-md-6"></component>
 		<component src="components/form/BatchOf.html" data-node-name="batchOfTextBox" class="col col-6 col-md-3"></component>
-
 		<component src="components/form/Address.html" data-node-name="addressTextBox" class="col col-12 col-md-6"></component>
 		<component src="components/form/UnitNumber.html" data-node-name="unitNumberTextBox" class="col col-6 col-md-3"></component>
 	</div>
@@ -29,7 +25,7 @@
 	<component type="Dialog" data-node-name="registrationFeesDialog" id="registrationFeesDialog">
 		<content>
 			{{ lang.byContinuingYouAgree }}
-			<p><button class="secondary-button" data-node-name="continueButton">{{ lang.continue }}</button></p>
+			<button class="secondary-button" data-node-name="continueButton">{{ lang.continue }}</button>
 		</content>
 	</component>
 </form>
