@@ -7,12 +7,14 @@
 	& h1,
 	& h3 {
 		font-weight: regular;
-		margin: 0;
+		margin: 0 0 1em 0;
 		font-size: 1.17em;
+		border-bottom: 1px solid black;
+		width: 250px;
 	}
 
 	& hr {
-		width: 250px;
+		/* width: 250px; */
 		margin: 0 0 1em 0;
 	}
 
@@ -36,6 +38,7 @@
 
 	& input[type="submit"] {
 		max-width: 200px;
+		margin-top: 2em;
 	}
 
 	& .select,
@@ -49,7 +52,7 @@
 	}
 
 	& div[data-node-name='zipCodeTextBox'] .validation-message {
-		max-width: 7em;
+		/* max-width: 7em; */
 	}
 
 	& input[name='zipCode'],
@@ -119,7 +122,7 @@
 	}
 
 	& div.validation-message {
-		max-width: 4em;
+		/* max-width: 4em; */
 	}
 }
 
@@ -144,11 +147,11 @@
 	& input {
 		margin-bottom: 5px;
 	}
+}
 
-	& .validation-message {
-		color: var(--input-field-invalid-color);
-		font-size: 0.8rem;
-	}
+.validation-message {
+	color: var(--input-field-invalid-color);
+	font-size: 0.8rem;
 }
 
 .divider {
@@ -161,11 +164,11 @@
 .item-title {
 	width: 125px;
 }
-
+/*
 .total {
 	min-width: 90px;
 	text-align: center;
-}
+} */
 
 @media (--small-down) {
 	.registration-form {
@@ -223,5 +226,27 @@
 		& .col-md-6 {
 			padding-right: 4rem;
 		}
+	}
+}
+
+.row.table-headers,
+.row.numberbox  {
+	border-bottom: 2px solid var(--lighter-gray);
+	margin-bottom: 1em;
+}
+
+
+.numberbox {
+	& select {
+		max-width: 5em;
+		width: 5em;
+	}
+}
+
+.col.fees-calculator {
+	margin-bottom: 2em;
+
+	& .row {
+		align-items: center;
 	}
 }
