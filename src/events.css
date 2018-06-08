@@ -199,7 +199,7 @@ section.event-content {
 	}
 }
 
-.fb-page.fb_iframe_widget {
+.fb-event-feed .fb-page {
 	margin: 0 auto 50px auto;
 	max-width: 500px;
 	display: block;
