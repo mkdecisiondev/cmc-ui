@@ -7,8 +7,9 @@ module.exports = {
 	extends: 'eslint:recommended',
 	globals: {
 		axios: true,
-		JSJoda: true,
+		FB: true,
 		hyperform: true,
+		JSJoda: true,
 		lang: true,
 	},
 	parserOptions: {

@@ -16,6 +16,7 @@ const serviceUrl = endpoints[process.env.RELEASE] || endpoints.master;
 const webpackConfig = {
 	devtool: 'source-map',
 	entry: {
+		'js/events': './src/events.js',
 		'js/main': './assets/js/main.js',
 		'js/contact': './src/contact.js',
 		'js/photos': './src/photos.js',
