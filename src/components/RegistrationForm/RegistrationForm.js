@@ -107,8 +107,7 @@ class RegistrationForm extends MkComponent {
 					this.formData = removeEmpty(this.formData);
 				})
 				.then(() => {
-					const dialog = this.registrationFeesDialog.contentNode;
-					dialog.innerHTML = 'Please wait a few seconds while your info is submitted...';
+					this.registrationFeesDialog.contentNode.innerHTML = 'Please wait a few seconds while your info is submitted...';
 				})
 				.then(() => {
 					return axios.post(
