@@ -107,7 +107,7 @@ class RegistrationForm extends MkComponent {
 					this.formData = removeEmpty(this.formData);
 				})
 				.then(() => {
-					var dialog = document.getElementById('registrationFeesDialogDescription');
+					const dialog = this.registrationFeesDialog.contentNode;
 					dialog.innerHTML = 'Please wait a few seconds while your info is submitted...';
 				})
 				.then(() => {
