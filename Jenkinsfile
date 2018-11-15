@@ -19,9 +19,8 @@ pipeline {
       steps {
         sh '''
           export PATH=/home/node/.npm-global/bin:$PATH
-          npm install
-          npm install spike
-          RELEASE=$GIT_BRANCH npm run build
+          yarn
+          RELEASE=$GIT_BRANCH yarn build
         '''
       }
     }
