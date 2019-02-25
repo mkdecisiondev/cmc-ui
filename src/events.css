@@ -28,27 +28,50 @@ nav.vertical-navigator ul a.events:after {
 	}
 }
 
-section.events {
-	background: url(img/cmc-green-back.png);
-	display: flex;
-	flex-direction: column;
+section.event-header {
+	background: #40874c url('img/cmc-green-back.png');
+	color: white;
+	/* flex-direction: column; */
 	font-family: var(--default-font);
 	padding: 1em;
 	padding-bottom: 0;
+	font-size: 150%;
+
+	& article {
+		margin: 0 0 1em 0;
+
+		&.address {
+
+			display: flex;
+
+			& p { margin-top: 0;}
+
+			& img {
+				max-width: 100px;
+				max-height: 100px;
+			}
+		}
+	}
+
+	& h2,
+	& p {
+
+		text-shadow:  var(--drop-shadow);
+	}
 }
 
 .current-event {
 	color: white;
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	/* flex-direction: column;
+	flex-wrap: wrap; */
 	justify-content: space-between;
 	min-height: 200px;
 	margin: 1em 0;
 
-	& a {
+	/* & a {
 		display: none;
-	}
+	} */
 
 	& p {
 		text-shadow:  var(--drop-shadow);
@@ -151,19 +174,19 @@ section.event-content {
 		}
 
 		& .event-address {
-			flex-grow: 0.3;
+			/* flex-grow: 0.3; */
 			font-size: 24px;
 
 			& img {
-				height: 190px;
+				height: 170px;
 				width: 170px;
 			}
 		}
 
-		& .event-info {
+		/* & .event-info {
 			font-size: 36px;
 			max-width: unset;
-		}
+		} */
 
 		& .mobile-button {
 			display: none;
