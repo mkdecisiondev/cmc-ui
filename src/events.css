@@ -31,11 +31,10 @@ nav.vertical-navigator ul a.events:after {
 section.event-header {
 	background: #40874c url('img/cmc-green-back.png');
 	color: white;
-	/* flex-direction: column; */
 	font-family: var(--default-font);
 	padding: 1em;
 	padding-bottom: 0;
-	font-size: 150%;
+	font-size: 110%;
 
 	& article {
 		margin: 0 0 1em 0;
@@ -43,71 +42,56 @@ section.event-header {
 		&.address {
 
 			display: flex;
+			align-items: center;
 
 			& p { margin-top: 0;}
 
 			& img {
-				max-width: 100px;
-				max-height: 100px;
+				float: left;
+				margin: 0 20px 0 0;
+				max-width: 150px;
+				max-height: 150px;
 			}
 		}
 	}
 
 	& h2,
 	& p {
-
+		margin-top: 0;
+		margin-bottom: 15px;
 		text-shadow:  var(--drop-shadow);
 	}
 }
 
-.current-event {
-	color: white;
-	display: flex;
-	/* flex-direction: column;
-	flex-wrap: wrap; */
-	justify-content: space-between;
-	min-height: 200px;
-	margin: 1em 0;
-
-	/* & a {
-		display: none;
-	} */
-
-	& p {
-		text-shadow:  var(--drop-shadow);
-		margin: 0;
-		max-width: 550px;
+@media(--medium-up) {
+	section.event-header {
+		font-size: 150%;
 	}
+}
 
-	& .event-address,
-	& .event-info {
-		padding: 0.3em;
-		margin: 0 auto;
-	}
+section.event-description {
+	padding: 1em;
+	font-size: 110%;
+	line-height: 140%;
 
-	& .event-info {
-		font-size: 34px;
-		max-width: 300px;
-	}
-
-	& .event-address {
-		display: flex;
-		flex-grow: unset;
-		font-size: 18px;
-		text-shadow:  var(--drop-shadow);
-
+	& figure {
 		& img {
-			display: block;
-			height: 150px;
-			margin-right: 0.5em;
-			width: 130px;
+			max-width: 100%;
+			margin: 1em 0;
+		}
+
+		& p.redundant-register {
+			margin-top: 55px;
+			padding-bottom: 33px;
+			text-align: center;
 		}
 	}
+}
 
-	& .mobile-button {
-		position: static;
-		display: inline-block;
-		margin: 0.5em auto;
+@media(--large-up) {
+	section.event-description {
+		font-size: 130%;
+		line-height: 200%;
 	}
 }
 
