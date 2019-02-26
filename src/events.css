@@ -28,63 +28,70 @@ nav.vertical-navigator ul a.events:after {
 	}
 }
 
-section.events {
-	background: url(img/cmc-green-back.png);
-	display: flex;
-	flex-direction: column;
+section.event-header {
+	background: #40874c url('img/cmc-green-back.png');
+	color: white;
 	font-family: var(--default-font);
 	padding: 1em;
 	padding-bottom: 0;
-}
+	font-size: 110%;
 
-.current-event {
-	color: white;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	min-height: 200px;
-	margin: 1em 0;
+	& article {
+		margin: 0 0 1em 0;
 
-	& a {
-		display: none;
-	}
+		&.address {
 
-	& p {
-		text-shadow:  var(--drop-shadow);
-		margin: 0;
-		max-width: 550px;
-	}
+			display: flex;
+			align-items: center;
 
-	& .event-address,
-	& .event-info {
-		padding: 0.3em;
-		margin: 0 auto;
-	}
+			& p { margin-top: 0;}
 
-	& .event-info {
-		font-size: 34px;
-		max-width: 300px;
-	}
-
-	& .event-address {
-		display: flex;
-		flex-grow: unset;
-		font-size: 18px;
-		text-shadow:  var(--drop-shadow);
-
-		& img {
-			display: block;
-			height: 150px;
-			margin-right: 0.5em;
-			width: 130px;
+			& img {
+				float: left;
+				margin: 0 20px 0 0;
+				max-width: 150px;
+				max-height: 150px;
+			}
 		}
 	}
 
-	& .mobile-button {
-		position: static;
-		display: inline-block;
-		margin: 0.5em auto;
+	& h2,
+	& p {
+		margin-top: 0;
+		margin-bottom: 15px;
+		text-shadow:  var(--drop-shadow);
+	}
+}
+
+@media(--medium-up) {
+	section.event-header {
+		font-size: 150%;
+	}
+}
+
+section.event-description {
+	padding: 1em;
+	font-size: 110%;
+	line-height: 140%;
+
+	& figure {
+		& img {
+			max-width: 100%;
+			margin: 1em 0;
+		}
+
+		& p.redundant-register {
+			margin-top: 55px;
+			padding-bottom: 33px;
+			text-align: center;
+		}
+	}
+}
+
+@media(--large-up) {
+	section.event-description {
+		font-size: 130%;
+		line-height: 200%;
 	}
 }
 
@@ -151,19 +158,19 @@ section.event-content {
 		}
 
 		& .event-address {
-			flex-grow: 0.3;
+			/* flex-grow: 0.3; */
 			font-size: 24px;
 
 			& img {
-				height: 190px;
+				height: 170px;
 				width: 170px;
 			}
 		}
 
-		& .event-info {
+		/* & .event-info {
 			font-size: 36px;
 			max-width: unset;
-		}
+		} */
 
 		& .mobile-button {
 			display: none;
